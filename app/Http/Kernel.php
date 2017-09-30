@@ -43,6 +43,11 @@ class Kernel extends HttpKernel
             'auth:admin',
         ],
 
+        'customer'=> [
+            'web',
+            'auth:customer',
+        ],
+
         'api' => [
             'throttle:60,1',
             'bindings',

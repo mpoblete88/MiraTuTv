@@ -33,6 +33,17 @@
                 'status' => 'active',
                 'remember_token' => str_random(10)
             ]);
+            DB::table('customers')->insert([
+                'first_name' => 'Marcial',
+                'last_name' => 'Olivares',
+                'nick_name' => 'marcial.olivares',
+                'email' => 'molivares@arqz-bim.com',
+                'rut' => '16519728-3',
+                'birthdate' => '1987-03-01',
+                'password' => bcrypt('client'),
+                'status' => 'active',
+                'remember_token' => str_random(10)
+            ]);
 
 
 

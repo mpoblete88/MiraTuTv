@@ -22,12 +22,19 @@ Route::get('/', function () {
 
 
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/admin', 'AdminController@index')->name('admin');
+//    Route::get('/admin', 'AdminController@index')->name('admin');
 
 
 
-    Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
+    Route::group(['prefix' => 'admin/', 'namespace' => 'Admin'], function(){
 
         require __DIR__ . '/admin_auth.routes.php';
+
+    });
+
+
+    Route::group(['prefix' => 'customer/', 'namespace' => 'Customer'], function(){
+
+        require __DIR__ . '/customer_auth.routes.php';
 
     });
