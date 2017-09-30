@@ -15,6 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Auth::routes();
+
+
+
+
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/admin', 'AdminController@index')->name('admin');
+
+
+
+    Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function(){
+
+        require __DIR__ . '/admin_auth.routes.php';
+
+    });
