@@ -1,6 +1,7 @@
 <?php
 
     use App\Admin;
+    use App\Catalog\Property;
     use App\Company;
     use App\CompanyBranchOffice;
     use App\Customer;
@@ -21,10 +22,13 @@ class DatabaseSeeder extends Seeder
         Customer::truncate();
         Company::truncate();
         CompanyBranchOffice::truncate();
+        \App\CompanyBranchOfficeAddress::truncate();
+        Property::truncate();
 
 
 
          $this->call(UserTableSeeder::class);
          $this->call(CompanyTableSeeder::class);
+         $this->call(PropertyTableSeeder::class);
     }
 }
