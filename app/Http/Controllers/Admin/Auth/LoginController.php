@@ -56,7 +56,7 @@ class LoginController extends Controller
             'email' => $request->input( 'email' ),
             'password' => $request->input( 'password' ),
         ])) {
-            return view( 'admin' );
+            return view( 'admin.index' );
         } else {
             return view( 'admin.auth.login' )->withErrors( [ 'email' => 'Authentication failed' ] );
         }

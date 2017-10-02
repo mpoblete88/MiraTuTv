@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCompanyBranchOfficesTable extends Migration
+class CreateContactsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,20 @@ class CreateCompanyBranchOfficesTable extends Migration
      */
     public function up()
     {
-        Schema::create('company_branch_offices', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('company_id');
+            $table->integer('country_id');
+
             $table->string('name');
-            $table->string('rut');
-            $table->enum('current', ['true', 'false']);
-            $table->enum('status', ['active', 'inactive']);
+            $table->string('phone');
+            $table->string('email');
+            $table->text('message');
+            $table->text('subject');
+            $table->enum('status', ['active','inactive']);
+            $table->text('comment');
+            $table->string('ip');
+
+
             $table->timestamps();
         });
     }
@@ -31,6 +38,6 @@ class CreateCompanyBranchOfficesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('company_branch_offices');
+        Schema::dropIfExists('contacts');
     }
 }
