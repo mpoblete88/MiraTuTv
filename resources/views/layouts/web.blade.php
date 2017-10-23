@@ -12,71 +12,14 @@
     <!-- Styles -->
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{--$ npm install animate.css --save--}}
+    <link rel="stylesheet" href="{{ url('/css/animate.min.css') }}">
     @yield('head')
     <style>
-        body {
-            width: 100%;
-            height: 100%;
-        }
-
-        html {
-            width: 100%;
-            height: 100%;
-        }
-        #app{
-            margin-top: 80px;
-            min-height: 80%;
-        }
-        footer{
-            background-color: #292b2c!important;
-            padding: 10px;
-            height: 300px;
-        }
-
-        #contact{
-            padding-left: 50px;
-            color: #74787E;
-        }
-        #CONTACT h6{
-            color: #4f5359;
-        }
-
-        #rrss{
-            color: #74787E;
-        }
-        .navbar-inverse a.navbar-brand{
-            height: 80px;
-            margin-right: 50px;
-        }
-        .navbar-inverse a img{
-            height: 100% !important;
-        }
-
-        .navbar-inverse .nav.navbar-nav li a{
-            height: 80px;
-            line-height: 50px;
-            width: 180px;
-            text-align: center;
-        }
-        .navbar-inverse .nav.navbar-nav li a:hover, .navbar-inverse .nav.navbar-nav li a.active{
-            color: #4CB686;
-        }
-        section{
-            padding: 35px;
-            width: 100%;
-            min-height: 350px;
-        }
-        section:nth-child(even){
-            background: #FFFFFF;
-        }
-        section:nth-child(odd){
-            background: #DDDDDD;
-        }
-
         @yield('style')
     </style>
 </head>
-<body>
+<body class="web">
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -99,36 +42,105 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="{{ url('/plans') }}">Planes TV</a>
+                        <a class="page-scroll @if(url()->current() == url('/')) active @endif" href="{{ url('/') }}">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="{{ url('/help-center') }}">Centro de ayuda</a>
+                        <a class="page-scroll @if(url()->current() == url('/plans')) active @endif" href="{{ url('/plans') }}">Planes TV</a>
                     </li>
                     <li>
-                        <a class="page-scroll active" href="#">Configura tu plan</a>
+                        <a class="page-scroll @if(url()->current() == url('/help-center')) active @endif" href="{{ url('/help-center') }}">Centro de ayuda</a>
                     </li>
-                </ul>
-                <!-- Right Side Of Navbar -->
+                    <!--<li>
+                       <a class="page-scroll" href="#">Configura tu plan</a>
+                   </li>-->
+               </ul>
+               <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    @guest
-                    <li><a href="{{ url('/')  }}">search</a></li>
                     <li>
-                        <a href="{{ route('login') }}">Login</a>
+                        <form>
+                            <div class="search-wrapper">
+                                <input class="search-input" type="text" placeholder="¿Que Buscas?"/><i class="fa fa-search"></i>
+                            </div>
+                        </form>
                     </li>
+                    @guest
+                    <li>
+                    </li>
+                    <li class="dropdown">
+                        <a class="login" data-toggle="dropdown" href="{{ route('login') }}"><i class="fa fa-user-o"></i></a>
+                        <ul class="dropdown-login dropdown-menu dropdown-lr animated fadeInDown" role="menu">
+                            <div class="col-lg-12">
+                                <div class="text-center"><h3><b>Ingresar</b></h3></div>
+                                <form class="form-horizontal" method="POST" action="{{ route('login') }}" autocomplete="off">
+                                    {{ csrf_field() }}
+                                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                        <div class="col-md-12">
+                                            <input id="email" type="email" class="form-control" placeholder="¿Cual es su Email?" name="email" value="{{ old('email') }}" required autofocus>
+                                            @if ($errors->has('email'))
+                                                <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                            @endif
+                                        </div>
+                                    </div>
 
+                                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+
+                                        <div class="col-md-12">
+                                            <input id="password" type="password" class="form-control" name="password" placeholder="¿Cual es su Contraseña?" required>
+
+                                            @if ($errors->has('password'))
+                                                <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn-primary bg-green">
+                                                Ingresar
+                                            </button>
+
+                                            <a class="btn btn-link " href="{{ route('password.request') }}">
+                                                ¿Contraseña?
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </ul>
+                    </li>
                     @else
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-expanded="false">
+                                <i class="fa fa-user-o"></i> Hola! {{ Auth::user()->first_name }} <span class="caret"></span>
                             </a>
 
-                            <ul class="dropdown-menu" role="menu">
+                            <ul class="dropdown-menu animated fadeInDown" role="menu">
+                                <li>
+                                    <a href="{{url('/home')}}">Mi TV</a>
+                                </li>
+                                <li>
+                                    <a href="{{url('/')}}">Mis Datos</a>
+                                </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        Logout
+                                        Salir
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
