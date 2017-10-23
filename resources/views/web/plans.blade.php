@@ -1,5 +1,6 @@
 @extends('layouts.web')
 @section('content')
+
     <section style="background: #FFFFFF; min-height: 100px !important;">
         <div class="container">
             <div class="row">
