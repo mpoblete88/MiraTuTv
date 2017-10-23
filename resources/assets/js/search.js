@@ -9,3 +9,11 @@ document.addEventListener('click', function (e) {
         searchWrapper.classList.remove('focused');
     }
 });
+$(document).ready(function(){
+
+    $(".plans-tv a").click(function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 800);
+    });
+});
