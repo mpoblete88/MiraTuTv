@@ -11592,10 +11592,6 @@ body.web .search-wrapper input:-ms-input-placeholder {
   color: #cccccc;
 }
 
-body.web .search-wrapper input::-ms-input-placeholder {
-  color: #cccccc;
-}
-
 body.web .search-wrapper input::placeholder {
   color: #cccccc;
 }
