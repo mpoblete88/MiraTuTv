@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
-use App\Company;
+use App\Catalog\Channel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class CompanyController extends Controller
+class ChannelController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -16,10 +15,10 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::get();
+        $channels = Channel::get();
 
 
-        return view('admin.catalog.company.index')->with(['companies'=>$companies]);
+        return view('admin.catalog.channel.index')->with(['channels'=>$channels]);
     }
 
     /**
