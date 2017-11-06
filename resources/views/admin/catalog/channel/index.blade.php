@@ -14,7 +14,7 @@
             <th>Tipo</th>
             <th>Estado</th>
             <th>Categoria</th>
-            <th>Logo</th>
+            <th>En planes</th>
         </tr>
         </thead>
         <tbody>
@@ -25,8 +25,12 @@
                 <td>  {{$channel->id}}</td>
                 <td> {{$channel->name}}</td>
                 <td> {{$channel->code}}</td>
-                <td> {{$channel->type_id}}</td>
+                <td> {{$channel->type->short_name}}</td>
                 <td> {{$channel->status}}</td>
+                <td> @foreach($channel->category as $category)
+                         <li> {{$category->name}}</li>
+                     @endforeach
+                </td>
                 <td> {{$channel->plans->count()}}</td>
                 <td> </td>
                 <td> </td>

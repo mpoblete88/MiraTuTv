@@ -46,6 +46,8 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{route('channel.index')}}">Canales</a>
                     <a class="dropdown-item" href="{{route('plan.index')}}">Planes</a>
+                    <a class="dropdown-item" href="#">Servicios</a>
+                    <a class="dropdown-item" href="#">Tipo</a>
                 </div>
             </li>
 
