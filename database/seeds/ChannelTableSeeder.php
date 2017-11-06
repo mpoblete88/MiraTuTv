@@ -246,11 +246,36 @@ class ChannelTableSeeder extends Seeder
 
         ]);
 
-        for ($i = 0; $i < count($nacional); $i++) {
 
-            Property::create([
-                'name'        => $nacional[ $i ][0],
-                'code' => $nacional[ $i ][1],
+
+    $channels = array_merge(
+        $nacional_hd,$nacional_sd,
+        $musica_hd,$musica_sd,
+        $noticias_hd,$noticias_sd,
+        $culturales_hd,$culturales_sd,
+        $peliculas_hd,$peliculas_sd,
+        $deportes_hd,$deportes_sd,
+        $infantiles_hd,$infantiles_sd,
+        $internacionales_hd, $internacionales_sd);
+
+
+        for ($i = 0; $i < count($channels); $i++) {
+
+            if( $channels[ $i ][3] == 'SD')
+            {
+                $type_id = 1;
+            }
+            elseif($channels[ $i ][3] == 'HD')
+            {
+                $type_id = 2;
+
+            }
+
+            Channel::create([
+                'name'   => $channels[ $i ][0],
+                'code'   => $channels[ $i ][1],
+                'status' => $channels[ $i ][2],
+                'type_id' => $type_id,
             ]);
 
         }

@@ -24,11 +24,21 @@ class DatabaseSeeder extends Seeder
         CompanyBranchOffice::truncate();
         \App\CompanyBranchOfficeAddress::truncate();
         Property::truncate();
+        \App\Catalog\Channel::truncate();
+        \App\Catalog\Category::truncate();
+        \App\Catalog\Type::truncate();
+        \App\Catalog\Plan::truncate();
+        \App\Catalog\Service::truncate();
 
 
 
          $this->call(UserTableSeeder::class);
          $this->call(CompanyTableSeeder::class);
          $this->call(PropertyTableSeeder::class);
+         $this->call(ChannelTableSeeder::class);
+         $this->call(CategoriesTableSeeder::class);
+         $this->call(TypeTableSeeder::class);
+         $this->call(PlanTableSeeder::class);
+         $this->call(ServiceTableSeeder::class);
     }
 }

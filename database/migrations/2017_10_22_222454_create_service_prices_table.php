@@ -17,7 +17,6 @@ class CreateServicePricesTable extends Migration
             $table->increments('id');
             $table->integer('service_id');
             $table->string('price');
-            $table->date('date');
             $table->timestamps();
         });
     }

@@ -15,6 +15,7 @@ class CreateChannelsTable extends Migration
     {
         Schema::create('channels', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('type_id');
             $table->string('name');
             $table->string('code');
             $table->enum('status',['active', 'inactive']);
