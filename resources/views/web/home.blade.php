@@ -1,18 +1,103 @@
 @extends('layouts.web')
 @section('content')
-    <section>
-        <div class="container">
+    <section class="slider-channels">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane animated slideInLeft active" id="plan1"><h1 class="">slider Plan BASE</h1></div>
-                        <div role="tabpanel" class="tab-pane animated slideInLeft" id="plan2"><h1 class="">slider Plan FÚTBOL</h1></div>
-                        <div role="tabpanel" class="tab-pane animated slideInLeft" id="plan3"><h1 class="">slider Plan CINE</h1></div>
-                        <div role="tabpanel" class="tab-pane animated slideInLeft" id="plan4"><h1 class="">slider Plan TOTAL</h1></div>
+                        <div role="tabpanel" style="background: url('{{ url('/images') }}/plan1.jpg')" class="tab-pane active fade in" id="plan1">
+                            <div class="container animated slideInRight">
+                                <div class="col-lg-6">
+                                    <h1 class=""><span>Plan</span><br> BASE</h1>
+                                    <p>contratelo desde:</p>
+                                    <h1>$14.500</h1>
+                                    <p>*Incluye 1 decodificador <b>HD</b></p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2><span>153</span> Canales de TV.</h2>
+                                    <ul>
+                                        <li>10 Canales Nacionales Standar (SD)</li>
+                                        <li>80 Canales Standar (SD)</li>
+                                        <li>06 Canales Nacionales en Alta Definición (HD)</li>
+                                        <li>57 Canales Nacionales en Altas Definición (HD)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" style="background: url('{{ url('/images') }}/plan2.jpg')" class="tab-pane fade" id="plan2">
+                            <div class="container animated slideInLeft">
+                                <div class="col-lg-6">
+                                    <h1 class=""><span>Plan</span><br> FÚTBOL</h1>
+                                    <p>contratelo desde:</p>
+                                    <h1>$21.000</h1>
+                                    <p>*Incluye 1 decodificador <b>HD</b></p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2><span>160</span> Canales de TV.</h2>
+                                    <ul>
+                                        <li>10 Canales Nacionales Standar (SD)</li>
+                                        <li>80 Canales Standar (SD)</li>
+                                        <li>06 Canales Nacionales en Alta Definición (HD)</li>
+                                        <li>57 Canales Nacionales en Altas Definición (HD)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" style="background: url('{{ url('/images') }}/plan4.jpg')"  class="tab-pane fade" id="plan3">
+                            <div class="container animated slideInRight">
+                                <div class="col-lg-6">
+                                    <h1 class=""><span>Plan</span><br> CINE</h1>
+                                    <p>contratelo desde:</p>
+                                    <h1>$20.000</h1>
+                                    <p>*Incluye 1 decodificador <b>HD</b></p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2><span>175</span> Canales de TV.</h2>
+                                    <ul>
+                                        <li>10 Canales Nacionales Standar (SD)</li>
+                                        <li>80 Canales Standar (SD)</li>
+                                        <li>06 Canales Nacionales en Alta Definición (HD)</li>
+                                        <li>57 Canales Nacionales en Altas Definición (HD)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" style="background: url('{{ url('/images') }}/plan3.jpg')" class="tab-pane fade" id="plan4">
+                            <div class="container animated slideInLeft">
+                                <div class="col-lg-6">
+                                    <h1 class=""><span>Plan</span><br> TOTAL</h1>
+                                    <p>contratelo desde:</p>
+                                    <h1>$25.000</h1>
+                                    <p>*Incluye 1 decodificador <b>HD</b></p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2><span>182</span> Canales de TV.</h2>
+                                    <ul>
+                                        <li>10 Canales Nacionales Standar (SD)</li>
+                                        <li>80 Canales Standar (SD)</li>
+                                        <li>06 Canales Nacionales en Alta Definición (HD)</li>
+                                        <li>57 Canales Nacionales en Altas Definición (HD)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-            </div>
         </div>
     </section>
     <section class="section-plans-tv">
@@ -46,7 +131,7 @@
                         </div>
                         <div class="col-lg-4">
 
-                            <a class="btn btn-lg btn-default" style="background: #212121; color: #FFFFFF;margin-top: 130px" href="#" role="button">Consultar</a>
+                            <a class="btn btn-lg btn-default" style="background: #212121; color: #FFFFFF;margin-top: 130px" href="#" role="button" data-toggle="modal" data-target="#miraModal">Consultar</a>
                         </div>
 
                     </div>
@@ -60,14 +145,17 @@
                 <div class="col-lg-12">
                     <div class="col-lg-4">
                         <div class="panel panel-default">
-                            <div class="panel-body text-center" style="height: 348px">
-                                                        <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-term.svg')}}" alt="Generic placeholder " width="100" height="100">
-                                <p style="margin: 0">Conoce nuestros</p>
-                                <h3 style="margin: 0">Términos y Condiciones</h3>
-                            </div>
+                            <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
+                                <div class="panel-body text-center" style="height: 348px">
+                                    <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-term.svg')}}" alt="Generic placeholder " width="100" height="100">
+                                    <p style="margin: 0">Conoce nuestros</p>
+                                    <h3 style="margin: 0">Términos y Condiciones</h3>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
+                        <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
                         <div class="panel panel-default" style="height: 348px">
                             <div class="panel-body text-center">
                                                         <img style="margin: 40px;fill: #444444"  class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-pai.svg')}}" alt="Generic placeholder " width="100" height="100">
@@ -75,8 +163,10 @@
                                 <h3 style="margin: 0">Formas de pago</h3>
                             </div>
                         </div>
+                        </a>
                     </div>
                     <div class="col-lg-4">
+                        <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
                         <div class="panel panel-default" style="height: 348px">
                             <div class="panel-body text-center">
                                                         <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-help.svg')}}" alt="Generic placeholder " width="100" height="100">
@@ -84,6 +174,7 @@
                                 <h3 style="margin: 0">Sitio ayuda online</h3>
                             </div>
                         </div>
+                        </a>
                     </div>
                 </div>
             </div>

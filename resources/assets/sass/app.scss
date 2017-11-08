@@ -7,6 +7,9 @@
 @import "~font-awesome/scss/font-awesome.scss";
 
 body.web {
+  a{
+    color: #4CB686;
+  }
   width: 100%;
   height: 100%;
   html {
@@ -193,7 +196,7 @@ body.web {
         cursor: pointer;
         transition: 275ms ease;
         &:before{
-          transition: 275ms ease;
+          transition: 500ms ease;
         }
         span{
           font-size: 14px;
@@ -218,6 +221,19 @@ body.web {
 
         }
       }
+      &:before{
+        top:-50px;
+        transition: 275ms ease;
+        content: '\25b2';
+        position: absolute;
+        width: 0;
+        font-size: 30px;
+        height: 0;
+        align-content: center;
+        color: #FFFFFF;
+        opacity: 0;
+
+      }
       &:nth-of-type(1).active a{
         color: #52B1BF;
       }
@@ -240,7 +256,7 @@ body.web {
       }
       &:nth-of-type(2) a{
         &:after{
-          background-image: url("/images/icon-futbol.svg");
+          background-image: url("/images/icon-cine.svg");
         }
         &:hover, &:active, &:focus {
           color: #FFAD20;
@@ -248,7 +264,7 @@ body.web {
       }
       &:nth-of-type(3) a{
         &:after {
-          background-image: url("/images/icon-cine.svg");
+          background-image: url("/images/icon-futbol.svg");
         }
         &:hover, &:active, &:focus{
           color: #E91D62;
@@ -269,14 +285,8 @@ body.web {
 
 
         &:before{
-          content: '\25b2';
-          position: absolute;
-          top:-69px;
-          width: 0;
-          font-size: 30px;
-          height: 0;
-          align-content: center;
-          color: #FFFFFF;
+          opacity: 1;
+          top:-68px;
           transition: 275ms ease;
 
         }
@@ -291,7 +301,7 @@ body.web {
       }
       &:nth-of-type(2) a:hover:after, &:nth-of-type(2).active a:after {
         cursor: pointer;
-        background: url("/images/icon-futbol.svg"),#FFAD20;
+        background: url("/images/icon-cine.svg"),#FFAD20;
         background-size: 85px 85px,80px 80px;
         background-repeat: no-repeat,no-repeat;
         background-position: center center,center center;
@@ -300,7 +310,7 @@ body.web {
       }
       &:nth-of-type(3) a:hover:after, &:nth-of-type(3).active a:after {
         cursor: pointer;
-        background: url("/images/icon-cine.svg"),#E91D62;
+        background: url("/images/icon-futbol.svg"),#E91D62;
         background-size: 85px 85px,80px 80px;
         background-repeat: no-repeat,no-repeat;
         background-position: center center,center center;
@@ -318,6 +328,138 @@ body.web {
       }
     }
   }
+  .icon-plans{
+    float: left;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    &.icon-base{
+      cursor: pointer;
+      background: url("/images/icon-base.svg"),#52B1BF;
+      background-size: 70px 70px,80px 80px;
+      background-repeat: no-repeat,no-repeat;
+      background-position: center center,center center;
+    }
+    &.icon-cine{
+      cursor: pointer;
+      background: url("/images/icon-futbol.svg"),#E91D62;
+      background-size: 70px 70px,80px 80px;
+      background-repeat: no-repeat,no-repeat;
+      background-position: center center,center center;
+    }
+    &.icon-futbol{
+      cursor: pointer;
+      background: url("/images/icon-cine.svg"),#FFAD20;
+      background-size: 70px 70px,80px 80px;
+      background-repeat: no-repeat,no-repeat;
+      background-position: center center,center center;
+    }
+    &.icon-total{
+      cursor: pointer;
+      background: url("/images/icon-total.svg"),#4CB686;
+      background-size: 70px 70px,80px 80px;
+      background-repeat: no-repeat,no-repeat;
+      background-position: center center,center center;
+    }
 
+  }
+
+  .content-plan{
+    padding-top: 60px;
+    h1{
+      margin: 0;
+      font-size: 50px;
+      margin-left: 10px;
+      span{
+        font-size: 40px;
+        font-weight: 100;
+      }
+      font-weight: 800;
+    }
+    &.p-base{
+      h1{
+        color: #52B1BF;
+      }
+
+    }
+    &.p-cine{
+      h1{
+        color: #E91D62;
+      }
+    }
+    &.p-futbol{
+      h1{
+        color: #FFAD20;
+      }
+    }
+    &.p-total{
+      h1{
+        color: #4CB686;
+      }
+    }
+  }
+
+
+  .slider-channels{
+    padding: 0;
+    height: 100%;
+  .tab-content{
+    width: 100%;
+    height:100%;
+    .tab-pane{
+      padding-top: 50px;
+      height: 350px;
+      background-size: cover !important;
+      .container{
+        width: 555px;
+        color: #f9f9f9;
+        h1{
+          margin:0;
+          span{
+            font-weight: 100;
+          }
+          font-weight: 800;
+        }
+        h2{
+          font-size: 16px;
+          span{
+            font-size: 30px !important;
+          }
+        }
+        p,li{
+          font-size: 10px;
+        }
+        .col-lg-6{
+          padding: 0;
+        }
+      }
+      &:nth-of-type(even){
+        background-position: right !important;
+        .container{
+          margin-right: 650px;
+        }
+      }
+      &:nth-of-type(odd){
+        background-position: left !important;
+        .container{
+          margin-left: 650px;
+        }
+      }
+    }
+
+  }
+  }
+  #rrss{
+    i{
+      text-align: center;
+      line-height: 27px;
+      color: #1F2021;
+      width: 25px;
+      border-radius: 50%;
+      height: 25px;
+      background: rgba(204, 204, 204, 0.29);
+      margin: 5px;
+    }
+  }
 }
 

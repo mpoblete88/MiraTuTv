@@ -4,7 +4,7 @@
         <div class="container" >
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h4 class="">Centro de ayuda <a href="#">Mas Informacion</a></h4>
+                    <h4 class=""><img  style="margin-right: 10px;fill: #444444" class="" src="{{url('/images/icon-help.svg')}}" alt="Generic placeholder " width="50" height="50"> Centro de ayuda <a href="#" data-toggle="modal" data-target="#miraModal">Mas Informacion</a></h4>
                 </div>
             </div>
         </div>
@@ -57,32 +57,42 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
                     <div class="col-lg-4">
                         <div class="panel panel-default">
-                            <div class="panel-body text-center" style="height: 348px">
-                                <img  style="margin: 40px" class="rounded mx-auto d-block img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="160" height="160">
-                                <p style="margin: 0">Conoce nuestros</p>
-                                <h3 style="margin: 0">Términos y Condiciones</h3>
-                            </div>
+                            <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
+                                <div class="panel-body text-center" style="height: 348px">
+                                    <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-term.svg')}}" alt="Generic placeholder " width="100" height="100">
+                                    <p style="margin: 0">Conoce nuestros</p>
+                                    <h3 style="margin: 0">Términos y Condiciones</h3>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="panel panel-default" style="height: 348px">
-                            <div class="panel-body text-center">
-                                <img style="margin: 40px"  class="rounded mx-auto d-block img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="160" height="160">
-                                <p style="margin: 0">Conoce nuestras</p>
-                                <h3 style="margin: 0">Formas de pago</h3>
+                        <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
+                            <div class="panel panel-default" style="height: 348px">
+                                <div class="panel-body text-center">
+                                    <img style="margin: 40px;fill: #444444"  class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-pai.svg')}}" alt="Generic placeholder " width="100" height="100">
+                                    <p style="margin: 0">Conoce nuestras</p>
+                                    <h3 style="margin: 0">Formas de pago</h3>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-4">
-                        <div class="panel panel-default" style="height: 348px">
-                            <div class="panel-body text-center">
-                                <img  style="margin: 40px" class="rounded mx-auto d-block img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="160" height="160">
-                                <p style="margin: 0">Ayuda con equipo o servicio</p>
-                                <h3 style="margin: 0">Sitio ayuda online</h3>
+                        <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
+                            <div class="panel panel-default" style="height: 348px">
+                                <div class="panel-body text-center">
+                                    <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-help.svg')}}" alt="Generic placeholder " width="100" height="100">
+                                    <p style="margin: 0">Ayuda con equipo o servicio</p>
+                                    <h3 style="margin: 0">Sitio ayuda online</h3>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

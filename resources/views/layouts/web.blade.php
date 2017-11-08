@@ -42,7 +42,7 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll @if(url()->current() == url('/')) active @endif" href="{{ url('/') }}">Home</a>
+                        <a class="page-scroll @if(url()->current() == url('/')) active @endif" href="{{ url('/') }}">Inicio</a>
                     </li>
                     <li>
                         <a class="page-scroll @if(url()->current() == url('/plans')) active @endif" href="{{ url('/plans') }}">Planes TV</a>
@@ -173,13 +173,32 @@
             <h6> © Copyright 2017 MIRATUTV - Todos los derechos reservados</h6>
         </div>
 
-        <div id="rrss" class="col-md-6 pull-right">
+        <div id="rrss" class="col-md-6 pull-right text-right">
             <br>
-            <h4>Facebook | Twitter | Ubicacion</h4>
+            <h4><i class="fa fa-facebook"></i> <i class="fa fa-twitter"></i> <i class="fa fa-map-marker "></i></h4>
         </div>
     </div>
 </footer>
+    <!-- Modal -->
+    <div id="miraModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
