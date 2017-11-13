@@ -15,6 +15,11 @@ class CreateDecodersTable extends Migration
     {
         Schema::create('decoders', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('plan_id');
+            $table->string('name');
+            $table->string('code');
+            $table->string('serial_number');
+            $table->enum('status',['active', 'inactive']);
             $table->timestamps();
         });
     }
