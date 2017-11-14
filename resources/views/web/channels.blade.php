@@ -1,7 +1,24 @@
+@if(url()->current() == url('/plan/1/channels'))
 <div class="modal-header" style="background: #4AA2B2; color: white">
     <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
     <h1 class=""><span>Plan</span><br> <b>BASE</b></h1>
 </div>
+@elseif(url()->current() == url('/plan/2/channels'))
+    <div class="modal-header" style="background: #FA9A05; color: white">
+        <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
+        <h1 class=""><span>Plan</span><br> <b>FÚTBOL</b></h1>
+    </div>
+@elseif(url()->current() == url('/plan/3/channels'))
+    <div class="modal-header" style="background: #CB3D6F; color: white">
+        <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
+        <h1 class=""><span>Plan</span><br> <b>CINE</b></h1>
+    </div>
+@elseif(url()->current() == url('/plan/4/channels'))
+    <div class="modal-header" style="background: #47AA71; color: white">
+        <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
+        <h1 class=""><span>Plan</span><br> <b>TOTAL</b></h1>
+    </div>
+@endif
 <div class="modal-body">
     <div class="row">
         <div class="col-lg-12">
