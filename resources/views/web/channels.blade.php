@@ -1,4 +1,4 @@
-<div class="modal-header" style="background: #4AA2B2; color: white ">
+<div class="modal-header" style="background: #4AA2B2; color: white">
     <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
     <h1 class=""><span>Plan</span><br> <b>BASE</b></h1>
 </div>
@@ -8,8 +8,8 @@
             <div class="col-lg-5">
                 <ul class="tabs-plans" role="tablist">
                     <li class="active">
-                        <a href="#all" role="tab" data-toggle="tab">
-                        Todos</a>
+                        <a href="#c-all" role="tab" data-toggle="tab">
+                        Todos 153</a>{{--Active al tabs--}}
                     </li>
                     <li>
                         <a href="#c1" role="tab" data-toggle="tab">
@@ -55,7 +55,118 @@
                 </ul>
             </div>
             <div class="col-lg-7">
-                <h1>Plan X Canales</h1>
+                <div class="tab-content" style="float:left;background: #cccccc; width: 100%; height: 400px; overflow: scroll; border-radius:5px; padding: 10px">
+                    <div role="tabpanel"  class="tab-pane active fade in" id="c-all">
+                        <p>Todos</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 153; $i++)
+                            <li style="float: left">
+                                <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                            </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c1">
+                        <p>Culturales</p>
+                        <ul style="list-style: none; padding: 0">
+                        @for ($i = 0; $i < 7; $i++)
+                            <li style="float: left">
+                                <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                            </li>
+                        @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c2">
+                        <p>Deportes</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 7; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c3">
+                        <p>Internacionales</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 8; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c4">
+                        <p>Infantiles</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 10; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c5">
+                        <p>Música</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 5; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c6">
+                        <p>Nacionales</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 10; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c7">
+                        <p>Nacionales HD</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 6; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c8">
+                        <p>Noticias</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 5; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c9">
+                        <p>Peliculas y series</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 29; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                    <div role="tabpanel"  class="tab-pane fade in" id="c10">
+                        <p>listado de señales</p>
+                        <ul style="list-style: none; padding: 0">
+                            @for ($i = 0; $i < 7; $i++)
+                                <li style="float: left">
+                                    <img src="/images/logo/logo_fondo_blanco.png" width="80px" alt="" style="border: 1px solid #000000">
+                                </li>
+                            @endfor
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
