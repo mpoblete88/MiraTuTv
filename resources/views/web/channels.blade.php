@@ -5,7 +5,7 @@
 <div class="modal-body">
     <div class="row">
         <div class="col-lg-12">
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                 <ul class="tabs-plans" role="tablist">
                     <li class="active">
                         <a href="#c-all" role="tab" data-toggle="tab">
@@ -54,8 +54,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-7">
-                <div class="tab-content" style="float:left;background: #cccccc; width: 100%; height: 400px; overflow: scroll; border-radius:5px; padding: 10px">
+            <div class="col-lg-8">
+                <div class="tab-content" style="float:left;background: #f9f9f9; width: 100%; height: 400px; overflow: scroll; border-radius:5px; padding: 10px">
                     <div role="tabpanel"  class="tab-pane active fade in" id="c-all">
                         <p>Todos</p>
                         <ul style="list-style: none; padding: 0">

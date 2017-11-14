@@ -11938,3 +11938,32 @@ body.web #rrss i {
   margin: 5px;
 }
 
+body.web .tabs-plans {
+  list-style: none;
+  padding: 0;
+}
+
+body.web .tabs-plans a {
+  color: #4aa2b2;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-transition: 275ms ease;
+  transition: 275ms ease;
+}
+
+body.web .tabs-plans .active {
+  background: #4aa2b2;
+  border-radius: 20px;
+  -webkit-transition: 275ms ease;
+  transition: 275ms ease;
+}
+
+body.web .tabs-plans .active a {
+  -webkit-transition: 275ms ease;
+  transition: 275ms ease;
+  color: whitesmoke;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
