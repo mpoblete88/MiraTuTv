@@ -461,5 +461,26 @@ body.web {
       margin: 5px;
     }
   }
+  .tabs-plans{
+    list-style: none;
+    padding: 0;
+    a{ color: #4aa2b2;
+    text-decoration:none;
+      padding-left: 10px;
+      padding-right: 10px;
+      transition: 275ms ease;
+    }
+    .active{
+      background: #4aa2b2;
+      border-radius: 20px;
+      transition: 275ms ease;
+      a{
+        transition: 275ms ease;
+        color: whitesmoke;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
 }
 

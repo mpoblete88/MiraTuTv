@@ -17,6 +17,12 @@ Route::get('/', function () {
 Route::get('/plans', function () {
     return view('web.plans');
 });
+Route::get('/plan/{id}/channels', function () {
+    return view('web.channels');
+});
+Route::get('/plan/{id}/hire', function () {
+    return view('web.hire');
+});
 Route::get('/help-center', function () {
     return view('web.help_center');
 });
