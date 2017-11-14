@@ -22,8 +22,8 @@
                                     </ul>
                                 </div>
                                 <div class="col-lg-12">
-                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/1/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
-                                    <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/1/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="{{url('/plan/1/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
                                 </div>
                             </div>
                         </div>
