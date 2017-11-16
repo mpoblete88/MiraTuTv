@@ -1,18 +1,9 @@
-@extends('layouts.web')
-@section('content')
     <section style="min-height: 100px !important;">
-        <div class="container" >
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h4 class=""><img  style="margin-right: 10px;fill: #444444" class="" src="{{url('/images/icon-help.svg')}}" alt="Generic placeholder " width="50" height="50"> Centro de ayuda </h4>
+                <div class="text-center">
+                    <h4 class=""><img  style="margin-right: 10px;fill: #444444" class="" src="{{url('/images/icon-help.svg')}}" alt="Generic placeholder " width="50" height="50"> Formas de Pago</h4>
                 </div>
-            </div>
-        </div>
     </section>
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">
@@ -57,45 +48,4 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="col-lg-4">
-                        <div class="panel panel-default">
-                            <a href="{{url('/terminos-modal')}}" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
-                                <div class="panel-body text-center" style="height: 348px">
-                                    <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-term.svg')}}" alt="Generic placeholder " width="100" height="100">
-                                    <p style="margin: 0">Conoce nuestros</p>
-                                    <h3 style="margin: 0">Términos y Condiciones</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <a href="{{url('/formas-pago-modal')}}" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
-                            <div class="panel panel-default" style="height: 348px">
-                                <div class="panel-body text-center">
-                                    <img style="margin: 40px;fill: #444444"  class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-pai.svg')}}" alt="Generic placeholder " width="100" height="100">
-                                    <p style="margin: 0">Conoce nuestras</p>
-                                    <h3 style="margin: 0">Formas de pago</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4">
-                        <a  href="{{url('/help-center-modal')}}" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
-                            <div class="panel panel-default" style="height: 348px">
-                                <div class="panel-body text-center">
-                                    <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-help.svg')}}" alt="Generic placeholder " width="100" height="100">
-                                    <p style="margin: 0">Ayuda con equipo o servicio</p>
-                                    <h3 style="margin: 0">Sitio ayuda online</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
-@endsection

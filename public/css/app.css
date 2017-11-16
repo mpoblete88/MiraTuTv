@@ -11757,36 +11757,36 @@ body.web .plans-tv li:nth-of-type(1) a:hover:after,
 body.web .plans-tv li:nth-of-type(1).active a:after {
   cursor: pointer;
   background: url("/images/icon-base.svg"), #52B1BF;
-  background-size: 85px 85px,80px 80px;
-  background-repeat: no-repeat,no-repeat;
-  background-position: center center,center center;
+  background-size: 85px 85px, 80px 80px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
 }
 
 body.web .plans-tv li:nth-of-type(2) a:hover:after,
 body.web .plans-tv li:nth-of-type(2).active a:after {
   cursor: pointer;
   background: url("/images/icon-cine.svg"), #FFAD20;
-  background-size: 85px 85px,80px 80px;
-  background-repeat: no-repeat,no-repeat;
-  background-position: center center,center center;
+  background-size: 85px 85px, 80px 80px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
 }
 
 body.web .plans-tv li:nth-of-type(3) a:hover:after,
 body.web .plans-tv li:nth-of-type(3).active a:after {
   cursor: pointer;
   background: url("/images/icon-futbol.svg"), #E91D62;
-  background-size: 85px 85px,80px 80px;
-  background-repeat: no-repeat,no-repeat;
-  background-position: center center,center center;
+  background-size: 85px 85px, 80px 80px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
 }
 
 body.web .plans-tv li:nth-of-type(4) a:hover:after,
 body.web .plans-tv li:nth-of-type(4).active a:after {
   cursor: pointer;
   background: url("/images/icon-total.svg"), #4CB686;
-  background-size: 85px 85px,80px 80px;
-  background-repeat: no-repeat,no-repeat;
-  background-position: center center,center center;
+  background-size: 85px 85px, 80px 80px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
 }
 
 body.web .icon-plans {
@@ -11799,33 +11799,33 @@ body.web .icon-plans {
 body.web .icon-plans.icon-base {
   cursor: pointer;
   background: url("/images/icon-base.svg"), #52B1BF;
-  background-size: 70px 70px,80px 80px;
-  background-repeat: no-repeat,no-repeat;
-  background-position: center center,center center;
+  background-size: 70px 70px, 80px 80px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
 }
 
 body.web .icon-plans.icon-cine {
   cursor: pointer;
   background: url("/images/icon-futbol.svg"), #E91D62;
-  background-size: 70px 70px,80px 80px;
-  background-repeat: no-repeat,no-repeat;
-  background-position: center center,center center;
+  background-size: 70px 70px, 80px 80px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
 }
 
 body.web .icon-plans.icon-futbol {
   cursor: pointer;
   background: url("/images/icon-cine.svg"), #FFAD20;
-  background-size: 70px 70px,80px 80px;
-  background-repeat: no-repeat,no-repeat;
-  background-position: center center,center center;
+  background-size: 70px 70px, 80px 80px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
 }
 
 body.web .icon-plans.icon-total {
   cursor: pointer;
   background: url("/images/icon-total.svg"), #4CB686;
-  background-size: 70px 70px,80px 80px;
-  background-repeat: no-repeat,no-repeat;
-  background-position: center center,center center;
+  background-size: 70px 70px, 80px 80px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
 }
 
 body.web .content-plan {
@@ -11834,13 +11834,13 @@ body.web .content-plan {
 
 body.web .content-plan h1 {
   margin: 0;
-  font-size: 50px;
+  font-size: 40px;
   margin-left: 10px;
   font-weight: 800;
 }
 
 body.web .content-plan h1 span {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 100;
 }
 
@@ -11942,17 +11942,42 @@ body.web .tabs-plans {
 body.web .tabs-plans a {
   color: #4aa2b2;
   text-decoration: none;
-  padding-left: 10px;
-  padding-right: 10px;
   -webkit-transition: 275ms ease;
   transition: 275ms ease;
 }
 
+body.web .tabs-plans.p-base .active {
+  background: #52B1BF;
+}
+
+body.web .tabs-plans.p-cine .active {
+  background: #E91D62;
+}
+
+body.web .tabs-plans.p-futbol .active {
+  background: #FFAD20;
+}
+
+body.web .tabs-plans.p-total .active {
+  background: #4CB686;
+}
+
 body.web .tabs-plans .active {
-  background: #4aa2b2;
+  padding-left: 10px;
+  padding-right: 10px;
   border-radius: 20px;
   -webkit-transition: 275ms ease;
   transition: 275ms ease;
+}
+
+body.web .tabs-plans .active:after {
+  color: white;
+  content: "\F105";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 body.web .tabs-plans .active a {
