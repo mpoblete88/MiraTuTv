@@ -145,7 +145,7 @@
                 <div class="col-lg-12">
                     <div class="col-lg-4">
                         <div class="panel panel-default">
-                            <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
+                            <a href="{{url('/terminos-modal')}}" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
                                 <div class="panel-body text-center" style="height: 348px">
                                     <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-term.svg')}}" alt="Generic placeholder " width="100" height="100">
                                     <p style="margin: 0">Conoce nuestros</p>
@@ -155,7 +155,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
+                        <a href="{{url('/formas-pago-modal')}}" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
                         <div class="panel panel-default" style="height: 348px">
                             <div class="panel-body text-center">
                                                         <img style="margin: 40px;fill: #444444"  class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-pai.svg')}}" alt="Generic placeholder " width="100" height="100">
@@ -166,7 +166,7 @@
                         </a>
                     </div>
                     <div class="col-lg-4">
-                        <a href="#" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
+                        <a href="{{url('/help-center-modal')}}" style="color: #444444; text-decoration: none; " data-toggle="modal" role="button"  data-target="#miraModal">
                         <div class="panel panel-default" style="height: 348px">
                             <div class="panel-body text-center">
                                                         <img  style="margin: 40px;fill: #444444" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-help.svg')}}" alt="Generic placeholder " width="100" height="100">

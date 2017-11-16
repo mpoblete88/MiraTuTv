@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h4 class=""><img  style="fill: #444444; margin-right: 20px" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-term.svg')}}" alt="Generic placeholder " width="50" height="50"> TODOS LOS PLANES Incluyen 1 decodificador <b>HD</b> <a href="#" data-toggle="modal" data-target="#miraModal">Mas Informacion</a></h4>
+                    <h4 class=""><img  style="fill: #444444; margin-right: 20px" class="rounded mx-auto d-block hvr-icon-float" src="{{url('/images/icon-term.svg')}}" alt="Generic placeholder " width="50" height="50"> TODOS LOS PLANES Incluyen 1 decodificador <b>HD</b> <a href="{{url('/info-decos-hd-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a></h4>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
                             <li>06 Canales Nacionales en Alta Definición (HD)</li>
                             <li>57 Canales Nacionales en Altas Definición (HD)</li>
                         </ul>
-                        <a class="btn btn-default" style="background: transparent;color:#52B1BF; border-color:#52B1BF " href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                        <a class="btn btn-default" style="background: transparent;color:#52B1BF; border-color:#52B1BF " href="{{url('/plan/1/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
                     </div>
                     <div class="col-lg-4" style="border-left: 2px solid #444444; padding-left: 50px">
                         <p>contratelo desde:</p>
@@ -34,7 +34,7 @@
                         <p>*Incluye 1 decodificador <b>HD</b></p>
                         <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
-                        <a href="#" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
+                        <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                             <li>06 Canales Nacionales en Alta Definición (HD)</li>
                             <li>57 Canales Nacionales en Altas Definición (HD)</li>
                         </ul>
-                        <a class="btn btn-default" style="background: transparent;color:#FFAD20; border-color:#FFAD20 " href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                        <a class="btn btn-default" style="background: transparent;color:#FFAD20; border-color:#FFAD20 " href="{{url('/plan/2/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
                     </div>
                     <div class="col-lg-4" style="border-left: 2px solid #444444; padding-left: 50px">
                         <p>contratelo desde:</p>
@@ -65,7 +65,7 @@
                         <p>*Incluye 1 decodificador <b>HD</b></p>
                         <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
-                        <a href="#" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
+                        <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
 
                 </div>
@@ -89,7 +89,7 @@
                             <li>06 Canales Nacionales en Alta Definición (HD)</li>
                             <li>57 Canales Nacionales en Altas Definición (HD)</li>
                         </ul>
-                        <a class="btn btn-default" style="background: transparent;color:#E91D62; border-color:#E91D62 " href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                        <a class="btn btn-default" style="background: transparent;color:#E91D62; border-color:#E91D62 " href="{{url('/plan/3/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
 
                     </div>
                     <div class="col-lg-4" style="border-left: 2px solid #444444; padding-left: 50px">
@@ -98,7 +98,7 @@
                         <p>*Incluye 1 decodificador <b>HD</b></p>
                         <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
-                        <a href="#" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
+                        <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
 
                 </div>
@@ -122,7 +122,7 @@
                             <li>06 Canales Nacionales en Alta Definición (HD)</li>
                             <li>57 Canales Nacionales en Altas Definición (HD)</li>
                         </ul>
-                        <a class="btn btn-default" style="background: transparent;color:#47AA71; border-color:#47AA71 " href="#" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
+                        <a class="btn btn-default" style="background: transparent;color:#47AA71; border-color:#47AA71 " href="{{url('/plan/4/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
                     </div>
                     <div class="col-lg-4" style="border-left: 2px solid #444444; padding-left: 50px">
                         <p>contratelo desde:</p>
@@ -130,7 +130,7 @@
                         <p>*Incluye 1 decodificador <b>HD</b></p>
                         <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
-                        <a href="#" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
+                        <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
 
                 </div>

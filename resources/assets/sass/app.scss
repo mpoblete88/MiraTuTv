@@ -7,7 +7,7 @@
 @import "~font-awesome/scss/font-awesome.scss";
 
 body.web {
-  a{
+  a {
     color: #4CB686;
   }
   width: 100%;
@@ -177,7 +177,7 @@ body.web {
     }
   }
   //home section plans
-  .section-plans-tv{
+  .section-plans-tv {
     min-height: 200px;
   }
   .plans-tv {
@@ -195,10 +195,10 @@ body.web {
         font-size: 18px;
         cursor: pointer;
         transition: 275ms ease;
-        &:before{
+        &:before {
           transition: 500ms ease;
         }
-        span{
+        span {
           font-size: 14px;
         }
         &:hover, &:active, &:focus {
@@ -221,8 +221,8 @@ body.web {
 
         }
       }
-      &:before{
-        top:-50px;
+      &:before {
+        top: -50px;
         transition: 275ms ease;
         content: '\25b2';
         position: absolute;
@@ -234,59 +234,58 @@ body.web {
         opacity: 0;
 
       }
-      &:nth-of-type(1).active a{
+      &:nth-of-type(1).active a {
         color: #52B1BF;
       }
-      &:nth-of-type(2).active a{
+      &:nth-of-type(2).active a {
         color: #FFAD20;
       }
-      &:nth-of-type(3).active a{
+      &:nth-of-type(3).active a {
         color: #E91D62;
       }
-      &:nth-of-type(4).active a{
+      &:nth-of-type(4).active a {
         color: #4CB686;
       }
-      &:nth-of-type(1) a{
-        &:after{
-          background-image: url("/images/icon-base.svg") ;
+      &:nth-of-type(1) a {
+        &:after {
+          background-image: url("/images/icon-base.svg");
         }
-        &:hover, &:active, &:focus{
+        &:hover, &:active, &:focus {
           color: #52B1BF;
         }
       }
-      &:nth-of-type(2) a{
-        &:after{
+      &:nth-of-type(2) a {
+        &:after {
           background-image: url("/images/icon-cine.svg");
         }
         &:hover, &:active, &:focus {
           color: #FFAD20;
         }
       }
-      &:nth-of-type(3) a{
+      &:nth-of-type(3) a {
         &:after {
           background-image: url("/images/icon-futbol.svg");
         }
-        &:hover, &:active, &:focus{
+        &:hover, &:active, &:focus {
           color: #E91D62;
         }
       }
-      &:nth-of-type(4) a{
+      &:nth-of-type(4) a {
         &:after {
-         background-image: url("/images/icon-total.svg");
+          background-image: url("/images/icon-total.svg");
         }
-        &:hover, &:active, &:focus{
+        &:hover, &:active, &:focus {
           color: #4CB686;
         }
       }
-      &.active{
+      &.active {
         text-decoration: none;
         font-weight: 900;
         transition: 275ms ease;
 
-
-        &:before{
+        &:before {
           opacity: 1;
-          top:-68px;
+          top: -68px;
           transition: 275ms ease;
 
         }
@@ -294,163 +293,159 @@ body.web {
       &:nth-of-type(1) a:hover:after, &:nth-of-type(1).active a:after {
         cursor: pointer;
 
-        background: url("/images/icon-base.svg"),#52B1BF;
-        background-size: 85px 85px,80px 80px;
-        background-repeat: no-repeat,no-repeat;
-        background-position: center center,center center;
+        background: url("/images/icon-base.svg"), #52B1BF;
+        background-size: 85px 85px, 80px 80px;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center, center center;
       }
       &:nth-of-type(2) a:hover:after, &:nth-of-type(2).active a:after {
         cursor: pointer;
-        background: url("/images/icon-cine.svg"),#FFAD20;
-        background-size: 85px 85px,80px 80px;
-        background-repeat: no-repeat,no-repeat;
-        background-position: center center,center center;
-
+        background: url("/images/icon-cine.svg"), #FFAD20;
+        background-size: 85px 85px, 80px 80px;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center, center center;
 
       }
       &:nth-of-type(3) a:hover:after, &:nth-of-type(3).active a:after {
         cursor: pointer;
-        background: url("/images/icon-futbol.svg"),#E91D62;
-        background-size: 85px 85px,80px 80px;
-        background-repeat: no-repeat,no-repeat;
-        background-position: center center,center center;
-
+        background: url("/images/icon-futbol.svg"), #E91D62;
+        background-size: 85px 85px, 80px 80px;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center, center center;
 
       }
       &:nth-of-type(4) a:hover:after, &:nth-of-type(4).active a:after {
         cursor: pointer;
-        background: url("/images/icon-total.svg"),#4CB686;
-        background-size: 85px 85px,80px 80px;
-        background-repeat: no-repeat,no-repeat;
-        background-position: center center,center center;
-
+        background: url("/images/icon-total.svg"), #4CB686;
+        background-size: 85px 85px, 80px 80px;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center, center center;
 
       }
     }
   }
-  .icon-plans{
+  .icon-plans {
     float: left;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    &.icon-base{
+    &.icon-base {
       cursor: pointer;
-      background: url("/images/icon-base.svg"),#52B1BF;
-      background-size: 70px 70px,80px 80px;
-      background-repeat: no-repeat,no-repeat;
-      background-position: center center,center center;
+      background: url("/images/icon-base.svg"), #52B1BF;
+      background-size: 70px 70px, 80px 80px;
+      background-repeat: no-repeat, no-repeat;
+      background-position: center center, center center;
     }
-    &.icon-cine{
+    &.icon-cine {
       cursor: pointer;
-      background: url("/images/icon-futbol.svg"),#E91D62;
-      background-size: 70px 70px,80px 80px;
-      background-repeat: no-repeat,no-repeat;
-      background-position: center center,center center;
+      background: url("/images/icon-futbol.svg"), #E91D62;
+      background-size: 70px 70px, 80px 80px;
+      background-repeat: no-repeat, no-repeat;
+      background-position: center center, center center;
     }
-    &.icon-futbol{
+    &.icon-futbol {
       cursor: pointer;
-      background: url("/images/icon-cine.svg"),#FFAD20;
-      background-size: 70px 70px,80px 80px;
-      background-repeat: no-repeat,no-repeat;
-      background-position: center center,center center;
+      background: url("/images/icon-cine.svg"), #FFAD20;
+      background-size: 70px 70px, 80px 80px;
+      background-repeat: no-repeat, no-repeat;
+      background-position: center center, center center;
     }
-    &.icon-total{
+    &.icon-total {
       cursor: pointer;
-      background: url("/images/icon-total.svg"),#4CB686;
-      background-size: 70px 70px,80px 80px;
-      background-repeat: no-repeat,no-repeat;
-      background-position: center center,center center;
+      background: url("/images/icon-total.svg"), #4CB686;
+      background-size: 70px 70px, 80px 80px;
+      background-repeat: no-repeat, no-repeat;
+      background-position: center center, center center;
     }
 
   }
 
-  .content-plan{
+  .content-plan {
     padding-top: 60px;
-    h1{
+    h1 {
       margin: 0;
       font-size: 50px;
       margin-left: 10px;
-      span{
+      span {
         font-size: 40px;
         font-weight: 100;
       }
       font-weight: 800;
     }
-    &.p-base{
-      h1{
+    &.p-base {
+      h1 {
         color: #52B1BF;
       }
 
     }
-    &.p-cine{
-      h1{
+    &.p-cine {
+      h1 {
         color: #E91D62;
       }
     }
-    &.p-futbol{
-      h1{
+    &.p-futbol {
+      h1 {
         color: #FFAD20;
       }
     }
-    &.p-total{
-      h1{
+    &.p-total {
+      h1 {
         color: #4CB686;
       }
     }
   }
 
-
-  .slider-channels{
+  .slider-channels {
     padding: 0;
     height: 100%;
-  .tab-content{
-    width: 100%;
-    height:100%;
-    .tab-pane{
-      padding-top: 50px;
-      height: 350px;
-      background-size: cover !important;
-      .container{
-        width: 555px;
-        color: #f9f9f9;
-        h1{
-          margin:0;
-          span{
-            font-weight: 100;
+    .tab-content {
+      width: 100%;
+      height: 100%;
+      .tab-pane {
+        padding-top: 50px;
+        height: 350px;
+        background-size: cover !important;
+        .container {
+          width: 555px;
+          color: #f9f9f9;
+          h1 {
+            margin: 0;
+            span {
+              font-weight: 100;
+            }
+            font-weight: 800;
           }
-          font-weight: 800;
-        }
-        h2{
-          font-size: 16px;
-          span{
-            font-size: 30px !important;
+          h2 {
+            font-size: 16px;
+            span {
+              font-size: 30px !important;
+            }
+          }
+          p, li {
+            font-size: 10px;
+          }
+          .col-lg-6 {
+            padding: 0;
           }
         }
-        p,li{
-          font-size: 10px;
+        &:nth-of-type(even) {
+          background-position: right !important;
+          .container {
+            margin-right: 650px;
+          }
         }
-        .col-lg-6{
-          padding: 0;
-        }
-      }
-      &:nth-of-type(even){
-        background-position: right !important;
-        .container{
-          margin-right: 650px;
-        }
-      }
-      &:nth-of-type(odd){
-        background-position: left !important;
-        .container{
-          margin-left: 650px;
+        &:nth-of-type(odd) {
+          background-position: left !important;
+          .container {
+            margin-left: 650px;
+          }
         }
       }
-    }
 
+    }
   }
-  }
-  #rrss{
-    i{
+  #rrss {
+    i {
       text-align: center;
       line-height: 27px;
       color: #1F2021;
@@ -461,20 +456,44 @@ body.web {
       margin: 5px;
     }
   }
-  .tabs-plans{
+  .tabs-plans {
     list-style: none;
     padding: 0;
-    a{ color: #4aa2b2;
-    text-decoration:none;
-      padding-left: 10px;
-      padding-right: 10px;
+    a {
+      color: #4aa2b2;
+      text-decoration: none;
+
       transition: 275ms ease;
     }
-    .active{
-      background: #4aa2b2;
+    &.p-base .active{
+      background: #52B1BF;
+
+    }
+    &.p-cine .active{
+      background: #E91D62;
+    }
+    &.p-futbol .active{
+      background: #FFAD20;
+    }
+    &.p-total .active{
+      background: #4CB686;
+    }
+    .active {
+      padding-left: 10px;
+      padding-right: 10px;
+      //background: #747474;
       border-radius: 20px;
       transition: 275ms ease;
-      a{
+      &:after{
+        color: white;
+        content: "\f105";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
         transition: 275ms ease;
         color: whitesmoke;
         padding-left: 10px;

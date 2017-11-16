@@ -26,6 +26,21 @@ Route::get('/plan/{id}/hire', function () {
 Route::get('/help-center', function () {
     return view('web.help_center');
 });
+Route::get('/help-center-modal', function () {
+    return view('web.help_center_modal');
+});
+Route::get('/formas-pago-modal', function () {
+    return view('web.formas_pago_modal');
+});
+Route::get('/terminos-modal', function () {
+    return view('web.terminos_modal');
+});
+Route::get('/info-decos-hd-modal', function () {
+    return view('web.info_decos_hd');
+});
+Route::get('/info-plan-modal', function () {
+    return view('web.info_plan_modal');
+});
     Auth::routes();
 
 

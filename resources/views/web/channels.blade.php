@@ -2,33 +2,45 @@
 <div class="modal-header" style="background: #4AA2B2; color: white">
     <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
     <h1 class=""><span>Plan</span><br> <b>BASE</b></h1>
+    <?php
+        $varBcolor = 'p-base';
+    ?>
 </div>
 @elseif(url()->current() == url('/plan/2/channels'))
     <div class="modal-header" style="background: #FA9A05; color: white">
         <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
         <h1 class=""><span>Plan</span><br> <b>FÚTBOL</b></h1>
     </div>
+    <?php
+    $varBcolor = 'p-futbol';
+    ?>
 @elseif(url()->current() == url('/plan/3/channels'))
     <div class="modal-header" style="background: #CB3D6F; color: white">
         <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
         <h1 class=""><span>Plan</span><br> <b>CINE</b></h1>
     </div>
+    <?php
+    $varBcolor = 'p-cine';
+    ?>
 @elseif(url()->current() == url('/plan/4/channels'))
     <div class="modal-header" style="background: #47AA71; color: white">
         <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
         <h1 class=""><span>Plan</span><br> <b>TOTAL</b></h1>
     </div>
+    <?php
+    $varBcolor = 'p-total';
+    ?>
 @endif
 <div class="modal-body">
     <div class="row">
         <div class="col-lg-12">
             <div class="col-lg-4">
-                <ul class="tabs-plans" role="tablist">
+                <ul class="tabs-plans {{$varBcolor}}" role="tablist">
                     <li class="active">
                         <a href="#c-all" role="tab" data-toggle="tab">
-                        Todos 153</a>{{--Active al tabs--}}
+                        Todos 153 </a>{{--Active al tabs--}}
                     </li>
-                    <li>
+                    <li >
                         <a href="#c1" role="tab" data-toggle="tab">
                             Culturales 7</a>
 
