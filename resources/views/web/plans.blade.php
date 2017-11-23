@@ -43,7 +43,7 @@
                         <p>contratelo desde:</p>
                         <h1>$14.500</h1>
                         <p>*Incluye 1 decodificador <b>HD</b></p>
-                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/1/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
@@ -85,7 +85,7 @@
                         <p>contratelo desde:</p>
                         <h1>$21.000</h1>
                         <p>*Incluye 1 decodificador <b>HD</b></p>
-                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/2/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
@@ -129,7 +129,7 @@
                         <p>contratelo desde:</p>
                         <h1>$20.000</h1>
                         <p>*Incluye 1 decodificador <b>HD</b></p>
-                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/3/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
@@ -172,7 +172,7 @@
                         <p>contratelo desde:</p>
                         <h1>$25.000</h1>
                         <p>*Incluye 1 decodificador <b>HD</b></p>
-                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/4/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
