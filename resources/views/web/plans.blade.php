@@ -33,17 +33,25 @@
                         <ul>
                             <li>INCLUYE 1 Decodificador</li>
                         </ul>
-                        <span class="label pull-left" style="background: #52B1BF; padding: 10px; width: 100%; margin-bottom: 10px"> ¿Desea agregar + Decos a tu plan? </span>
+                        <div class="col-lg-12" style="padding: 2px"><span class="label label-default pull-left selectDeco" style="padding: 10px; width: 100%; margin-bottom: 3px"> ¿Desea agregar + Decos a tu plan? </span></div>
+                        <div class="col-lg-6" style="padding: 2px">
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 2 Deco </span>
 
-                        <span class="label label-default pull-left" style="width: 48%; padding: 7px"> + 2 Deco </span>
-                        <span class="label label-default pull-left" style="width: 48%; padding: 7px; margin-left: 5px"> + 3 Deco </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> base + base </span>
 
+                        </div>
+                        <div class="col-lg-6" style="padding: 2px">
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 3 Deco </span>
+
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Base + Base + Base </span>
+
+                        </div>
                     </div>
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 50px">
                         <p>contratelo desde:</p>
                         <h1>$14.500</h1>
                         <p>*Incluye 1 decodificador <b>HD</b></p>
-                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/1/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
@@ -75,17 +83,31 @@
                         <ul>
                             <li>INCLUYE 1 Decodificador</li>
                         </ul>
-                        <span class="label pull-left" style="background: #FFAD20; padding: 10px; width: 100%; margin-bottom: 10px"> ¿Desea agregar + Decos a tu plan? </span>
+                        <div class="col-lg-12" style="padding: 2px"><span class="label label-default pull-left selectDeco" style="padding: 10px; width: 100%; margin-bottom: 3px"> ¿Desea agregar + Decos a tu plan? </span></div>
+                        <div class="col-lg-6" style="padding: 2px">
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 2 Deco </span>
 
-                        <span class="label label-default pull-left" style="width: 48%; padding: 7px"> + 2 Deco </span>
-                        <span class="label label-default pull-left" style="width: 48%; padding: 7px; margin-left: 5px"> + 3 Deco </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> base + Fútbol </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> Fútbol + Fútbol </span>
+
+
+                        </div>
+                        <div class="col-lg-6" style="padding: 2px">
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 3 Deco </span>
+
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Base + Base + Fútbol </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Base + Fútbol + Fútbol </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Fútbol + Fútbol + Fútbol </span>
+
+
+                        </div>
 
                     </div>
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 50px">
                         <p>contratelo desde:</p>
                         <h1>$21.000</h1>
                         <p>*Incluye 1 decodificador <b>HD</b></p>
-                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/2/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
@@ -119,17 +141,32 @@
                         <ul>
                             <li>INCLUYE 1 Decodificador</li>
                         </ul>
-                        <span class="label pull-left" style="background: #E91D62; padding: 10px; width: 100%; margin-bottom: 10px"> ¿Desea agregar + Decos a tu plan? </span>
+                        <div class="col-lg-12" style="padding: 2px"><span class="label label-default pull-left selectDeco" style="padding: 10px; width: 100%; margin-bottom: 3px"> ¿Desea agregar + Decos a tu plan? </span></div>
 
-                        <span class="label label-default pull-left" style="width: 48%; padding: 7px"> + 2 Deco </span>
-                        <span class="label label-default pull-left" style="width: 48%; padding: 7px; margin-left: 5px"> + 3 Deco </span>
+                        <div class="col-lg-6" style="padding: 2px">
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 2 Deco </span>
+
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> Base + Cine </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> Cine + Cine </span>
+
+
+                        </div>
+                        <div class="col-lg-6" style="padding: 2px">
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 3 Deco </span>
+
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Base + Base + Base </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Base + Base + Cine </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Cine + Cine + Cine </span>
+
+
+                        </div>
 
                     </div>
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 50px">
                         <p>contratelo desde:</p>
                         <h1>$20.000</h1>
                         <p>*Incluye 1 decodificador <b>HD</b></p>
-                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/3/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>
@@ -162,17 +199,34 @@
                         <ul>
                             <li>INCLUYE 1 Decodificador</li>
                         </ul>
-                        <span class="label pull-left" style="background: #47AA71; padding: 10px; width: 100%; margin-bottom: 10px"> ¿Desea agregar + Decos a tu plan? </span>
+                        <div class="col-lg-12" style="padding: 2px"><span class="label label-default pull-left selectDeco" style="padding: 10px; width: 100%; margin-bottom: 3px"> ¿Desea agregar + Decos a tu plan? </span></div>
 
-                        <span class="label label-default pull-left" style="width: 48%; padding: 7px"> + 2 Deco </span>
-                        <span class="label label-default pull-left" style="width: 48%; padding: 7px; margin-left: 5px"> + 3 Deco </span>
+                        <div class="col-lg-6" style="padding: 2px">
+
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 2 Deco </span>
+
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> Base + Total </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> Total + Total </span>
+
+
+                        </div>
+                        <div class="col-lg-6" style="padding: 2px">
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 3 Deco </span>
+
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Base + Base + Total </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Base + Total + Total </span>
+                            <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px "> Total + Total + Total </span>
+
+
+                        </div>
+
 
                     </div>
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 50px">
                         <p>contratelo desde:</p>
                         <h1>$25.000</h1>
                         <p>*Incluye 1 decodificador <b>HD</b></p>
-                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="#" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                        <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/4/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
                     </div>

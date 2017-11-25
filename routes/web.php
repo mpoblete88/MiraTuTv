@@ -41,6 +41,9 @@ Route::get('/info-decos-hd-modal', function () {
 Route::get('/info-plan-modal', function () {
     return view('web.info_plan_modal');
 });
+Route::get('/error-404', function () {
+    return view('error.404');
+});
     Auth::routes();
 
 
