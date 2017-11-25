@@ -372,9 +372,24 @@ body.web {
       }
       font-weight: 800;
     }
+    .selectDeco{
+      cursor: pointer;
+      .icon-deco{
+        background:url("/images/icon-term-white.svg");
+        width: 14px;
+        height: 12px;
+        background-size: cover;
+        display: inline-block;
+      }
+    }
     &.p-base {
       h1 {
         color: #52B1BF;
+      }
+      .selectDeco{
+        &:hover, &:active &.active{
+          background: #52B1BF;
+        }
       }
 
     }
@@ -382,15 +397,30 @@ body.web {
       h1 {
         color: #E91D62;
       }
+      .selectDeco{
+        &:hover, &:active &.active{
+          background: #E91D62;
+        }
+      }
     }
     &.p-futbol {
       h1 {
         color: #FFAD20;
       }
+      .selectDeco{
+        &:hover, &:active &.active{
+          background: #FFAD20;
+        }
+      }
     }
     &.p-total {
       h1 {
         color: #4CB686;
+      }
+      .selectDeco{
+        &:hover, &:active &.active{
+          background: #4CB686;
+        }
       }
     }
   }
@@ -501,5 +531,6 @@ body.web {
       }
     }
   }
+
 }
 
