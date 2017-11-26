@@ -11865,8 +11865,9 @@ body.web .content-plan.p-base h1 {
 }
 
 body.web .content-plan.p-base .selectDeco:hover,
-body.web .content-plan.p-base .selectDeco:active body.web .content-plan.p-base .selectDeco.active {
-  background: #52B1BF;
+body.web .content-plan.p-base .selectDeco:active,
+body.web .content-plan.p-base .selectDeco.active {
+  background: #52B1BF !important;
 }
 
 body.web .content-plan.p-cine h1 {
@@ -11874,8 +11875,9 @@ body.web .content-plan.p-cine h1 {
 }
 
 body.web .content-plan.p-cine .selectDeco:hover,
-body.web .content-plan.p-cine .selectDeco:active body.web .content-plan.p-cine .selectDeco.active {
-  background: #E91D62;
+body.web .content-plan.p-cine .selectDeco:active,
+body.web .content-plan.p-cine .selectDeco.active {
+  background: #E91D62 !important;
 }
 
 body.web .content-plan.p-futbol h1 {
@@ -11883,8 +11885,9 @@ body.web .content-plan.p-futbol h1 {
 }
 
 body.web .content-plan.p-futbol .selectDeco:hover,
-body.web .content-plan.p-futbol .selectDeco:active body.web .content-plan.p-futbol .selectDeco.active {
-  background: #FFAD20;
+body.web .content-plan.p-futbol .selectDeco:active,
+body.web .content-plan.p-futbol .selectDeco.active {
+  background: #FFAD20 !important;
 }
 
 body.web .content-plan.p-total h1 {
@@ -11892,8 +11895,9 @@ body.web .content-plan.p-total h1 {
 }
 
 body.web .content-plan.p-total .selectDeco:hover,
-body.web .content-plan.p-total .selectDeco:active body.web .content-plan.p-total .selectDeco.active {
-  background: #4CB686;
+body.web .content-plan.p-total .selectDeco:active,
+body.web .content-plan.p-total .selectDeco.active {
+  background: #4CB686 !important;
 }
 
 body.web .slider-channels {

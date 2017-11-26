@@ -387,8 +387,8 @@ body.web {
         color: #52B1BF;
       }
       .selectDeco{
-        &:hover, &:active &.active{
-          background: #52B1BF;
+        &:hover, &:active, &.active{
+          background: #52B1BF !important;
         }
       }
 
@@ -398,8 +398,8 @@ body.web {
         color: #E91D62;
       }
       .selectDeco{
-        &:hover, &:active &.active{
-          background: #E91D62;
+        &:hover, &:active, &.active{
+          background: #E91D62 !important;
         }
       }
     }
@@ -408,8 +408,8 @@ body.web {
         color: #FFAD20;
       }
       .selectDeco{
-        &:hover, &:active &.active{
-          background: #FFAD20;
+        &:hover, &:active, &.active{
+          background: #FFAD20 !important;
         }
       }
     }
@@ -418,8 +418,8 @@ body.web {
         color: #4CB686;
       }
       .selectDeco{
-        &:hover, &:active &.active{
-          background: #4CB686;
+        &:hover, &:active, &.active{
+          background: #4CB686 !important;
         }
       }
     }

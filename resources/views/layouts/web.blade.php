@@ -201,6 +201,11 @@
                 $(this).removeData();
             }) ;
 
+                $(".selectDeco").click(function(){
+                    //alert('active');
+                    $(this).toggleClass("active");
+                });
+
         });
     </script>
 </body>
