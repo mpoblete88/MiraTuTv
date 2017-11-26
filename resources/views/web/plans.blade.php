@@ -204,7 +204,6 @@
                         <div class="col-lg-6" style="padding: 2px">
 
                             <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px"> <i class="fa fa-plus"></i><i class="icon-deco"></i> 2 Deco </span>
-
                             <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> Base + Total </span>
                             <span class="label label-default pull-left selectDeco" style="width: 100%; padding: 7px; margin-top: 3px"> Total + Total </span>
 

@@ -11704,7 +11704,7 @@ body.web .plans-tv li:nth-of-type(4).active a {
 }
 
 body.web .plans-tv li:nth-of-type(1) a:after {
-  background-image: url("/images/icon-base.svg");
+  background-image: url("/images/icon-base-white.svg");
 }
 
 body.web .plans-tv li:nth-of-type(1) a:hover,
@@ -11714,7 +11714,7 @@ body.web .plans-tv li:nth-of-type(1) a:focus {
 }
 
 body.web .plans-tv li:nth-of-type(2) a:after {
-  background-image: url("/images/icon-cine.svg");
+  background-image: url("/images/icon-cine-white.svg");
 }
 
 body.web .plans-tv li:nth-of-type(2) a:hover,
@@ -11724,7 +11724,7 @@ body.web .plans-tv li:nth-of-type(2) a:focus {
 }
 
 body.web .plans-tv li:nth-of-type(3) a:after {
-  background-image: url("/images/icon-futbol.svg");
+  background-image: url("/images/icon-futbol-white.svg");
 }
 
 body.web .plans-tv li:nth-of-type(3) a:hover,
@@ -11734,7 +11734,7 @@ body.web .plans-tv li:nth-of-type(3) a:focus {
 }
 
 body.web .plans-tv li:nth-of-type(4) a:after {
-  background-image: url("/images/icon-total.svg");
+  background-image: url("/images/icon-total-white.svg");
 }
 
 body.web .plans-tv li:nth-of-type(4) a:hover,
