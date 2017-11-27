@@ -11468,8 +11468,25 @@ button.close {
 }
 
 body.web {
+  font-family: 'proximaNova-Regular';
   width: 100%;
   height: 100%;
+}
+
+body.web h1,
+body.web h2,
+body.web h3 {
+  font-family: 'proximaNova-Regular';
+}
+
+body.web h4,
+body.web h5,
+body.web h6 {
+  font-family: 'proximaNova-Bold';
+}
+
+body.web b {
+  font-family: 'proximaNova-Black';
 }
 
 body.web a {
@@ -11897,6 +11914,7 @@ body.web .icon-plans.icon-total {
 }
 
 body.web .content-plan {
+  background: #D8D8D8 !important;
   padding-top: 60px;
 }
 
@@ -11924,7 +11942,8 @@ body.web .content-plan .selectDeco .icon-deco {
   display: inline-block;
 }
 
-body.web .content-plan.p-base h1 {
+body.web .content-plan.p-base h1,
+body.web .content-plan.p-base a {
   color: #52B1BF;
 }
 
@@ -11934,7 +11953,8 @@ body.web .content-plan.p-base .selectDeco.active {
   background: #52B1BF !important;
 }
 
-body.web .content-plan.p-cine h1 {
+body.web .content-plan.p-cine h1,
+body.web .content-plan.p-cine a {
   color: #E91D62;
 }
 
@@ -11944,7 +11964,8 @@ body.web .content-plan.p-cine .selectDeco.active {
   background: #E91D62 !important;
 }
 
-body.web .content-plan.p-futbol h1 {
+body.web .content-plan.p-futbol h1,
+body.web .content-plan.p-futbol a {
   color: #FFAD20;
 }
 
@@ -11954,7 +11975,8 @@ body.web .content-plan.p-futbol .selectDeco.active {
   background: #FFAD20 !important;
 }
 
-body.web .content-plan.p-total h1 {
+body.web .content-plan.p-total h1,
+body.web .content-plan.p-total a {
   color: #4CB686;
 }
 

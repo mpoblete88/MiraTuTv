@@ -10,7 +10,7 @@
             </div>
         </div>
     </section>
-    <section class="content-plan p-base" style="background: #DDDDDD;">
+    <section class="content-plan p-base" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -48,9 +48,10 @@
                         </div>
                     </div>
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 50px">
-                        <p>contratelo desde:</p>
-                        <h1>$14.500</h1>
-                        <p>*Incluye 1 decodificador <b>HD</b></p>
+                        <p>Detalle Solicitado:</p>
+                        <p class="detail"><b>1</b> Deco / Base</p>
+
+                        <h1 class="price">$14.500</h1>
                         <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/1/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
@@ -60,7 +61,7 @@
         </div>
     </section>
     <br>
-    <section class="content-plan p-futbol" style="background: #DDDDDD;">
+    <section class="content-plan p-futbol">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -81,7 +82,7 @@
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 20px">
                         <h3><span style="color:#FFAD20;font-weight: 800" >Decodificadores</span> </h3>
                         <ul>
-                            <li>INCLUYE 1 Decodificador</li>
+                            <li>INCLUYE 1 Decodificador Fútbol</li>
                         </ul>
                         <div class="col-lg-12" style="padding: 2px"><span class="label label-default pull-left selectDeco" style="padding: 10px; width: 100%; margin-bottom: 3px"> ¿Desea agregar + Decos a tu plan? </span></div>
                         <div class="col-lg-6" style="padding: 2px">
@@ -104,9 +105,10 @@
 
                     </div>
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 50px">
-                        <p>contratelo desde:</p>
-                        <h1>$21.000</h1>
-                        <p>*Incluye 1 decodificador <b>HD</b></p>
+                        <p>Detalle Solicitado:</p>
+                        <p class="detail"><b>1</b> Deco / Fútbol</p>
+
+                        <h1 class="price">$21.000</h1>
                         <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/2/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
@@ -117,7 +119,7 @@
         </div>
     </section>
     <br>
-    <section class="content-plan p-cine" style="background: #DDDDDD;">
+    <section class="content-plan p-cine" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -139,7 +141,7 @@
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 20px">
                         <h3><span style="color:#E91D62;font-weight: 800" >Decodificadores</span> </h3>
                         <ul>
-                            <li>INCLUYE 1 Decodificador</li>
+                            <li>INCLUYE 1 Decodificador Cine</li>
                         </ul>
                         <div class="col-lg-12" style="padding: 2px"><span class="label label-default pull-left selectDeco" style="padding: 10px; width: 100%; margin-bottom: 3px"> ¿Desea agregar + Decos a tu plan? </span></div>
 
@@ -163,9 +165,10 @@
 
                     </div>
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 50px">
-                        <p>contratelo desde:</p>
-                        <h1>$20.000</h1>
-                        <p>*Incluye 1 decodificador <b>HD</b></p>
+                        <p>Detalle Solicitado:</p>
+                        <p class="detail"><b>1</b> Deco / Cine</p>
+
+                        <h1 class="price">$20.000</h1>
                         <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/3/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
@@ -176,7 +179,7 @@
         </div>
     </section>
     <br>
-    <section class="content-plan p-total" style="background: #DDDDDD;">
+    <section class="content-plan p-total" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -197,7 +200,7 @@
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 20px">
                         <h3><span style="color:#47AA71;font-weight: 800" >Decodificadores</span> </h3>
                         <ul>
-                            <li>INCLUYE 1 Decodificador</li>
+                            <li>INCLUYE 1 Decodificador Total</li>
                         </ul>
                         <div class="col-lg-12" style="padding: 2px"><span class="label label-default pull-left selectDeco" style="padding: 10px; width: 100%; margin-bottom: 3px"> ¿Desea agregar + Decos a tu plan? </span></div>
 
@@ -222,9 +225,10 @@
 
                     </div>
                     <div class="col-lg-3" style="border-left: 2px solid #444444; padding-left: 50px">
-                        <p>contratelo desde:</p>
-                        <h1>$25.000</h1>
-                        <p>*Incluye 1 decodificador <b>HD</b></p>
+                        <p>Detalle Solicitado:</p>
+                        <p class="detail"><b>1</b> Deco / Total</p>
+
+                        <h1 class="price">$25.000</h1>
                         <a class="btn btn-lg btn-default" style="width: 200px;height: 70px;font-size: 30px; background: #212121; color: #FFFFFF;" href="{{url('/plan/4/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                         <br>
                         <a href="{{url('/info-plan-modal')}}" data-toggle="modal" data-target="#miraModal">Mas Informacion</a>
