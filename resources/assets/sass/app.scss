@@ -2,11 +2,34 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 // Variables
 @import "variables";
+@import "webFonts";
+
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "~font-awesome/scss/font-awesome.scss";
+@include web-fonts('proximaNova-Black','../fonts/ProximaNova-Black/ProximaNova-Black');
+@include web-fonts('proximaNova-Bold','../fonts/ProximaNova-Bold/ProximaNova-Bold');
+@include web-fonts('proximaNova-Extrabld','../fonts/ProximaNova-Extrabld/ProximaNova-Extrabld');
+@include web-fonts('proximaNova-Light','../fonts/ProximaNova-Light/ProximaNova-Light');
+@include web-fonts('proximaNova-Regular','../fonts/ProximaNova-Regular/ProximaNova-Regular');
+@include web-fonts('proximaNova-RegularIt','../fonts/ProximaNova-RegularIt/ProximaNova-RegularIt');
+@include web-fonts('proximaNova-Semibold','../fonts/ProximaNova-Semibold/ProximaNova-Semibold');
+@include web-fonts('proximaNova-SemiboldIt','../fonts/ProximaNova-SemiboldIt/ProximaNova-SemiboldIt');
+
 
 body.web {
+  h1, h2, h3{
+    font-family: 'proximaNova-Regular';
+
+  }
+  h4, h5, h6{
+    font-family: 'proximaNova-Bold';
+
+  }
+  b{
+    font-family: 'proximaNova-Black';
+  }
+  font-family: 'proximaNova-Regular';
   a {
     color: #4CB686;
   }
@@ -248,7 +271,7 @@ body.web {
       }
       &:nth-of-type(1) a {
         &:after {
-          background-image: url("/images/icon-base.svg");
+          background-image: url("/images/icon-base-white.svg");
         }
         &:hover, &:active, &:focus {
           color: #52B1BF;
@@ -256,7 +279,7 @@ body.web {
       }
       &:nth-of-type(2) a {
         &:after {
-          background-image: url("/images/icon-cine.svg");
+          background-image: url("/images/icon-cine-white.svg");
         }
         &:hover, &:active, &:focus {
           color: #FFAD20;
@@ -264,7 +287,7 @@ body.web {
       }
       &:nth-of-type(3) a {
         &:after {
-          background-image: url("/images/icon-futbol.svg");
+          background-image: url("/images/icon-futbol-white.svg");
         }
         &:hover, &:active, &:focus {
           color: #E91D62;
@@ -272,7 +295,7 @@ body.web {
       }
       &:nth-of-type(4) a {
         &:after {
-          background-image: url("/images/icon-total.svg");
+          background-image: url("/images/icon-total-white.svg");
         }
         &:hover, &:active, &:focus {
           color: #4CB686;
@@ -361,6 +384,28 @@ body.web {
   }
 
   .content-plan {
+    li {
+      position:relative;
+      list-style-type: none;
+      line-height: 1.75em;
+    }
+    li::before{
+      position:absolute;
+      content:"";
+      top:50%;
+      -webkit-transform:translateY(-50%);
+      -moz-transform:translateY(-50%);
+      -o-transform:translateY(-50%);
+      -ms-transform:translateY(-50%);
+      transform:translateY(-50%);
+      margin-left:-15px;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid #282828;
+    }
+    background: #D8D8D8 !important;
     padding-top: 60px;
     h1 {
       margin: 0;
@@ -383,43 +428,43 @@ body.web {
       }
     }
     &.p-base {
-      h1 {
+      h1, a {
         color: #52B1BF;
       }
       .selectDeco{
-        &:hover, &:active &.active{
-          background: #52B1BF;
+        &:hover, &:active, &.active{
+          background: #52B1BF !important;
         }
       }
 
     }
     &.p-cine {
-      h1 {
+      h1, a {
         color: #E91D62;
       }
       .selectDeco{
-        &:hover, &:active &.active{
-          background: #E91D62;
+        &:hover, &:active, &.active{
+          background: #E91D62 !important;
         }
       }
     }
     &.p-futbol {
-      h1 {
+      h1, a {
         color: #FFAD20;
       }
       .selectDeco{
-        &:hover, &:active &.active{
-          background: #FFAD20;
+        &:hover, &:active, &.active{
+          background: #FFAD20 !important;
         }
       }
     }
     &.p-total {
-      h1 {
+      h1, a {
         color: #4CB686;
       }
       .selectDeco{
-        &:hover, &:active &.active{
-          background: #4CB686;
+        &:hover, &:active, &.active{
+          background: #4CB686 !important;
         }
       }
     }
@@ -456,6 +501,27 @@ body.web {
           }
           .col-lg-6 {
             padding: 0;
+          }
+          li {
+            position:relative;
+            list-style-type: none;
+            line-height: 1.75em;
+          }
+          li::before{
+            position:absolute;
+            content:"";
+            top:50%;
+            -webkit-transform:translateY(-50%);
+            -moz-transform:translateY(-50%);
+            -o-transform:translateY(-50%);
+            -ms-transform:translateY(-50%);
+            transform:translateY(-50%);
+            margin-left:-15px;
+            width: 0;
+            height: 0;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 7px solid #FFFFFF;
           }
         }
         &:nth-of-type(even) {

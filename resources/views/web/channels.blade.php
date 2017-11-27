@@ -15,7 +15,7 @@
     $varBcolor = 'p-futbol';
     ?>
 @elseif(url()->current() == url('/plan/3/channels'))
-    <div class="modal-header" style="background: #CB3D6F; color: white">
+    <div class="modal-header" style="background: #E91D62; color: white">
         <button type="button" class="close" data-dismiss="modal" style="color: white">&times;</button>
         <h1 class=""><span>Plan</span><br> <b>CINE</b></h1>
     </div>

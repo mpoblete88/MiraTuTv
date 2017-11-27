@@ -18,8 +18,8 @@
 
         </div>
         <div class="col-lg-6">
-            RUT<input class="form-control mr-sm-2 " style="border-radius:20px;" type="text" placeholder="Ej: 13454364-K" >
-            Telefono<input class="form-control mr-sm-2 " style="border-radius:20px;" type="text" placeholder="Ej: 998643214 (9 digitos)" >
+            <span style="float: left; line-height: 50px; "><h5>RUT</h5></span> <input class="form-control mr-sm-2 " style="border-radius:20px; float: right; width: 200px" type="text" placeholder="Ej: 13454364-K" >
+            <span style="float: left; line-height: 50px; clear: left"><h5>Telefono</h5></span><input class="form-control mr-sm-2 " style="border-radius:20px; float: right; width: 200px" type="text" placeholder="Ej: 998643214 (9 digitos)" >
         </div>
         <div class="col-lg-6">
 

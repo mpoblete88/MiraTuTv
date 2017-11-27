@@ -201,6 +201,33 @@
                 $(this).removeData();
             }) ;
 
+                $(".selectDeco").click(function(){
+                    //alert('active');
+                    console.log($(this));
+                    var content = $(this).closest('.content-plan');
+
+                    if($(this).hasClass('unique-all')){
+                        content.find('.unique-all').removeClass('active');
+                    }
+                    if($(this).hasClass('unique')){
+                        content.find('.unique').removeClass('active');
+                    }
+                    $(this).toggleClass("active");
+
+                    if($(this).hasClass('unique-all')){
+                        var priceDeco = $(this).data('value');
+                        var price  = content.find('.price');
+                        var newPrice = price.data('value')+priceDeco;
+                        var formatPrice = '$' + newPrice.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+                        price.html(formatPrice);
+
+                        var planDetail = content.find('.detail');
+                        var decoDetail = $(this).data('detail');
+                        planDetail.html(decoDetail);
+                    }
+
+                });
+
         });
     </script>
 </body>

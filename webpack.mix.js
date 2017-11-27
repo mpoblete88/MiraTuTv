@@ -16,6 +16,8 @@ mix.sass('resources/assets/sass/app.scss', 'public/css');
 
 mix.copy('resources/assets/images','public/images');
 mix.copy('resources/assets/images/favicon.ico','public/');
+mix.copy('resources/assets/fonts/','public/fonts/');
+
 
 //mix.copy('resources/assets/js/libraries','public/js');
  mix.copy('node_modules/animate.css/animate.min.css','public/css/animate.min.css');
