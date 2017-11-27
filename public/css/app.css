@@ -11918,6 +11918,26 @@ body.web .content-plan {
   padding-top: 60px;
 }
 
+body.web .content-plan li {
+  position: relative;
+  list-style-type: none;
+  line-height: 1.75em;
+}
+
+body.web .content-plan li::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: -15px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #282828;
+}
+
 body.web .content-plan h1 {
   margin: 0;
   font-size: 40px;
@@ -12031,6 +12051,26 @@ body.web .slider-channels .tab-content .tab-pane .container li {
 
 body.web .slider-channels .tab-content .tab-pane .container .col-lg-6 {
   padding: 0;
+}
+
+body.web .slider-channels .tab-content .tab-pane .container li {
+  position: relative;
+  list-style-type: none;
+  line-height: 1.75em;
+}
+
+body.web .slider-channels .tab-content .tab-pane .container li::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: -15px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #FFFFFF;
 }
 
 body.web .slider-channels .tab-content .tab-pane:nth-of-type(even) {

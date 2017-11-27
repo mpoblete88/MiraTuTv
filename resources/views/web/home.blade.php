@@ -126,8 +126,9 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="col-lg-8">
-                            <input class="form-control mr-sm-2 " style="border-radius:20px; margin-top: 80px; width: 300px" type="text" placeholder="Tu Nombre" aria-label="Search">
-                            <input class="form-control mr-sm-2 " style="border-radius:20px; margin-top: 15px; width: 300px" type="text" placeholder="Tu Correo" aria-label="Search">
+                            <span style="border-radius:25px; margin-top: 80px; width: 35px;height: 35px; text-align: center;float: left; background: #282828"><i style="color: white; line-height: 35px; font-size: 25px" class="fa fa-user-o"></i></span><input class="form-control mr-sm-2 " style="border-radius:20px; margin-top: 80px; width: 300px; margin-left: 5px; float: left" type="text" placeholder="Tu Nombre" >
+
+                            <span style="border-radius:25px; margin-top: 15px; width: 35px;height: 35px; text-align: center;float: left; background: #282828; clear: left"><i style="color: white; line-height: 35px; font-size: 25px" class="fa fa-envelope-o"></i></span><input class="form-control mr-sm-2 " style="border-radius:20px; margin-top: 15px; width: 300px;margin-left: 5px; float: left" type="text" placeholder="Tu Correo" >
                         </div>
                         <div class="col-lg-4">
 
