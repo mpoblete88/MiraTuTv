@@ -11,6 +11,7 @@
 @include web-fonts('proximaNova-Bold','../fonts/ProximaNova-Bold/ProximaNova-Bold');
 @include web-fonts('proximaNova-Extrabld','../fonts/ProximaNova-Extrabld/ProximaNova-Extrabld');
 @include web-fonts('proximaNova-Light','../fonts/ProximaNova-Light/ProximaNova-Light');
+@include web-fonts('proximaNova-LightIt','../fonts/ProximaNova-LightIt/ProximaNova-LightIt');
 @include web-fonts('proximaNova-Regular','../fonts/ProximaNova-Regular/ProximaNova-Regular');
 @include web-fonts('proximaNova-RegularIt','../fonts/ProximaNova-RegularIt/ProximaNova-RegularIt');
 @include web-fonts('proximaNova-Semibold','../fonts/ProximaNova-Semibold/ProximaNova-Semibold');
@@ -18,6 +19,26 @@
 
 
 body.web {
+
+
+
+
+  .color-cine{
+    color: #E91D62 !important;
+
+  }
+  .color-futbol{
+    color: #FFAD20 !important;
+
+  }
+  .color-base{
+    color: #52B1BF !important;
+
+  }
+  .color-total{
+    color: #4CB686 !important;
+
+  }
   h1, h2, h3{
     font-family: 'proximaNova-Regular';
 
@@ -410,10 +431,12 @@ body.web {
     h1 {
       margin: 0;
       font-size: 40px;
+      font-family: 'proximaNova-SemiboldIt' !important;
+      font-weight: 900;
       margin-left: 10px;
       span {
         font-size: 30px;
-        font-weight: 100;
+        font-family: 'proximaNova-LightIt' !important;
       }
       font-weight: 800;
     }
@@ -484,11 +507,17 @@ body.web {
           width: 555px;
           color: #f9f9f9;
           h1 {
+            color: #282828;
+            font-family: 'proximaNova-SemiboldIt' !important;
             margin: 0;
             span {
-              font-weight: 100;
+              font-family: 'proximaNova-LightIt' !important;
             }
-            font-weight: 800;
+            font-weight: 900;
+            &.price{
+              font-family: 'proximaNova-Regular' !important;
+              color: #f9f9f9;
+            }
           }
           h2 {
             font-size: 16px;
@@ -522,6 +551,19 @@ body.web {
             border-top: 7px solid transparent;
             border-bottom: 7px solid transparent;
             border-left: 7px solid #FFFFFF;
+
+          }
+          li.color-cine::before{
+            border-left: 7px solid #E91D62;
+          }
+          li.color-base::before{
+            border-left: 7px solid #52B1BF;
+          }
+          li.color-futbol::before{
+            border-left: 7px solid #FFAD20;
+          }
+          li.color-total::before{
+            border-left: 7px solid #4CB686;
           }
         }
         &:nth-of-type(even) {

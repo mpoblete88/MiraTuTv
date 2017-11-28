@@ -11436,6 +11436,14 @@ button.close {
 }
 
 @font-face {
+  font-family: "proximaNova-LightIt";
+  src: url(/fonts/ProximaNova-LightIt.eot?50630b4f81d3a8a2b6d7a428e19b8ed8);
+  src: url(/fonts/ProximaNova-LightIt.eot?50630b4f81d3a8a2b6d7a428e19b8ed8) format("embedded-opentype"), url(/fonts/ProximaNova-LightIt.woff?3cbac5204dd80725574949fb2e5fb3ef) format("woff"), url(/fonts/ProximaNova-LightIt.ttf?c0a7739ceee11ed43579c9bd7d1033cc) format("truetype"), url(/fonts/ProximaNova-LightIt.svg?977774c50e1673aab320ddcd8323e78f) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "proximaNova-Regular";
   src: url(/fonts/ProximaNova-Regular.eot?0790c788322d484ffeae79f8f89f8059);
   src: url(/fonts/ProximaNova-Regular.eot?0790c788322d484ffeae79f8f89f8059) format("embedded-opentype"), url(/fonts/ProximaNova-Regular.woff?c36a4c198cd2f6c2ccab69957654a44e) format("woff"), url(/fonts/ProximaNova-Regular.ttf?f25221c0c41249dad1be087451404542) format("truetype"), url(/fonts/ProximaNova-Regular.svg?c8681ecea30b7b4e2047561859b9c82f) format("svg");
@@ -11471,6 +11479,22 @@ body.web {
   font-family: 'proximaNova-Regular';
   width: 100%;
   height: 100%;
+}
+
+body.web .color-cine {
+  color: #E91D62 !important;
+}
+
+body.web .color-futbol {
+  color: #FFAD20 !important;
+}
+
+body.web .color-base {
+  color: #52B1BF !important;
+}
+
+body.web .color-total {
+  color: #4CB686 !important;
 }
 
 body.web h1,
@@ -11941,13 +11965,15 @@ body.web .content-plan li::before {
 body.web .content-plan h1 {
   margin: 0;
   font-size: 40px;
+  font-family: 'proximaNova-SemiboldIt' !important;
+  font-weight: 900;
   margin-left: 10px;
   font-weight: 800;
 }
 
 body.web .content-plan h1 span {
   font-size: 30px;
-  font-weight: 100;
+  font-family: 'proximaNova-LightIt' !important;
 }
 
 body.web .content-plan .selectDeco {
@@ -12028,12 +12054,19 @@ body.web .slider-channels .tab-content .tab-pane .container {
 }
 
 body.web .slider-channels .tab-content .tab-pane .container h1 {
+  color: #282828;
+  font-family: 'proximaNova-SemiboldIt' !important;
   margin: 0;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 body.web .slider-channels .tab-content .tab-pane .container h1 span {
-  font-weight: 100;
+  font-family: 'proximaNova-LightIt' !important;
+}
+
+body.web .slider-channels .tab-content .tab-pane .container h1.price {
+  font-family: 'proximaNova-Regular' !important;
+  color: #f9f9f9;
 }
 
 body.web .slider-channels .tab-content .tab-pane .container h2 {
@@ -12071,6 +12104,22 @@ body.web .slider-channels .tab-content .tab-pane .container li::before {
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
   border-left: 7px solid #FFFFFF;
+}
+
+body.web .slider-channels .tab-content .tab-pane .container li.color-cine::before {
+  border-left: 7px solid #E91D62;
+}
+
+body.web .slider-channels .tab-content .tab-pane .container li.color-base::before {
+  border-left: 7px solid #52B1BF;
+}
+
+body.web .slider-channels .tab-content .tab-pane .container li.color-futbol::before {
+  border-left: 7px solid #FFAD20;
+}
+
+body.web .slider-channels .tab-content .tab-pane .container li.color-total::before {
+  border-left: 7px solid #4CB686;
 }
 
 body.web .slider-channels .tab-content .tab-pane:nth-of-type(even) {

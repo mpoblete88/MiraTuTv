@@ -9,11 +9,13 @@
                                 <div class="col-lg-6">
                                     <h1 class=""><span>Plan</span><br> BASE</h1>
                                     <p>contratelo desde:</p>
-                                    <h1>$14.500</h1>
-                                    <p>*Incluye 1 decodificador <b>HD</b></p>
+                                    <h1 class="price">$14.500</h1>
+                                    <ul>
+                                        <li class="color-cine">Incluye 1 decodificador <b>HD</b></li>
+                                    </ul>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h2><span>153</span> Canales de TV.</h2>
+                                    <h2><span class="color-cine">153</span> Canales de TV.</h2>
                                     <ul>
                                         <li>10 Canales Nacionales Standar (SD)</li>
                                         <li>80 Canales Standar (SD)</li>
@@ -32,8 +34,10 @@
                                 <div class="col-lg-6">
                                     <h1 class=""><span>Plan</span><br> FÚTBOL</h1>
                                     <p>contratelo desde:</p>
-                                    <h1>$21.000</h1>
-                                    <p>*Incluye 1 decodificador <b>HD</b></p>
+                                    <h1 class="price">$21.000</h1>
+                                    <ul>
+                                        <li>Incluye 1 decodificador <b>HD</b></li>
+                                    </ul>
                                 </div>
                                 <div class="col-lg-6">
                                     <h2><span>160</span> Canales de TV.</h2>
@@ -55,11 +59,13 @@
                                 <div class="col-lg-6">
                                     <h1 class=""><span>Plan</span><br> CINE</h1>
                                     <p>contratelo desde:</p>
-                                    <h1>$20.000</h1>
-                                    <p>*Incluye 1 decodificador <b>HD</b></p>
+                                    <h1 class="price">$20.000</h1>
+                                    <ul>
+                                        <li class="color-futbol">Incluye 1 decodificador <b>HD</b></li>
+                                    </ul>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h2><span>175</span> Canales de TV.</h2>
+                                    <h2><span class="color-futbol">175</span> Canales de TV.</h2>
                                     <ul>
                                         <li>10 Canales Nacionales Standar (SD)</li>
                                         <li>80 Canales Standar (SD)</li>
@@ -76,13 +82,15 @@
                         <div role="tabpanel" style="background: url('{{ url('/images') }}/plan3.jpg')" class="tab-pane fade" id="plan4">
                             <div class="container animated slideInLeft">
                                 <div class="col-lg-6">
-                                    <h1 class=""><span>Plan</span><br> TOTAL</h1>
+                                    <h1 class="color-total"><span>Plan</span><br> TOTAL</h1>
                                     <p>contratelo desde:</p>
-                                    <h1>$25.000</h1>
-                                    <p>*Incluye 1 decodificador <b>HD</b></p>
+                                    <h1 class="price">$25.000</h1>
+                                    <ul>
+                                        <li class="color-total">Incluye 1 decodificador <b>HD</b></li>
+                                    </ul>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h2><span>182</span> Canales de TV.</h2>
+                                    <h2><span class="color-total">182</span> Canales de TV.</h2>
                                     <ul>
                                         <li>10 Canales Nacionales Standar (SD)</li>
                                         <li>80 Canales Standar (SD)</li>
