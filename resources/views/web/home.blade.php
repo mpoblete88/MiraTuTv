@@ -7,6 +7,7 @@
                         <div role="tabpanel" style="background: url('{{ url('/images') }}/plan1.jpg')" class="tab-pane active fade in" id="plan1">
                             <div class="container animated slideInRight">
                                 <div class="col-lg-6">
+                                    <span class="icon-plans icon-base"></span>
                                     <h1 class=""><span>Plan</span><br> BASE</h1>
                                     <p>contratelo desde:</p>
                                     <h1 class="price">$14.500</h1>
@@ -24,7 +25,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-lg-12">
-                                    <a class="btn btn-lg btn-default " style="background: #FFFFFF; color: #444444;" href="{{url('/plan/1/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default color-base" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/1/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                                     <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="{{url('/plan/1/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
                                 </div>
                             </div>
@@ -32,15 +33,16 @@
                         <div role="tabpanel" style="background: url('{{ url('/images') }}/plan2.jpg')" class="tab-pane fade" id="plan2">
                             <div class="container animated slideInLeft">
                                 <div class="col-lg-6">
+                                    <span class="icon-plans icon-futbol"></span>
                                     <h1 class=""><span>Plan</span><br> FÚTBOL</h1>
                                     <p>contratelo desde:</p>
                                     <h1 class="price">$21.000</h1>
                                     <ul>
-                                        <li>Incluye 1 decodificador <b>HD</b></li>
+                                        <li class="color-cine">Incluye 1 decodificador <b>HD</b></li>
                                     </ul>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h2><span>160</span> Canales de TV.</h2>
+                                    <h2><span class="color-cine">160</span> Canales de TV.</h2>
                                     <ul>
                                         <li>10 Canales Nacionales Standar (SD)</li>
                                         <li>80 Canales Standar (SD)</li>
@@ -49,7 +51,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-lg-12">
-                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/2/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default color-futbol" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/2/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                                     <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="{{url('/plan/2/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
                                 </div>
                             </div>
@@ -57,6 +59,7 @@
                         <div role="tabpanel" style="background: url('{{ url('/images') }}/plan4.jpg')"  class="tab-pane fade" id="plan3">
                             <div class="container animated slideInRight">
                                 <div class="col-lg-6">
+                                    <span class="icon-plans icon-cine"></span>
                                     <h1 class=""><span>Plan</span><br> CINE</h1>
                                     <p>contratelo desde:</p>
                                     <h1 class="price">$20.000</h1>
@@ -74,7 +77,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-lg-12">
-                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/3/hire')}}"role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default color-cine" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/3/hire')}}"role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                                     <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="{{url('/plan/3/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
                                 </div>
                             </div>
@@ -82,6 +85,7 @@
                         <div role="tabpanel" style="background: url('{{ url('/images') }}/plan3.jpg')" class="tab-pane fade" id="plan4">
                             <div class="container animated slideInLeft">
                                 <div class="col-lg-6">
+                                    <span class="icon-plans icon-total"></span>
                                     <h1 class="color-total"><span>Plan</span><br> TOTAL</h1>
                                     <p>contratelo desde:</p>
                                     <h1 class="price">$25.000</h1>
@@ -99,7 +103,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-lg-12">
-                                    <a class="btn btn-lg btn-default" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/4/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
+                                    <a class="btn btn-lg btn-default color-total" style="background: #FFFFFF; color: #444444;" href="{{url('/plan/4/hire')}}" role="button" data-toggle="modal" data-target="#miraModal">Contratar</a>
                                     <a class="btn btn-lg btn-default" style="background: transparent; color: #FFFFFF;" href="{{url('/plan/4/channels')}}" role="button" data-toggle="modal" data-target="#miraModal">Ver Canales</a>
                                 </div>
                             </div>

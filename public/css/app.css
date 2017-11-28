@@ -12037,6 +12037,40 @@ body.web .slider-channels {
   height: 100%;
 }
 
+body.web .slider-channels .icon-plans {
+  background: #282828 !important;
+  width: 50px;
+  height: 50px;
+}
+
+body.web .slider-channels .icon-plans.icon-base {
+  background: url("/images/icon-base-white.svg"), #282828 !important;
+  background-size: 30px 30px, 50px 50px !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center center ,center center !important;
+}
+
+body.web .slider-channels .icon-plans.icon-cine {
+  background: url("/images/icon-futbol-white.svg"), #282828 !important;
+  background-size: 30px 30px, 50px 50px !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center center ,center center !important;
+}
+
+body.web .slider-channels .icon-plans.icon-futbol {
+  background: url("/images/icon-cine-white.svg"), #282828 !important;
+  background-size: 30px 30px, 50px 50px !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center center ,center center !important;
+}
+
+body.web .slider-channels .icon-plans.icon-total {
+  background: url("/images/icon-total.svg"), #f9f9f9 !important;
+  background-size: 30px 30px, 50px 50px !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center center ,center center !important;
+}
+
 body.web .slider-channels .tab-content {
   width: 100%;
   height: 100%;
@@ -12057,10 +12091,12 @@ body.web .slider-channels .tab-content .tab-pane .container h1 {
   color: #282828;
   font-family: 'proximaNova-SemiboldIt' !important;
   margin: 0;
+  line-height: 28px;
   font-weight: 900;
 }
 
 body.web .slider-channels .tab-content .tab-pane .container h1 span {
+  font-size: 22px;
   font-family: 'proximaNova-LightIt' !important;
 }
 
@@ -12069,7 +12105,12 @@ body.web .slider-channels .tab-content .tab-pane .container h1.price {
   color: #f9f9f9;
 }
 
+body.web .slider-channels .tab-content .tab-pane .container .col-lg-12 {
+  padding: 0;
+}
+
 body.web .slider-channels .tab-content .tab-pane .container h2 {
+  margin: 0;
   font-size: 16px;
 }
 
@@ -12082,8 +12123,17 @@ body.web .slider-channels .tab-content .tab-pane .container li {
   font-size: 10px;
 }
 
+body.web .slider-channels .tab-content .tab-pane .container p {
+  margin: 0;
+  font-size: 12px;
+}
+
 body.web .slider-channels .tab-content .tab-pane .container .col-lg-6 {
   padding: 0;
+}
+
+body.web .slider-channels .tab-content .tab-pane .container ul {
+  padding-left: 17px;
 }
 
 body.web .slider-channels .tab-content .tab-pane .container li {

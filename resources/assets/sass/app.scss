@@ -22,7 +22,6 @@ body.web {
 
 
 
-
   .color-cine{
     color: #E91D62 !important;
 
@@ -496,6 +495,35 @@ body.web {
   .slider-channels {
     padding: 0;
     height: 100%;
+    .icon-plans {
+      background: #282828 !important;
+      width: 50px;
+      height: 50px;
+      &.icon-base {
+        background: url("/images/icon-base-white.svg"),#282828 !important;
+        background-size: 30px 30px, 50px 50px !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: center center ,center center !important;
+      }
+      &.icon-cine {
+        background: url("/images/icon-futbol-white.svg"),#282828 !important;
+        background-size: 30px 30px, 50px 50px !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: center center ,center center !important;
+      }
+      &.icon-futbol {
+        background: url("/images/icon-cine-white.svg"),#282828 !important;
+        background-size: 30px 30px, 50px 50px !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: center center ,center center !important;
+      }
+      &.icon-total {
+        background: url("/images/icon-total.svg"),#f9f9f9 !important;
+        background-size: 30px 30px, 50px 50px !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: center center ,center center !important;
+      }
+    }
     .tab-content {
       width: 100%;
       height: 100%;
@@ -510,7 +538,9 @@ body.web {
             color: #282828;
             font-family: 'proximaNova-SemiboldIt' !important;
             margin: 0;
+            line-height: 28px;
             span {
+              font-size: 22px;
               font-family: 'proximaNova-LightIt' !important;
             }
             font-weight: 900;
@@ -519,7 +549,11 @@ body.web {
               color: #f9f9f9;
             }
           }
+          .col-lg-12{
+            padding: 0;
+          }
           h2 {
+            margin: 0;
             font-size: 16px;
             span {
               font-size: 30px !important;
@@ -528,8 +562,15 @@ body.web {
           p, li {
             font-size: 10px;
           }
+          p{
+            margin: 0;
+            font-size: 12px;
+          }
           .col-lg-6 {
             padding: 0;
+          }
+          ul{
+            padding-left: 17px;
           }
           li {
             position:relative;
