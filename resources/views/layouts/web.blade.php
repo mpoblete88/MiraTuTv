@@ -227,6 +227,22 @@
                     }
 
                 });
+            $("#consultar").click(function(){
+                $(this).fadeOut();
+                $(this).addClass('animated fadeOutUp');
+
+                $("#formConsultar").addClass('animated fadeOutUp').css('display','none');
+                $("#gracias").css('display','block').addClass('animated fadeInLeft');
+            });
+            $('.btn,.label').click(function(){
+                $(this).addClass('animated pulse').delay( 1000 )
+
+
+            });
+            $('.btn,.label,.hvr-icon-float,.section-plans-tv li a,.content-plan .icon-plans').hover(function(){
+                $(this).addClass('animated pulse').delay( 1000 )
+                setTimeout(function(){ $(this).removeClass('animated').removeClass('pulse'); }, 3000);
+            });
 
         });
     </script>

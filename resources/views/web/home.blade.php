@@ -138,13 +138,21 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br>
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="col-lg-8">
-                            <span style="border-radius:25px; margin-top: 80px; width: 35px;height: 35px; text-align: center;float: left; background: #282828"><i style="color: white; line-height: 35px; font-size: 25px" class="fa fa-user-o"></i></span><input class="form-control mr-sm-2 " style="border-radius:20px; margin-top: 80px; width: 300px; margin-left: 5px; float: left" type="text" placeholder="Tu Nombre" >
-
-                            <span style="border-radius:25px; margin-top: 15px; width: 35px;height: 35px; text-align: center;float: left; background: #282828; clear: left"><i style="color: white; line-height: 35px; font-size: 25px" class="fa fa-envelope-o"></i></span><input class="form-control mr-sm-2 " style="border-radius:20px; margin-top: 15px; width: 300px;margin-left: 5px; float: left" type="text" placeholder="Tu Correo" >
+                            <form id="formConsultar" action="">
+                                <span style="border-radius:25px; margin-top: 80px; width: 35px;height: 35px; text-align: center;float: left; background: #282828"><i style="color: white; line-height: 35px; font-size: 25px" class="fa fa-user-o"></i></span><input class="form-control mr-sm-2 " style="border-radius:20px; margin-top: 80px; width: 300px; margin-left: 5px; float: left" type="text" placeholder="Tu Nombre" >
+                                <span style="border-radius:25px; margin-top: 15px; width: 35px;height: 35px; text-align: center;float: left; background: #282828; clear: left"><i style="color: white; line-height: 35px; font-size: 25px" class="fa fa-envelope-o"></i></span><input class="form-control mr-sm-2 " style="border-radius:20px; margin-top: 15px; width: 300px;margin-left: 5px; float: left" type="text" placeholder="Tu Correo" >
+                            </form>
+                            <div id="gracias" style="display: none; color: #4CB686;float: left ">
+                                <h3>
+                                    Gracias por contactarnos.
+                                </h3>
+                                <p>
+                                    Te llamaremos de inmediato de lunes a viernes de 08:00 a 23:00 hrs. Sábados, domingos y festivos de 10:00 a 21:00 hrs. Fuera de este horario, será durante el día hábil siguiente
+                                </p>
+                            </div>
                         </div>
                         <div class="col-lg-4">
-
-                            <a class="btn btn-lg btn-default" style="background: #212121; color: #FFFFFF;margin-top: 130px" href="#" role="button" data-toggle="modal" data-target="#miraModal">Consultar</a>
+                            <a id="consultar" class="btn btn-lg btn-default" style="background: #212121; color: #FFFFFF;margin-top: 130px"  >Consultar</a>
                         </div>
 
                     </div>

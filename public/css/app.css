@@ -11942,6 +11942,10 @@ body.web .content-plan {
   padding-top: 60px;
 }
 
+body.web .content-plan ul {
+  padding-left: 17px;
+}
+
 body.web .content-plan li {
   position: relative;
   list-style-type: none;
@@ -11969,6 +11973,11 @@ body.web .content-plan h1 {
   font-weight: 900;
   margin-left: 10px;
   font-weight: 800;
+}
+
+body.web .content-plan h1.price {
+  font-family: 'proximaNova-Semibold' !important;
+  color: #282828 !important;
 }
 
 body.web .content-plan h1 span {

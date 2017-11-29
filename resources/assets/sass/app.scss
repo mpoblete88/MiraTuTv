@@ -21,7 +21,6 @@
 body.web {
 
 
-
   .color-cine{
     color: #E91D62 !important;
 
@@ -404,6 +403,9 @@ body.web {
   }
 
   .content-plan {
+    ul{
+      padding-left: 17px;
+    }
     li {
       position:relative;
       list-style-type: none;
@@ -428,6 +430,10 @@ body.web {
     background: #D8D8D8 !important;
     padding-top: 60px;
     h1 {
+      &.price{
+        font-family: 'proximaNova-Semibold' !important;
+        color: #282828 !important;
+      }
       margin: 0;
       font-size: 40px;
       font-family: 'proximaNova-SemiboldIt' !important;
