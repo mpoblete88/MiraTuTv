@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
         \App\Catalog\Type::truncate();
         \App\Catalog\Plan::truncate();
         \App\Catalog\Service::truncate();
+        \App\SystemMaintenance::truncate();
 
 
 
@@ -40,5 +41,6 @@ class DatabaseSeeder extends Seeder
          $this->call(TypeTableSeeder::class);
          $this->call(PlanTableSeeder::class);
          $this->call(ServiceTableSeeder::class);
+         $this->call(SystemMaintenanceTableSeeder::class);
     }
 }

@@ -15,10 +15,15 @@
     Route::resource('types', 'Admin\Catalog\TypeController');
     Route::resource('category', 'Admin\Catalog\CategoryController');
 
+    Route::resource('sliders', 'Admin\Catalog\SliderController');
+
 
     Route::resource('users', 'Admin\Catalog\UserController');
+
+
     Route::resource('app_customers', 'Admin\Catalog\CustomerController');
     Route::resource('app_admins', 'Admin\Catalog\AdminController');
+    Route::resource('system_maintenance', 'Admin\Catalog\systemMaintenanceController');
 
 //    Route::resource('company_branch_office', 'Admin\Catalog\CompanyBranchOfficeController');
 

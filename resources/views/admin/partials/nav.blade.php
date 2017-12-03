@@ -19,13 +19,8 @@
                     <a class="dropdown-item" href="{{route('users.index')}}">Vendedores</a>
                 </div>
             </li>
-
-
             <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Mantenimiento</a>
+                <a class="nav-link" href="{{route('system_maintenance.index')}}">Mantenimiento</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -35,7 +30,7 @@
                     <a class="dropdown-item" href="#">About</a>
                     <a class="dropdown-item" href="#">Call to Action</a>
                     <a class="dropdown-item" href="#">Contact</a>
-                    <a class="dropdown-item" href="#">Sliders</a>
+                    <a class="dropdown-item" href="{{route('sliders.index')}}">Sliders</a>
                 </div>
             </li>
 
