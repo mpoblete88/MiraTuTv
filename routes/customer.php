@@ -4,3 +4,5 @@
         return view('customer.index');
     });
 
+
+    Route::resource('customers', 'Customer\Catalog\CustomerController');
