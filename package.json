@@ -19,7 +19,9 @@
     "vue": "^2.1.10"
   },
   "dependencies": {
+    "admin-lte": "^2.4.2",
     "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0"
   }
 }
