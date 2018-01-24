@@ -1,15 +1,22 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "amelia/rememberable": "^2.0",
+        "bytestgear/laravel-accountable": "^1.1",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "styde/html": "~1.4"
+        "styde/html": "~1.4",
+        "yajra/laravel-datatables-oracle": "~8.0",
+        "orangehill/iseed": "dev-master"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

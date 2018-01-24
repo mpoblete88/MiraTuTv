@@ -56,3 +56,4 @@
         <!-- /.content-wrapper -->
 
     @include('admin.layout.footer')
+@yield('extra_scripts')

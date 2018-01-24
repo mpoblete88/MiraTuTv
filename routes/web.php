@@ -46,11 +46,11 @@ Route::get('/error-404', function () {
 });
     Auth::routes();
 
+    Route::get('#', function () {})->name('#');
 
 
 
     Route::get('/home', 'HomeController@index')->name('home');
-//    Route::get('/admin', 'AdminController@index')->name('admin');
 
 
 
@@ -65,4 +65,8 @@ Route::get('/error-404', function () {
 
         require __DIR__ . '/customer_auth.routes.php';
 
+    });
+
+    Route::group(['prefix' => 'datatable/'], function(){
+        require_once __DIR__.'/datatable_routes.php';
     });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Catalog;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
 {
@@ -85,5 +86,12 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getDatatable()
+    {
+        $users = User::all();
+        $datatable = DataTables::of($users)->make(true);
+        return $datatable;
     }
 }

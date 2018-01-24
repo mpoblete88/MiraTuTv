@@ -12,9 +12,8 @@
 <script src="{{env('URL_SYSTEM')}}/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- ChartJS -->
 <script src="{{env('URL_SYSTEM')}}/bower_components/Chart.js/Chart.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{env('URL_SYSTEM')}}/js/pages/dashboard2.js"></script>
+{{--<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{env('URL_SYSTEM')}}/js/pages/dashboard2.js"></script>--}}
 <!-- AdminLTE for demo purposes -->
 <script src="{{env('URL_SYSTEM')}}/js/demo.js"></script>
 
-@yield('extra_scripts')

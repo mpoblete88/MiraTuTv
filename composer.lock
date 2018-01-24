@@ -4,8 +4,135 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "043953b6f28646295c27e3a60d8e95b7",
+    "content-hash": "15d52d8e52025291b81aa561139ebaf5",
     "packages": [
+        {
+            "name": "amelia/rememberable",
+            "version": "v2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ameliaikeda/rememberable.git",
+                "reference": "6bf3da61b16468e345a5f91ac08e20ec9dc4c96f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ameliaikeda/rememberable/zipball/6bf3da61b16468e345a5f91ac08e20ec9dc4c96f",
+                "reference": "6bf3da61b16468e345a5f91ac08e20ec9dc4c96f",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.2|~5.3",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "mockery/mockery": "1.0.x-dev",
+                "phpunit/phpunit": "~5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Amelia\\Rememberable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dwight Watson",
+                    "email": "dwight@studiousapp.com"
+                },
+                {
+                    "name": "Amelia Ikeda",
+                    "email": "amelia@dorks.io"
+                }
+            ],
+            "description": "Query caching for Laravel 5",
+            "keywords": [
+                "caching",
+                "eloquent",
+                "laravel",
+                "remember"
+            ],
+            "time": "2016-08-08T09:46:16+00:00"
+        },
+        {
+            "name": "bytestgear/laravel-accountable",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/byTestGear/laravel-accountable.git",
+                "reference": "e91c4f039a33ac7e89218694164a9d7e1df65018"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/byTestGear/laravel-accountable/zipball/e91c4f039a33ac7e89218694164a9d7e1df65018",
+                "reference": "e91c4f039a33ac7e89218694164a9d7e1df65018",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.2",
+                "illuminate/contracts": "~5.2",
+                "illuminate/database": "~5.2",
+                "illuminate/support": "~5.2",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/database": "~3.3.0|~3.4.0",
+                "orchestra/testbench": "~3.3.0|~3.4.0",
+                "phpunit/phpunit": "~5.7",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ByTestGear\\Accountable\\AccountableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ByTestGear\\Accountable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thijs Kok",
+                    "email": "tkok@testmonitor.com",
+                    "homepage": "https://www.testmonitor.com/",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Stephan Grootveld",
+                    "email": "sgrootveld@testmonitor.com",
+                    "homepage": "https://www.testmonitor.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Frank Keulen",
+                    "email": "fkeulen@testmonitor.com",
+                    "homepage": "https://www.testmonitor.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tracks the user responsible for creating, modifying, or deleting an Eloquent model",
+            "keywords": [
+                "created",
+                "deleted",
+                "eloquent",
+                "laravel",
+                "modified",
+                "testgear",
+                "user"
+            ],
+            "time": "2017-10-04T19:21:22+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -976,6 +1103,65 @@
                 "php"
             ],
             "time": "2017-12-26T14:43:21+00:00"
+        },
+        {
+            "name": "orangehill/iseed",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orangehill/iseed.git",
+                "reference": "c99a9f7bcc37dd853891acdc2e4d43bcf55a0404"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orangehill/iseed/zipball/c99a9f7bcc37dd853891acdc2e4d43bcf55a0404",
+                "reference": "c99a9f7bcc37dd853891acdc2e4d43bcf55a0404",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.3.8",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/filesystem": "5.x",
+                "laravel/framework": "^5.3.8",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Orangehill\\Iseed\\IseedServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Orangehill\\Iseed": "src/"
+                },
+                "classmap": [
+                    "src/Orangehill/Iseed/Exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tihomir Opacic",
+                    "email": "tihomir.opacic@orangehilldev.com"
+                }
+            ],
+            "description": "Generate a new Laravel database seed file based on data from the existing database table.",
+            "keywords": [
+                "artisan",
+                "generators",
+                "laravel",
+                "seed"
+            ],
+            "time": "2017-10-05T07:30:15+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2347,6 +2533,76 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "yajra/laravel-datatables-oracle",
+            "version": "v8.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables.git",
+                "reference": "2c475a5e0f13e9b61740a4bb0c59bdb4607ee48d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/2c475a5e0f13e9b61740a4bb0c59bdb4607ee48d",
+                "reference": "2c475a5e0f13e9b61740a4bb0c59bdb4607ee48d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "5.4.*|5.5.*",
+                "illuminate/filesystem": "5.4.*|5.5.*",
+                "illuminate/http": "5.4.*|5.5.*",
+                "illuminate/support": "5.4.*|5.5.*",
+                "illuminate/view": "5.4.*|5.5.*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5"
+            },
+            "suggest": {
+                "yajra/laravel-datatables-buttons": "Plugin for server-side exporting of dataTable.",
+                "yajra/laravel-datatables-fractal": "Plugin for server-side response using Fractal.",
+                "yajra/laravel-datatables-html": "Plugin for server-side HTML builder of dataTable."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Yajra\\DataTables\\DataTablesServiceProvider"
+                    ],
+                    "aliases": {
+                        "DataTables": "Yajra\\DataTables\\Facades\\DataTables"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\DataTables\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "jQuery DataTables API for Laravel 4|5",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "laravel"
+            ],
+            "time": "2018-01-11T01:35:04+00:00"
         }
     ],
     "packages-dev": [
@@ -4031,7 +4287,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "orangehill/iseed": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
