@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin\Catalog;
 
 use App\Customer;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Yajra\DataTables\Facades\DataTables;
 
 class CustomerController extends Controller
 {
@@ -28,7 +30,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        return view('customer.catalog.customer.create');
     }
 
     /**
@@ -39,7 +41,24 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dtpBorn = date('Y-m-d', strtotime($request->dtpBorn));
+        $customer = Customer::create([
+            'first_name' => $request->txtNames,
+            'last_name' => $request->txtLastNames,
+            'nick_name' => $request->txtNameUser,
+            'email' => $request->txtEmail,
+            'password' => bcrypt($request->txtPassword),
+            'birthdate' => $dtpBorn,
+            'rut' => $request->txtRut,
+        ]);
+
+        $customer->save();
+
+        flash('Se ha creado exitosamente al Cliente')->success();
+
+        return redirect()->route('app_customers.index');
+
+
     }
 
     /**
@@ -61,7 +80,8 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $customer = Customer::findOrFail($id);
+        return view('customer.catalog.customer.edit', compact('customer'));
     }
 
     /**
@@ -73,7 +93,21 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dtpBorn = date('Y-m-d', strtotime($request->dtpBorn));
+
+        Customer::findOrFail($id)->update([
+            'first_name' => $request->txtNames,
+            'last_name' => $request->txtLastNames,
+            'nick_name' => $request->txtNameUser,
+            'email' => $request->txtEmail,
+            'password' => bcrypt($request->txtPassword),
+            'birthdate' => $dtpBorn,
+            'rut' => $request->txtRut,
+        ]);
+
+        flash('Se ha editado exitosamente al Cliente')->success();
+
+        return redirect()->route('app_customers.index');
     }
 
     /**
@@ -84,6 +118,19 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $customer = Customer::findOrFail($id);
+        $customer->update([
+            'status' => $customer->status == 'active' ? 'inactive' : 'active'
+            ]);
+        $customer->save();
+        flash('Se ha desactivado la cuenta')->error();
+        return redirect()->route('app_customers.index');
+    }
+
+    public function getDatatable()
+    {
+        $customers = Customer::all();
+        $datatable = DataTables::of($customers)->make(true);
+        return $datatable;
     }
 }

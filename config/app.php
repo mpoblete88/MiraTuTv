@@ -172,7 +172,9 @@ return [
         Styde\Html\HtmlServiceProvider::class,
         ByTestGear\Accountable\AccountableServiceProvider::class,
         \App\Providers\MenuProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -212,6 +214,8 @@ return [
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
         'File' => Illuminate\Support\Facades\File::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,

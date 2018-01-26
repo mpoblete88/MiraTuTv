@@ -1,0 +1,21 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Variables
+@import "web/variables";
+@import "web/webFonts";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~font-awesome/scss/font-awesome.scss";
+@include web-fonts('proximaNova-Black','../fonts/ProximaNova-Black/ProximaNova-Black');
+@include web-fonts('proximaNova-Bold','../fonts/ProximaNova-Bold/ProximaNova-Bold');
+@include web-fonts('proximaNova-Extrabld','../fonts/ProximaNova-Extrabld/ProximaNova-Extrabld');
+@include web-fonts('proximaNova-Light','../fonts/ProximaNova-Light/ProximaNova-Light');
+@include web-fonts('proximaNova-LightIt','../fonts/ProximaNova-LightIt/ProximaNova-LightIt');
+@include web-fonts('proximaNova-Regular','../fonts/ProximaNova-Regular/ProximaNova-Regular');
+@include web-fonts('proximaNova-RegularIt','../fonts/ProximaNova-RegularIt/ProximaNova-RegularIt');
+@include web-fonts('proximaNova-Semibold','../fonts/ProximaNova-Semibold/ProximaNova-Semibold');
+@include web-fonts('proximaNova-SemiboldIt','../fonts/ProximaNova-SemiboldIt/ProximaNova-SemiboldIt');
+@import "web/main";
+
+

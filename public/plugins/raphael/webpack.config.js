@@ -45,10 +45,11 @@ module.exports = {
 
 	loaders: [
   		{
-  			test: /\.js$/, 
-  			loader: "eslint-loader", 
-  			include: "./dev/"
-  		}
+  			test: /\.js$/,
+            loader: 'postcss-loader',
+            options: { sourceMap: true},
+  			include: "./dev/",
+  		},
 	],
   	
 	eslint: {

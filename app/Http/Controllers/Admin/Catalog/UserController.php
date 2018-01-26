@@ -29,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.catalog.user.create');
     }
 
     /**
@@ -40,7 +40,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create([
+            'first_name' => $request->txtNames,
+            'last_name' => $request->txtLastNames,
+            'nick_name' => $request->txtNameUser,
+            'email' => $request->txtEmail,
+            'password' => bcrypt($request->txtPassword),
+        ]);
+
+        flash('Se ha creado el usuario de forma exitosa')->success();
+        return redirect()->route('users.index');
     }
 
     /**
@@ -62,7 +71,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('admin.catalog.user.edit', compact('user'));
     }
 
     /**
@@ -74,7 +84,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->update([
+            'first_name' => $request->txtNames,
+            'last_name' => $request->txtLastNames,
+            'nick_name' => $request->txtNameUser,
+            'email' => $request->txtEmail,
+            'password' => !is_null($request->txtPassword) ? bcrypt($request->txtPassword) : $user->password,
+        ]);
+
+        flash('Se ha actualizado correctamente el usuario')->success();
+        return redirect()->route('users.index');
     }
 
     /**
@@ -85,7 +105,12 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->update([
+            'status' => $user->status == 'active' ? 'inactive' : 'active'
+            ]);
+        flash('Se ha desactivado al usuario')->error();
+        return redirect()->route('users.index');
     }
 
     public function getDatatable()
