@@ -23,7 +23,7 @@ class MenuComposers
 
     public function compose(View $view)
     {
-        $menu = $this->menu->remember(3600)->get()->where('parent_id', null);
+        $menu = $this->menu->get()->where('parent_id', null);
         $user = Auth::user();
         $view->with(
             ['menu' => $menu,

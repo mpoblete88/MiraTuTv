@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js');
 mix.js('resources/assets/js/jquery.js', 'public/js');
+mix.js('resources/assets/js/admin.js', 'public/js');
 mix.sass('resources/assets/sass/web.scss', 'public/css');
 mix.sass('resources/assets/sass/icons.scss', 'public/css');
 mix.sass('resources/assets/sass/datatable.scss', 'public/css');
