@@ -32,7 +32,6 @@ class CompanyTableSeeder extends Seeder
 
         DB::table('company_branch_office_addresses')->insert([
             'company_branch_office_id' => '1',
-            'country_id'               => '1',
             'city_id'                  => '1',
             'property_id'              => '1',
             'address'                  => 'Pasaje la plaza',

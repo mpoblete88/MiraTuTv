@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateCompanyBranchOfficeAddressesTable extends Migration
 {
@@ -16,7 +16,6 @@ class CreateCompanyBranchOfficeAddressesTable extends Migration
         Schema::create('company_branch_office_addresses', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('company_branch_office_id');
-            $table->integer('country_id');
             $table->integer('city_id');
             $table->integer('property_id');
             $table->text('address');
