@@ -986,9 +986,9 @@ define(["./raphael.core"], function(R) {
      = (object) object of attributes if nothing is passed in.
      > Possible parameters
      # <p>Please refer to the <a href="http://www.w3.org/TR/SVG/" title="The W3C Recommendation for the SVG language describes these properties in detail.">SVG specification</a> for an explanation of these parameters.</p>
-     o arrow-end (string) arrowhead on the end of the path. The format for string is `<type>[-<width>[-<length>]]`. Possible types: `classic`, `block`, `open`, `oval`, `diamond`, `none`, width: `wide`, `narrow`, `medium`, length: `long`, `short`, `midium`.
+     o arrow-end (string) arrowhead on the end of the path. The format for string is `<types_channel>[-<width>[-<length>]]`. Possible types: `classic`, `block`, `open`, `oval`, `diamond`, `none`, width: `wide`, `narrow`, `medium`, length: `long`, `short`, `midium`.
      o clip-rect (string) comma or space separated values: x, y, width and height
-     o cursor (string) CSS type of the cursor
+     o cursor (string) CSS types_channel of the cursor
      o cx (number) the x-axis coordinate of the center of the circle, or ellipse
      o cy (number) the y-axis coordinate of the center of the circle, or ellipse
      o fill (string) colour, gradient or image

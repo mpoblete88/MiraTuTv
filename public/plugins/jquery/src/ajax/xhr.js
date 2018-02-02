@@ -51,7 +51,7 @@ jQuery.ajaxTransport( function( options ) {
 					}
 				}
 
-				// Override mime type if needed
+				// Override mime types_channel if needed
 				if ( options.mimeType && xhr.overrideMimeType ) {
 					xhr.overrideMimeType( options.mimeType );
 				}

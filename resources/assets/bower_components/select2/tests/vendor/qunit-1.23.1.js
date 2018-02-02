@@ -152,7 +152,7 @@ function objectType( obj ) {
 	}
 }
 
-// Safe object type checking
+// Safe object types_channel checking
 function is( type, obj ) {
 	return QUnit.objectType( obj ) === type;
 }
@@ -335,7 +335,7 @@ function verifyLoggingCallbacks() {
 				global.console.warn(
 					"QUnit." + loggingCallback + " was replaced with a new value.\n" +
 					"Please, check out the documentation on how to apply logging callbacks.\n" +
-					"Reference: https://api.qunitjs.com/category/callbacks/"
+					"Reference: https://api.qunitjs.com/category_channel/callbacks/"
 				);
 			}
 		}
@@ -1251,7 +1251,7 @@ function unitSamplerGenerator( seed ) {
 		sample ^= sample >>> 17;
 		sample ^= sample << 5;
 
-		// ECMAScript has no unsigned number type
+		// ECMAScript has no unsigned number types_channel
 		if ( sample < 0 ) {
 			sample += 0x100000000;
 		}
@@ -1647,7 +1647,7 @@ function errorString( error ) {
 	}
 }
 
-// Test for equality any JavaScript type.
+// Test for equality any JavaScript types_channel.
 // Author: Philippe Rathé <prathe@gmail.com>
 QUnit.equiv = ( function() {
 
@@ -1900,7 +1900,7 @@ QUnit.equiv = ( function() {
 			return true;
 		}
 
-		// Require type-specific equality
+		// Require types_channel-specific equality
 		return ( a === b || typeEquiv( a, b ) ) &&
 
 			// ...across all consecutive argument pairs
@@ -1950,7 +1950,7 @@ QUnit.dump = ( function() {
 	var reName = /^function (\w+)/,
 		dump = {
 
-			// The objType is used mostly internally, you can fix a (custom) type in advance
+			// The objType is used mostly internally, you can fix a (custom) types_channel in advance
 			parse: function( obj, objType, stack ) {
 				stack = stack || [];
 				var res, parser, parserType,
@@ -3281,7 +3281,7 @@ QUnit.diff = ( function() {
 		changes = false;
 		equalities = []; // Stack of indices where equalities are found.
 		equalitiesLength = 0; // Keeping our own length var is faster in JS.
-		/** @type {?string} */
+		/** @types_channel {?string} */
 		lastequality = null;
 
 		// Always equal to diffs[equalities[equalitiesLength - 1]][1]
@@ -3907,7 +3907,7 @@ QUnit.diff = ( function() {
 		changes = false;
 		equalities = []; // Stack of indices where equalities are found.
 		equalitiesLength = 0; // Keeping our own length var is faster in JS.
-		/** @type {?string} */
+		/** @types_channel {?string} */
 		lastequality = null;
 
 		// Always equal to diffs[equalities[equalitiesLength - 1]][1]

@@ -4699,8 +4699,8 @@ var ChronoComponent = Model.extend({
 	// Generates HTML for an anchor to another view into the calendar.
 	// Will either generate an <a> tag or a non-clickable <span> tag, depending on enabled settings.
 	// `gotoOptions` can either be a moment input, or an object with the form:
-	// { date, type, forceOff }
-	// `type` is a view-type like "day" or "week". default value is "day".
+	// { date, types_channel, forceOff }
+	// `types_channel` is a view-types_channel like "day" or "week". default value is "day".
 	// `attrs` and `innerHtml` are use to generate the rest of the HTML tag.
 	buildGotoAnchorHtml: function(gotoOptions, attrs, innerHtml) {
 		var date, type, forceOff;
@@ -6033,7 +6033,7 @@ Grid.mixin({
 
 
 	// Builds a listener that will track user-dragging on an event segment.
-	// Generic enough to work with any type of Grid.
+	// Generic enough to work with any types_channel of Grid.
 	// Has side effect of setting/unsetting `segDragListener`
 	buildSegDragListener: function(seg) {
 		var _this = this;
@@ -6287,7 +6287,7 @@ Grid.mixin({
 
 
 	// Creates a listener that tracks the user as they resize an event segment.
-	// Generic enough to work with any type of Grid.
+	// Generic enough to work with any types_channel of Grid.
 	buildSegResizeListener: function(seg, isStart) {
 		var _this = this;
 		var view = this.view;
@@ -6737,7 +6737,7 @@ Grid.mixin({
 	},
 
 
-	// Unrenders a specific type of fill that is currently rendered on the grid
+	// Unrenders a specific types_channel of fill that is currently rendered on the grid
 	unrenderFill: function(type) {
 		var el = this.elsByFill[type];
 
@@ -6772,7 +6772,7 @@ Grid.mixin({
 				var seg = segs[i];
 				var el = $(node);
 
-				// allow custom filter methods per-type
+				// allow custom filter methods per-types_channel
 				if (segElMethod) {
 					el = segElMethod.call(_this, seg, el);
 				}
@@ -6780,7 +6780,7 @@ Grid.mixin({
 				if (el) { // custom filters did not cancel the render
 					el = $(el); // allow custom filter to return raw DOM node
 
-					// correct element type? (would be bad if a non-TD were inserted into a table for example)
+					// correct element types_channel? (would be bad if a non-TD were inserted into a table for example)
 					if (el.is(_this.fillSegTag)) {
 						seg.el = el;
 						renderedSegs.push(seg);
@@ -6799,7 +6799,7 @@ Grid.mixin({
 	// Builds the HTML needed for one fill segment. Generic enough to work with different types.
 	fillSegHtml: function(type, seg) {
 
-		// custom hooks per-type
+		// custom hooks per-types_channel
 		var classesMethod = this[type + 'SegClasses'];
 		var cssMethod = this[type + 'SegCss'];
 
@@ -9625,7 +9625,7 @@ function isSlotSegCollision(seg1, seg2) {
 var View = FC.View = ChronoComponent.extend({
 
 	type: null, // subclass' view name (string)
-	name: null, // deprecated. use `type` instead
+	name: null, // deprecated. use `types_channel` instead
 	title: null, // the text that will be displayed in the header's title
 
 	calendar: null, // owner Calendar object
@@ -11406,7 +11406,7 @@ function Toolbar(calendar, toolbarOptions) {
 								buttonInnerHtml = "<span class='" + buttonIcon + "'></span>";
 							}
 
-							buttonEl = $( // type="button" so that it doesn't submit a form
+							buttonEl = $( // types_channel="button" so that it doesn't submit a form
 								'<button type="button" class="' + buttonClasses.join(' ') + '">' +
 									buttonInnerHtml +
 								'</button>'
@@ -11745,7 +11745,7 @@ var Calendar = FC.Calendar = Class.extend(EmitterMixin, {
 	// -----------------------------------------------------------------------------------------------------------------
 
 
-	// Should be called when any type of async data fetching begins
+	// Should be called when any types_channel of async data fetching begins
 	pushLoading: function() {
 		if (!(this.loadingLevel++)) {
 			this.publiclyTrigger('loading', [ true, this.view ]);
@@ -11753,7 +11753,7 @@ var Calendar = FC.Calendar = Class.extend(EmitterMixin, {
 	},
 
 
-	// Should be called when any type of async data fetching completes
+	// Should be called when any types_channel of async data fetching completes
 	popLoading: function() {
 		if (!(--this.loadingLevel)) {
 			this.publiclyTrigger('loading', [ false, this.view ]);
@@ -12576,7 +12576,7 @@ Calendar.mixin({
 	// -----------------------------------------------------------------------------------
 
 
-	// Renders a view because of a date change, view-type change, or for the first time.
+	// Renders a view because of a date change, view-types_channel change, or for the first time.
 	// If not given a viewType, keep the current view but render different dates.
 	// Accepts an optional scroll state to restore to.
 	renderView: function(viewType, forcedScroll) {
@@ -15571,7 +15571,7 @@ EventDefMutation.createFromRawProps = function(eventInstance, newRawProps, large
 
 	for (propName in newRawProps) {
 		if (
-			// ignore object-type custom properties and any date-related properties,
+			// ignore object-types_channel custom properties and any date-related properties,
 			// as well as any other internal property
 			typeof newRawProps[propName] !== 'object' &&
 			propName !== 'start' && propName !== 'end' && propName !== 'allDay' &&
@@ -15955,7 +15955,7 @@ EventSource.allowRawProps({
 
 
 /*
-rawInput can be any data type!
+rawInput can be any data types_channel!
 */
 EventSource.parse = function(rawInput, calendar) {
 	var source = new this(calendar);
@@ -16921,7 +16921,7 @@ var basicDayGridMethods = {
 	},
 
 
-	// Generates the HTML that goes before every other type of row generated by DayGrid.
+	// Generates the HTML that goes before every other types_channel of row generated by DayGrid.
 	// Affects helper-skeleton and highlight-skeleton rows.
 	renderIntroHtml: function() {
 		var view = this.view;

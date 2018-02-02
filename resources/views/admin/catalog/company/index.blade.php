@@ -1,42 +1,69 @@
-@extends('admin.layout.default')
-@section('title','Datos de Compañia')
-
-
+@extends('admin.layout.head')
+@section('title','Comapañia')
 @section('content')
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">@yield('title')</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        @include('flash::message')
 
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Nombre</th>
-            <th>Nombre Corto</th>
-            <th>Pagina Web</th>
-            <th>Favicon</th>
-            <th>Logo</th>
-            <th>Logo Oscuro</th>
-            <th>Logo Suave</th>
-        </tr>
-        </thead>
-        <tbody>
-
-        @foreach($companies as  $company)
-
-            <tr>
-                <td>  {{$company->id}}</td>
-                <td><a href="{{route('company_branch_office.index', $company->id)}}">{{$company->name}}</a> </td>
-                <td> {{$company->short_name}}</td>
-                <td> {{$company->web_site}}</td>
-                <td> {{$company->favicon_path}}</td>
-                <td> {{$company->logo_path}}</td>
-                <td> {{$company->logo_dark_path}}</td>
-                <td> {{$company->logo_light_path}}</td>
-            </tr>
-
-        @endforeach
+        {!! Form::open(['route' => ['channel.update', $company->id], 'method' => 'put']) !!}
+        <div class="box-body">
+            <div class="form-group">
+                {{ Form::label('lblDescription', 'Nombre', ['class' => ''])}}
+                {{ Form::text('name', $company->name, ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group">
+                {{ Form::label('lblDescription', 'Nombre corto', ['class' => ''])}}
+                {{ Form::text('short_name', $company->short_name, ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group">
+                {{ Form::label('lblDescription', 'Sitio WEB', ['class' => ''])}}
+                {{ Form::text('web_site', $company->web_site, ['class' => 'form-control'])}}
+            </div>
+            <div class="form-group">
+                {{ Form::label('lblFavicon', 'Favicon', ['class' => ''])}}
+                {{ Form::file("favicon", ['class' => '']) }}
 
 
-        </tbody>
-    </table>
+                <img alt="*" src="{{ asset($company->favicon_path) }}">
 
+            </div>
+            <div class="form-group">
+                {{ Form::label('lblLogo', 'Logo', ['class' => ''])}}
+
+                {{ Form::file("logo_path", ['class' => '']) }}
+
+
+                <img alt="*" src="{{ asset($company->logo_path) }}" height="80" width="80">
+
+
+            </div>
+            <div class="form-group">
+                {{ Form::label('lblLogoDark', 'Logo Oscuro', ['class' => ''])}}
+
+                {{ Form::file("logo_dark_path", ['class' => '']) }}
+
+
+                <img alt="*" src="{{ asset($company->logo_dark_path) }}" height="80" width="80">
+
+
+            </div>
+            <div class="form-group">
+                {{ Form::label('lblLogoLight', 'Logo claro', ['class' => ''])}}
+                {{ Form::file("logo_light_path", ['class' => '']) }}
+                <img alt="*" src="{{ asset($company->logo_light_path) }}" height="80" width="80">
+
+            </div>
+            
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            {{ Form::submit('Editar', ['class' => 'btn btn-success']) }}
+        </div>
+        <!-- /.box-footer -->
+        {!!  Form::close() !!}
+    </div>
 @endsection
-

@@ -7,7 +7,7 @@
   .str { color: #080 }  /* string content */
   .kwd { color: #008 }  /* a keyword */
   .com { color: #800 }  /* a comment */
-  .typ { color: #606 }  /* a type name */
+  .typ { color: #606 }  /* a types_channel name */
   .lit { color: #066 }  /* a literal value */
   /* punctuation, lisp open bracket, lisp close bracket */
   .pun, .opn, .clo { color: #660 }

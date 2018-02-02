@@ -28,7 +28,7 @@
  * <p>
  * Usage: <ol>
  * <li> include this source file in an html page via
- *   {@code <script type="text/javascript" src="/path/to/prettify.js"></script>}
+ *   {@code <script types_channel="text/javascript" src="/path/to/prettify.js"></script>}
  * <li> define style rules.  See the example page for examples.
  * <li> mark the {@code <pre>} and {@code <code>} tags in your source with
  *    {@code class=prettyprint.}
@@ -40,7 +40,7 @@
  * need to specify which language the code is in, but if you wish, you can add
  * another class to the {@code <pre>} or {@code <code>} element to specify the
  * language, as in {@code <pre class="prettyprint lang-java">}.  Any class that
- * starts with "lang-" followed by a file extension, specifies the file type.
+ * starts with "lang-" followed by a file extension, specifies the file types_channel.
  * See the "lang-*.js" files in this directory for code that implements
  * per-language file handlers.
  * <p>
@@ -127,7 +127,7 @@ window['PR_SHOULD_USE_CONTINUATION'] = true;
    */
   var PR_COMMENT = 'com';
   /**
-   * token style for a type
+   * token style for a types_channel
    * @const
    */
   var PR_TYPE = 'typ';
@@ -680,7 +680,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
       /** Even entries are positions in source in ascending order.  Odd enties
         * are style markers (e.g., PR_COMMENT) that run from that position until
         * the end.
-        * @type {Array.<number|string>}
+        * @types_channel {Array.<number|string>}
         */
       var decorations = [basePos, PR_PLAIN];
       var pos = 0;  // index into sourceCode
@@ -1299,7 +1299,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
     try {
       // Extract tags, and convert the source code to plain text.
       var sourceAndSpans = extractSourceSpans(job.sourceNode);
-      /** Plain text. @type {string} */
+      /** Plain text. @types_channel {string} */
       var source = sourceAndSpans.sourceCode;
       job.sourceCode = source;
       job.spans = sourceAndSpans.spans;
@@ -1454,7 +1454,7 @@ var REGEXP_PRECEDER_PATTERN = '(?:^^\\.?|[+-]|\\!|\\!=|\\!==|\\#|\\%|\\%=|&|&&|&
   window['prettyPrint'] = prettyPrint;
    /**
     * Contains functions for creating and registering new language handlers.
-    * @type {Object}
+    * @types_channel {Object}
     */
   window['PR'] = {
         'createSimpleLexer': createSimpleLexer,

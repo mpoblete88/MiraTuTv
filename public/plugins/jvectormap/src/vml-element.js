@@ -20,7 +20,7 @@ jvm.inherits(jvm.VMLElement, jvm.AbstractElement);
  * Shows if VML was already initialized for the current document or not.
  * @static
  * @private
- * @type {Boolean}
+ * @types_channel {Boolean}
  */
 jvm.VMLElement.VMLInitialized = false;
 

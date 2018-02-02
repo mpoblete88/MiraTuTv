@@ -230,7 +230,7 @@ label
 
 /**
  *	CKEditor editables are automatically set with the "cke_editable" class
- *	plus cke_editable_(inline|themed) depending on the editor type.
+ *	plus cke_editable_(inline|themed) depending on the editor types_channel.
  */
 
 /* Style a bit the inline editables. */

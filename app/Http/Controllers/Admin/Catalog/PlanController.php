@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
+use App\Catalog\Channel;
 use App\Catalog\Plan;
+use App\Http\Requests\PlanRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Yajra\DataTables\Facades\DataTables;
 
 class PlanController extends Controller
 {
@@ -28,7 +31,8 @@ class PlanController extends Controller
      */
     public function create()
     {
-        //
+        $channels = Channel::pluck('name', 'id');
+        return view('admin.catalog.' . parent::getRouteActual() . '.create', compact('channels'));
     }
 
     /**
@@ -37,9 +41,12 @@ class PlanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PlanRequest $request)
     {
-        //
+        $plan = Plan::create($request->only(['name','code','description']));
+        $plan->channels()->sync($request->channels);
+        flash(trans('general.message.success'))->success();
+        return redirect()->route(parent::getRouteActual() . '.index');
     }
 
     /**
@@ -61,7 +68,9 @@ class PlanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $plan = Plan::findOrFail($id);
+        $channels = Channel::pluck('name', 'id');
+       return view('admin.catalog.' . parent::getRouteActual() . '.edit', compact('channels', 'plan'));
     }
 
     /**
@@ -71,9 +80,13 @@ class PlanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PlanRequest $request, $id)
     {
-        //
+        $plan = Plan::findOrFail($id);
+        $plan->update($request->only(['name','code','description']));
+        $plan->channels()->sync($request->channels);
+        flash(trans('general.message.success'))->success();
+        return redirect()->route(parent::getRouteActual() . '.index');
     }
 
     /**
@@ -84,6 +97,16 @@ class PlanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $plan = Plan::findOrFail($id);
+        $plan->delete();
+        flash(trans('general.message.destroy'))->error();
+        return redirect()->route(parent::getRouteActual() . '.index');
+    }
+
+    public function getDatatable()
+    {
+        $plans = Plan::with('channels')->get();
+        $datatables = DataTables::of($plans)->make(true);
+        return $datatables;
     }
 }

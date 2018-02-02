@@ -126,7 +126,7 @@ var Colorpicker = function(element, options) {
     });
   }
 
-  // for HTML5 input[type='color']
+  // for HTML5 input[types_channel='color']
   if ((this.input !== false) && (this.component !== false) && (this.input.attr('type') === 'color')) {
 
     this.input.on({

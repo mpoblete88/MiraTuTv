@@ -7,4 +7,13 @@
     class Controller extends BaseController
     {
         use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+        protected $routeActual;
+
+        protected function getRouteActual()
+        {
+            $routeAs = \Route::getCurrentRoute()->action['as'];
+            $explode_route = explode('.', $routeAs);
+            return $explode_route[0];
+        }
     }

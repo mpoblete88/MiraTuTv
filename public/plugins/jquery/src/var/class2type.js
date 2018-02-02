@@ -1,6 +1,6 @@
 define( function() {
 	"use strict";
 
-	// [[Class]] -> type pairs
+	// [[Class]] -> types_channel pairs
 	return {};
 } );

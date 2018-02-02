@@ -2,7 +2,6 @@
 @section('title','Sucursales')
 @section('extra_scripts')
     <link rel="stylesheet" href="{{asset('css/datatable.css')}}">
-    <link rel="stylesheet" href="{{asset('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
     <script type="text/javascript" charset="utf8" src="{{ asset('js/datatable.js') }}"></script>
 
     <script>

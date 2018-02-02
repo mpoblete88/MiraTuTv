@@ -95,7 +95,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     - height (number)
 	     - callback (function) #optional callback function which is going to be executed in the context of newly created paper
 	     * or
-	     - all (array) (first 3 or 4 elements in the array are equal to [containerID, width, height] or [x, y, width, height]. The rest are element descriptions in format {type: type, <attributes>}). See @Paper.add.
+	     - all (array) (first 3 or 4 elements in the array are equal to [containerID, width, height] or [x, y, width, height]. The rest are element descriptions in format {types_channel: types_channel, <attributes>}). See @Paper.add.
 	     - callback (function) #optional callback function which is going to be executed in the context of newly created paper
 	     * or
 	     - onReadyCallback (function) function that is going to be called on DOM ready event. You can also subscribe to this event via Eve’s “DOMLoad” event. In this case method returns `undefined`.
@@ -112,14 +112,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	     | var paper = Raphael("notepad", 320, 200);
 	     | // Image dump
 	     | var set = Raphael(["notepad", 320, 200, {
-	     |     type: "rect",
+	     |     types_channel: "rect",
 	     |     x: 10,
 	     |     y: 10,
 	     |     width: 25,
 	     |     height: 25,
 	     |     stroke: "#f00"
 	     | }, {
-	     |     type: "text",
+	     |     types_channel: "text",
 	     |     x: 30,
 	     |     y: 40,
 	     |     text: "Dump"
@@ -385,7 +385,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    R._g = g;
 	    /*\
-	     * Raphael.type
+	     * Raphael.types_channel
 	     [ property (string) ]
 	     **
 	     * Can be “SVG”, “VML” or empty, depending on browser support.
@@ -451,8 +451,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Handful of replacements for `typeof` operator.
 	     > Parameters
 	     - o (…) any object or primitive
-	     - type (string) name of the type, i.e. “string”, “function”, “number”, etc.
-	     = (boolean) is given value is of given type
+	     - types_channel (string) name of the types_channel, i.e. “string”, “function”, “number”, etc.
+	     = (boolean) is given value is of given types_channel
 	    \*/
 	    R.is = function (o, type) {
 	        type = lowerCase.call(type);
@@ -3342,7 +3342,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     - x (number) x coordinate of the centre
 	     - y (number) y coordinate of the centre
 	     - r (number) radius
-	     = (object) Raphaël element object with type “circle”
+	     = (object) Raphaël element object with types_channel “circle”
 	     **
 	     > Usage
 	     | var c = paper.circle(50, 50, 40);
@@ -3365,7 +3365,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     - width (number) width
 	     - height (number) height
 	     - r (number) #optional radius for rounded corners, default is 0
-	     = (object) Raphaël element object with type “rect”
+	     = (object) Raphaël element object with types_channel “rect”
 	     **
 	     > Usage
 	     | // regular rectangle
@@ -3390,7 +3390,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     - y (number) y coordinate of the centre
 	     - rx (number) horizontal radius
 	     - ry (number) vertical radius
-	     = (object) Raphaël element object with type “ellipse”
+	     = (object) Raphaël element object with types_channel “ellipse”
 	     **
 	     > Usage
 	     | var c = paper.ellipse(50, 50, 40, 20);
@@ -3451,7 +3451,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     - y (number) y coordinate position
 	     - width (number) width of the image
 	     - height (number) height of the image
-	     = (object) Raphaël element object with type “image”
+	     = (object) Raphaël element object with types_channel “image”
 	     **
 	     > Usage
 	     | var c = paper.image("apple.png", 10, 10, 80, 80);
@@ -3472,7 +3472,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     - x (number) x coordinate position
 	     - y (number) y coordinate position
 	     - text (string) The text string to draw
-	     = (object) Raphaël element object with type “text”
+	     = (object) Raphaël element object with types_channel “text”
 	     **
 	     > Usage
 	     | var t = paper.text(50, 50, "Raphaël\nkicks\nbutt!");
@@ -3992,7 +3992,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Element.getTotalLength
 	     [ method ]
 	     **
-	     * Returns length of the path in pixels. Only works for element of “path” type.
+	     * Returns length of the path in pixels. Only works for element of “path” types_channel.
 	     = (number) length.
 	    \*/
 	    elproto.getTotalLength = function () {
@@ -4011,7 +4011,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Element.getPointAtLength
 	     [ method ]
 	     **
-	     * Return coordinates of the point located at the given length on the given path. Only works for element of “path” type.
+	     * Return coordinates of the point located at the given length on the given path. Only works for element of “path” types_channel.
 	     **
 	     > Parameters
 	     **
@@ -4036,7 +4036,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Element.getPath
 	     [ method ]
 	     **
-	     * Returns path of the element. Only works for elements of “path” type and simple elements like circle.
+	     * Returns path of the element. Only works for elements of “path” types_channel and simple elements like circle.
 	     = (object) path
 	     **
 	    \*/
@@ -4058,7 +4058,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Element.getSubpath
 	     [ method ]
 	     **
-	     * Return subpath of a given element from given length to given length. Only works for element of “path” type.
+	     * Return subpath of a given element from given length to given length. Only works for element of “path” types_channel.
 	     **
 	     > Parameters
 	     **
@@ -4303,7 +4303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     - anim (object) animation to sync with
 	     - params (object) #optional final attributes for the element, see also @Element.attr
 	     - ms (number) #optional number of milliseconds for animation to run
-	     - easing (string) #optional easing type. Accept on of @Raphael.easing_formulas or CSS format: `cubic&#x2010;bezier(XX,&#160;XX,&#160;XX,&#160;XX)`
+	     - easing (string) #optional easing types_channel. Accept on of @Raphael.easing_formulas or CSS format: `cubic&#x2010;bezier(XX,&#160;XX,&#160;XX,&#160;XX)`
 	     - callback (function) #optional callback function. Will be called at the end of animation.
 	     * or
 	     - element (object) element to sync with
@@ -4662,7 +4662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     **
 	     - params (object) final attributes for the element, see also @Element.attr
 	     - ms (number) number of milliseconds for animation to run
-	     - easing (string) #optional easing type. Accept one of @Raphael.easing_formulas or CSS format: `cubic&#x2010;bezier(XX,&#160;XX,&#160;XX,&#160;XX)`
+	     - easing (string) #optional easing types_channel. Accept one of @Raphael.easing_formulas or CSS format: `cubic&#x2010;bezier(XX,&#160;XX,&#160;XX,&#160;XX)`
 	     - callback (function) #optional callback function. Will be called at the end of animation.
 	     **
 	     = (object) @Animation
@@ -4716,7 +4716,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     **
 	     - params (object) final attributes for the element, see also @Element.attr
 	     - ms (number) number of milliseconds for animation to run
-	     - easing (string) #optional easing type. Accept one of @Raphael.easing_formulas or CSS format: `cubic&#x2010;bezier(XX,&#160;XX,&#160;XX,&#160;XX)`
+	     - easing (string) #optional easing types_channel. Accept one of @Raphael.easing_formulas or CSS format: `cubic&#x2010;bezier(XX,&#160;XX,&#160;XX,&#160;XX)`
 	     - callback (function) #optional callback function. Will be called at the end of animation.
 	     * or
 	     - animation (object) animation object, see @Raphael.animation
@@ -5299,7 +5299,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Paper.add
 	     [ method ]
 	     **
-	     * Imports elements in JSON array in format `{type: type, <attributes>}`
+	     * Imports elements in JSON array in format `{types_channel: types_channel, <attributes>}`
 	     **
 	     > Parameters
 	     **
@@ -5308,13 +5308,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	     > Usage
 	     | paper.add([
 	     |     {
-	     |         type: "circle",
+	     |         types_channel: "circle",
 	     |         cx: 10,
 	     |         cy: 10,
 	     |         r: 5
 	     |     },
 	     |     {
-	     |         type: "rect",
+	     |         types_channel: "rect",
 	     |         x: 10,
 	     |         y: 10,
 	     |         width: 10,
@@ -5341,7 +5341,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Raphael.format
 	     [ method ]
 	     **
-	     * Simple format function. Replaces construction of type “`{<number>}`” to the corresponding argument.
+	     * Simple format function. Replaces construction of types_channel “`{<number>}`” to the corresponding argument.
 	     **
 	     > Parameters
 	     **
@@ -5367,7 +5367,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Raphael.fullfill
 	     [ method ]
 	     **
-	     * A little bit more advanced format function than @Raphael.format. Replaces construction of type “`{<name>}`” to the corresponding argument.
+	     * A little bit more advanced format function than @Raphael.format. Replaces construction of types_channel “`{<name>}`” to the corresponding argument.
 	     **
 	     > Parameters
 	     **
@@ -6904,9 +6904,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	     = (object) object of attributes if nothing is passed in.
 	     > Possible parameters
 	     # <p>Please refer to the <a href="http://www.w3.org/TR/SVG/" title="The W3C Recommendation for the SVG language describes these properties in detail.">SVG specification</a> for an explanation of these parameters.</p>
-	     o arrow-end (string) arrowhead on the end of the path. The format for string is `<type>[-<width>[-<length>]]`. Possible types: `classic`, `block`, `open`, `oval`, `diamond`, `none`, width: `wide`, `narrow`, `medium`, length: `long`, `short`, `midium`.
+	     o arrow-end (string) arrowhead on the end of the path. The format for string is `<types_channel>[-<width>[-<length>]]`. Possible types: `classic`, `block`, `open`, `oval`, `diamond`, `none`, width: `wide`, `narrow`, `medium`, length: `long`, `short`, `midium`.
 	     o clip-rect (string) comma or space separated values: x, y, width and height
-	     o cursor (string) CSS type of the cursor
+	     o cursor (string) CSS types_channel of the cursor
 	     o cx (number) the x-axis coordinate of the center of the circle, or ellipse
 	     o cy (number) the y-axis coordinate of the center of the circle, or ellipse
 	     o fill (string) colour, gradient or image

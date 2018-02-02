@@ -23,7 +23,7 @@ class SystemMaintenanceController extends Controller
             if ($font->category == 'sans-serif')
                 $font_list[] = [
                     'font_name' => $font->family,
-                    'category' => $font->category,
+                    'category_channel' => $font->category,
                     'variants' => implode(', ', $font->variants),
                 ];
         }

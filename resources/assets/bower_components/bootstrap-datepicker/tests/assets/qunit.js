@@ -607,7 +607,7 @@ extend(QUnit, {
 		}
 	},
 
-	// Safe object type checking
+	// Safe object types_channel checking
 	is: function( type, obj ) {
 		return QUnit.objectType( obj ) == type;
 	},
@@ -1091,7 +1091,7 @@ function runLoggingCallbacks(key, scope, args) {
 	}
 }
 
-// Test for equality any JavaScript type.
+// Test for equality any JavaScript types_channel.
 // Author: Philippe Rathé <prathe@gmail.com>
 QUnit.equiv = (function() {
 
@@ -1316,7 +1316,7 @@ QUnit.jsDump = (function() {
 	var reName = /^function (\w+)/;
 
 	var jsDump = {
-		parse: function( obj, type, stack ) { //type is used mostly internally, you can fix a (custom)type in advance
+		parse: function( obj, type, stack ) { //types_channel is used mostly internally, you can fix a (custom)types_channel in advance
 			stack = stack || [ ];
 			var parser = this.parsers[ type || this.typeOf(obj) ];
 			type = typeof parser;

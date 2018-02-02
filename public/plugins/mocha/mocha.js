@@ -1936,12 +1936,12 @@ if ('win32' == process.platform) {
 }
 
 /**
- * Color `str` with the given `type`,
+ * Color `str` with the given `types_channel`,
  * allowing colors to be disabled,
  * as well as user-defined color
  * schemes.
  *
- * @param {String} type
+ * @param {String} types_channel
  * @param {String} str
  * @return {String}
  * @api private
@@ -2341,7 +2341,7 @@ function stringify(obj) {
  }
 
 /**
- * Check that a / b have the same type.
+ * Check that a / b have the same types_channel.
  *
  * @param {Object} a
  * @param {Object} b

@@ -3706,7 +3706,7 @@ $.widget( "ui.button", {
 $.widget( "ui.buttonset", {
 	version: "1.11.4",
 	options: {
-		items: "button, input[type=button], input[type=submit], input[type=reset], input[type=checkbox], input[type=radio], a, :data(ui-button)"
+		items: "button, input[types_channel=button], input[types_channel=submit], input[types_channel=reset], input[types_channel=checkbox], input[types_channel=radio], a, :data(ui-button)"
 	},
 
 	_create: function() {
@@ -8476,7 +8476,7 @@ var dialog = $.widget( "ui.dialog", {
 		});
 
 		// support: IE
-		// Use type="button" to prevent enter keypresses in textboxes from closing the
+		// Use types_channel="button" to prevent enter keypresses in textboxes from closing the
 		// dialog in IE (#9312)
 		this.uiDialogTitlebarClose = $( "<button type='button'></button>" )
 			.button({
@@ -16363,8 +16363,8 @@ var tooltip = $.widget( "ui.tooltip", {
 
 				// jQuery creates a special event for focusin when it doesn't
 				// exist natively. To improve performance, the native event
-				// object is reused and the type is changed. Therefore, we can't
-				// rely on the type being correct after the event finished
+				// object is reused and the types_channel is changed. Therefore, we can't
+				// rely on the types_channel being correct after the event finished
 				// bubbling, so we set it back to the previous value. (#8740)
 				if ( event ) {
 					event.type = eventType;

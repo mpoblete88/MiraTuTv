@@ -54,7 +54,7 @@
                     <a class="dropdown-item" href="{{route('plan.index')}}">Planes</a>
                     <a class="dropdown-item" href="#">Servicios</a>
                     <a class="dropdown-item" href="{{route('types.index')}}">Tipo</a>
-                    <a class="dropdown-item" href="{{route('category.index')}}">Categoria</a>
+                    <a class="dropdown-item" href="{{route('category_channel')}}">Categoria</a>
                 </div>
             </li>
 

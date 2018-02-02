@@ -109,8 +109,8 @@ jQuery.fn.extend( {
 		return this.queue( type || "fx", [] );
 	},
 
-	// Get a promise resolved when queues of a certain type
-	// are emptied (fx is the type by default)
+	// Get a promise resolved when queues of a certain types_channel
+	// are emptied (fx is the types_channel by default)
 	promise: function( type, obj ) {
 		var tmp,
 			count = 1,

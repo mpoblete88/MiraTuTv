@@ -827,7 +827,7 @@
 		//Add the chart instance to the global namespace
 		Chart.instances[this.id] = this;
 
-		// Initialize is always called when a chart type is created
+		// Initialize is always called when a chart types_channel is created
 		// By default it is a no op, but it should be extended
 		if (options.responsive){
 			this.resize();
@@ -835,7 +835,7 @@
 		this.initialize.call(this,data);
 	};
 
-	//Core methods that'll be a part of every chart type
+	//Core methods that'll be a part of every chart types_channel
 	extend(Chart.Type.prototype,{
 		initialize : function(){return this;},
 		clear : function(){
@@ -1068,9 +1068,9 @@
 		if (extensions.name || parent.prototype.name){
 
 			var chartName = extensions.name || parent.prototype.name;
-			//Assign any potential default values of the new chart type
+			//Assign any potential default values of the new chart types_channel
 
-			//If none are defined, we'll use a clone of the chart type this is being extended from.
+			//If none are defined, we'll use a clone of the chart types_channel this is being extended from.
 			//I.e. if we extend a line chart, we'll use the defaults from the line chart if our new chart
 			//doesn't define some defaults of their own.
 
@@ -1080,7 +1080,7 @@
 
 			Chart.types[chartName] = ChartType;
 
-			//Register this new chart type in the Chart prototype
+			//Register this new chart types_channel in the Chart prototype
 			Chart.prototype[chartName] = function(data,options){
 				var config = merge(Chart.defaults.global, Chart.defaults[chartName], options || {});
 				return new ChartType(data,config,this);
@@ -1579,7 +1579,7 @@
 			}
 
 		},
-		// Needs to be overidden in each Chart type
+		// Needs to be overidden in each Chart types_channel
 		// Otherwise we need to pass all the data into the scale class
 		calculateYRange: noop,
 		drawingArea: function(){

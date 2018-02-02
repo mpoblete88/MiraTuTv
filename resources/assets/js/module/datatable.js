@@ -1025,3 +1025,11 @@
 	        }
 	    };
 	})(jQuery);
+
+    function delete_confirm()
+    {
+        if(confirm('¿Estas seguro de eliminar?'))
+            return true;
+        else
+            return false;
+    }

@@ -18,7 +18,7 @@ class CreateCompanyBranchOfficeAddressPhonesTable extends Migration
             $table->integer('company_branch_office_address_id');
             $table->integer('country_code_id');
             $table->string('phone');
-            $table->enum('type', ['fixed', 'mobile']);
+            $table->enum('types_channel', ['fixed', 'mobile']);
             $table->timestamps();
         });
     }

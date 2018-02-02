@@ -22,7 +22,7 @@ For support for Internet Explorer < 9, you can use [Excanvas]
 with Flot. You just include the excanvas script like this:
 
 ```html
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="excanvas.min.js"></script><![endif]-->
+types_channel
 ```
 
 If it's not working on your development IE 6.0, check that it has

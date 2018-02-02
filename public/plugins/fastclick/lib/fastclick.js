@@ -28,7 +28,7 @@
 		/**
 		 * Whether a click is currently being tracked.
 		 *
-		 * @type boolean
+		 * @types_channel boolean
 		 */
 		this.trackingClick = false;
 
@@ -36,7 +36,7 @@
 		/**
 		 * Timestamp for when click tracking started.
 		 *
-		 * @type number
+		 * @types_channel number
 		 */
 		this.trackingClickStart = 0;
 
@@ -44,7 +44,7 @@
 		/**
 		 * The element being tracked for a click.
 		 *
-		 * @type EventTarget
+		 * @types_channel EventTarget
 		 */
 		this.targetElement = null;
 
@@ -52,7 +52,7 @@
 		/**
 		 * X-coordinate of touch start event.
 		 *
-		 * @type number
+		 * @types_channel number
 		 */
 		this.touchStartX = 0;
 
@@ -60,7 +60,7 @@
 		/**
 		 * Y-coordinate of touch start event.
 		 *
-		 * @type number
+		 * @types_channel number
 		 */
 		this.touchStartY = 0;
 
@@ -68,7 +68,7 @@
 		/**
 		 * ID of the last touch, retrieved from Touch.identifier.
 		 *
-		 * @type number
+		 * @types_channel number
 		 */
 		this.lastTouchIdentifier = 0;
 
@@ -76,7 +76,7 @@
 		/**
 		 * Touchmove boundary, beyond which a click will be cancelled.
 		 *
-		 * @type number
+		 * @types_channel number
 		 */
 		this.touchBoundary = options.touchBoundary || 10;
 
@@ -84,21 +84,21 @@
 		/**
 		 * The FastClick layer.
 		 *
-		 * @type Element
+		 * @types_channel Element
 		 */
 		this.layer = layer;
 
 		/**
 		 * The minimum time between tap(touchstart and touchend) events
 		 *
-		 * @type number
+		 * @types_channel number
 		 */
 		this.tapDelay = options.tapDelay || 200;
 
 		/**
 		 * The maximum time for a tap
 		 *
-		 * @type number
+		 * @types_channel number
 		 */
 		this.tapTimeout = options.tapTimeout || 700;
 
@@ -176,14 +176,14 @@
 	/**
 	* Windows Phone 8.1 fakes user agent string to look like Android and iPhone.
 	*
-	* @type boolean
+	* @types_channel boolean
 	*/
 	var deviceIsWindowsPhone = navigator.userAgent.indexOf("Windows Phone") >= 0;
 
 	/**
 	 * Android requires exceptions.
 	 *
-	 * @type boolean
+	 * @types_channel boolean
 	 */
 	var deviceIsAndroid = navigator.userAgent.indexOf('Android') > 0 && !deviceIsWindowsPhone;
 
@@ -191,7 +191,7 @@
 	/**
 	 * iOS requires exceptions.
 	 *
-	 * @type boolean
+	 * @types_channel boolean
 	 */
 	var deviceIsIOS = /iP(ad|hone|od)/.test(navigator.userAgent) && !deviceIsWindowsPhone;
 
@@ -199,7 +199,7 @@
 	/**
 	 * iOS 4 requires an exception for select elements.
 	 *
-	 * @type boolean
+	 * @types_channel boolean
 	 */
 	var deviceIsIOS4 = deviceIsIOS && (/OS 4_\d(_\d)?/).test(navigator.userAgent);
 
@@ -207,14 +207,14 @@
 	/**
 	 * iOS 6.0-7.* requires the target element to be manually derived
 	 *
-	 * @type boolean
+	 * @types_channel boolean
 	 */
 	var deviceIsIOSWithBadTarget = deviceIsIOS && (/OS [6-7]_\d/).test(navigator.userAgent);
 
 	/**
 	 * BlackBerry requires exceptions.
 	 *
-	 * @type boolean
+	 * @types_channel boolean
 	 */
 	var deviceIsBlackBerry10 = navigator.userAgent.indexOf('BB10') > 0;
 
@@ -325,7 +325,7 @@
 	FastClick.prototype.focus = function(targetElement) {
 		var length;
 
-		// Issue #160: on iOS 7, some input elements (e.g. date datetime month) throw a vague TypeError on setSelectionRange. These elements don't have an integer value for the selectionStart and selectionEnd properties, but unfortunately that can't be used for detection because accessing the properties also throws a TypeError. Just check the type instead. Filed as Apple bug #15122724.
+		// Issue #160: on iOS 7, some input elements (e.g. date datetime month) throw a vague TypeError on setSelectionRange. These elements don't have an integer value for the selectionStart and selectionEnd properties, but unfortunately that can't be used for detection because accessing the properties also throws a TypeError. Just check the types_channel instead. Filed as Apple bug #15122724.
 		if (deviceIsIOS && targetElement.setSelectionRange && targetElement.type.indexOf('date') !== 0 && targetElement.type !== 'time' && targetElement.type !== 'month') {
 			length = targetElement.value.length;
 			targetElement.setSelectionRange(length, length);
@@ -508,7 +508,7 @@
 
 		// If no for attribute exists, attempt to retrieve the first labellable descendant element
 		// the list of which is defined here: http://www.w3.org/TR/html5/forms.html#category-label
-		return labelElement.querySelector('button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea');
+		return labelElement.querySelector('button, input:not([types_channel=hidden]), keygen, meter, output, progress, select, textarea');
 	};
 
 
@@ -687,7 +687,7 @@
 			return true;
 		}
 
-		// Very odd behaviour on iOS (issue #18): if a submit element is present inside a form and the user hits enter in the iOS simulator or clicks the Go button on the pop-up OS keyboard the a kind of 'fake' click event will be triggered with the submit-type input element as the target.
+		// Very odd behaviour on iOS (issue #18): if a submit element is present inside a form and the user hits enter in the iOS simulator or clicks the Go button on the pop-up OS keyboard the a kind of 'fake' click event will be triggered with the submit-types_channel input element as the target.
 		if (event.target.type === 'submit' && event.detail === 0) {
 			return true;
 		}

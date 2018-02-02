@@ -12,7 +12,7 @@
     {{--$.ajax({--}}
 
     {{--url: url,--}}
-    {{--type: 'post',--}}
+    {{--types_channel: 'post',--}}
     {{--data: {_method: 'delete', _token: token},--}}
     {{--success: function (response) {--}}
 

@@ -570,7 +570,7 @@
 
         /**
          * Determine which handler has a priority
-         * works only for double slider type
+         * works only for double slider types_channel
          */
         setTopHandler: function () {
             var min = this.options.min,

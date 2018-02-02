@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin\Catalog;
 
 use App\Catalog\Category;
+use App\Http\Requests\CategoryRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Yajra\DataTables\Facades\DataTables;
 
 class CategoryController extends Controller
 {
@@ -18,7 +20,7 @@ class CategoryController extends Controller
         $categories = Category::get();
 
 
-        return view('admin.catalog.category.index')->with(['categories'=>$categories]);
+        return view('admin.catalog.category_channel.index')->with(['categories'=>$categories]);
     }
 
     /**
@@ -28,7 +30,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.catalog.' . parent::getRouteActual() . '.create');
     }
 
     /**
@@ -37,9 +39,11 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
-        //
+        Category::create($request->all());
+        flash(trans('general.message.success'))->success();
+        return redirect()->route(parent::getRouteActual() . '.index');
     }
 
     /**
@@ -61,7 +65,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        return view('admin.catalog.' . parent::getRouteActual() . '.edit', compact('category'));
     }
 
     /**
@@ -71,9 +76,12 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->update($request->all());
+        flash(trans('general.message.edit'))->success();
+        return redirect()->route(parent::getRouteActual() . '.index');
     }
 
     /**
@@ -84,6 +92,16 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->delete();
+        flash(trans('general.message.destroy'))->error();
+        return redirect()->route(parent::getRouteActual() . '.index');
+    }
+
+    public function getDatatable()
+    {
+        $categories = Category::all();
+        $datatable = DataTables::of($categories)->make(true);
+        return $datatable;
     }
 }

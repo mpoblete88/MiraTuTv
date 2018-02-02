@@ -17,7 +17,7 @@ class CreateAboutAttachmentsTable extends Migration
             $table->increments('id');
             $table->integer('about_id');
 
-            $table->string('type');
+            $table->string('types_channel');
             $table->string('file_name');
             $table->string('size');
             $table->string('format_file');

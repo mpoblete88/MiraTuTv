@@ -521,7 +521,7 @@
       var ruleset = zone[1];
       var basicOffset = zone[0];
 
-      //Convert a date to UTC. Depending on the 'type' parameter, the date
+      //Convert a date to UTC. Depending on the 'types_channel' parameter, the date
       // parameter may be:
       //
       // - `u`, `g`, `z`: already UTC (no adjustment).
@@ -541,7 +541,7 @@
         } else if (type === 'w' || !type) { // Wall Clock Time
           offset = getAdjustedOffset(basicOffset, rule);
         } else {
-          throw("unknown type " + type);
+          throw("unknown types_channel " + type);
         }
         offset *= 60 * 1000; // to millis
 

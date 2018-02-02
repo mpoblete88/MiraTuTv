@@ -172,6 +172,7 @@ return [
         Styde\Html\HtmlServiceProvider::class,
         ByTestGear\Accountable\AccountableServiceProvider::class,
         \App\Providers\MenuProvider::class,
+        \App\Providers\SectionAdminProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,

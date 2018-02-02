@@ -7,21 +7,21 @@
 jvm.AbstractElement = function(name, config){
   /**
    * Underlying DOM element
-   * @type {DOMElement}
+   * @types_channel {DOMElement}
    * @private
    */
   this.node = this.createElement(name);
 
   /**
    * Name of underlying element
-   * @type {String}
+   * @types_channel {String}
    * @private
    */
   this.name = name;
 
   /**
    * Internal store of attributes
-   * @type {Object}
+   * @types_channel {Object}
    * @private
    */
   this.properties = {};

@@ -350,7 +350,7 @@ $.widget( "ui.button", {
 $.widget( "ui.buttonset", {
 	version: "1.11.4",
 	options: {
-		items: "button, input[type=button], input[type=submit], input[type=reset], input[type=checkbox], input[type=radio], a, :data(ui-button)"
+		items: "button, input[types_channel=button], input[types_channel=submit], input[types_channel=reset], input[types_channel=checkbox], input[types_channel=radio], a, :data(ui-button)"
 	},
 
 	_create: function() {

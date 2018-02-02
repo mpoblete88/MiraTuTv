@@ -17,7 +17,7 @@ class CreateCallToActionAttachmentsTable extends Migration
             $table->increments('id');
             $table->integer('call_to_action_id');
 
-            $table->string('type');
+            $table->string('types_channel');
             $table->string('file_name');
             $table->string('size');
             $table->string('format_file');

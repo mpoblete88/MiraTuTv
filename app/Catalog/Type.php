@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-
+    protected $fillable = ['name', 'short_name'];
 
     public function channel(){
 

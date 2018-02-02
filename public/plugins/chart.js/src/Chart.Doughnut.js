@@ -46,7 +46,7 @@
 		//Config is automatically merged by the core of Chart.js, and is available at this.options
 		initialize:  function(data){
 
-			//Declare segments as a static property to prevent inheriting across the Chart type prototype
+			//Declare segments as a static property to prevent inheriting across the Chart types_channel prototype
 			this.segments = [];
 			this.outerRadius = (helpers.min([this.chart.width,this.chart.height]) -	this.options.segmentStrokeWidth/2)/2;
 
