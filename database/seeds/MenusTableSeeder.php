@@ -213,6 +213,20 @@ class MenusTableSeeder extends Seeder
                 'updated_by_user_id' => NULL,
                 'deleted_by_user_id' => NULL,
             ),
+            14 => 
+            array (
+                'id' => 16,
+                'title' => 'Redes Sociales Sucursales',
+                'route' => 'company_branch_office_social.index',
+                'icon' => 'fas fa-briefcase',
+                'parent_id' => 2,
+                'hierarchy' => 100,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'created_by_user_id' => NULL,
+                'updated_by_user_id' => NULL,
+                'deleted_by_user_id' => NULL,
+            ),
         ));
         
         

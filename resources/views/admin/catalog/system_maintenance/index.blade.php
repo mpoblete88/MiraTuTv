@@ -25,27 +25,27 @@
 
             <div class="form-group input-group">
                 {{ Form::label('lblDescription', 'Color de fondo', ['class' => ''])}}
-                {{ Form::text('txtBackgroundColor', $maintenance->background_color, ['class' => 'form-control colorPicker colorpicker-element'])}}
+                {!! Form::colorPicker('txtBackgroundColor', $maintenance->background_color) !!}
             </div>
 
             <div class="form-group input-group">
                 {{ Form::label('lblDescription', 'Color del titulo', ['class' => ''])}}
-                {{ Form::text('txtTitleColor', $maintenance->title_color, ['class' => 'form-control colorPicker colorpicker-element'])}}
+                {!! Form::colorPicker('txtTitleColor', $maintenance->title_color)!!}
             </div>
             <div class="form-group input-group">
                 {{ Form::label('lblDescription', 'Color del Subtitulo', ['class' => ''])}}
-                {{ Form::text('txtSubtitleColor', $maintenance->subtitle_color, ['class' => 'form-control colorPicker colorpicker-element'])}}
+                {!! Form::colorPicker('txtSubtitleColor', $maintenance->subtitle_color)!!}
             </div>
 
 
             <div class="form-group input-group">
                 {{ Form::label('lblDescription', 'Color de texto del pie de Página', ['class' => ''])}}
-                {{ Form::text('txtFooterColor', $maintenance->footer_text_color, ['class' => 'form-control colorPicker colorpicker-element'])}}
+                {!! Form::colorPicker('txtFooterColor', $maintenance->footer_text_color)!!}
             </div>
 
             <div class="form-group">
                 {{ Form::label('lblDescription','Fuente', ['class' => ''])}}
-                {{ Form::select('txtFontFamily', $fontsGoogle,  $maintenance->font_family, ['class' => 'form-control'])}}
+                {!! Form::selectMultiple('txtFontFamily', $fontsGoogle,  $maintenance->font_family) !!}
             </div>
 
             <div class="form-group">
@@ -60,8 +60,7 @@
 
 
             <div class="form-group">
-                {{ Form::checkbox('isActivate', null, $maintenance->status == 1 ? true : false)}}
-
+                {{ Form::checkbox('isActivate', 'true', $maintenance->status == 1)}}
                 {{ Form::label('lblDescription', 'Activar', ['class' => ''])}}
             </div>
 

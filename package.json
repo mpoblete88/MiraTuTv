@@ -23,11 +23,13 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
+    "bootstrap-colorpicker": "^2.5.2",
     "datatables.net-bs": "^1.10.16",
     "datatables.net-dt": "^1.10.16",
     "datatables.net-responsive-bs": "^2.2.1",
     "datatables.net-select-bs": "^1.2.4",
     "font-awesome": "^4.7.0",
+    "multiple-select": "^1.2.1",
     "select2": "^4.0.6-rc.1"
   }
 }

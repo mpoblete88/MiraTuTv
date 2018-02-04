@@ -2,6 +2,8 @@ var $ = global.jQuery = global.$ = require('jquery');
 require('./bootstrap');
 require('./fontawesome');
 require('select2');
+require('bootstrap-colorpicker');
+$('.colorPicker').colorpicker();
 $('.select2').select2({
     language: "es"
 });

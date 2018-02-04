@@ -62,17 +62,31 @@
                         })
                     }
                 },
-                ajax: '{!! route('datatable_company_branch_office_phones') !!}',
+                ajax: '{!! route('datatable_company_branch_office_contacts') !!}',
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Todo"]],
                 "pageLength": 10,
                 stateSave: true,
                 columns: [
 
                     {data: 'id'},
-                    {data: 'phone'},
-                    {data: 'country'},
-                    {data: 'type'},
+                    {data: 'name'},
+                    {data: 'email'},
                     {data: 'branch_office'},
+                    {
+                        data: function (data) {
+                            var phones = '<ul>';
+                            if (data.phones.length > 0) {
+                                $.each(data.phones, function (value, key) {
+                                    phones += '<li>' + key.phone + '</li>';
+                                })
+                                phones += '</li>';
+                            } else {
+                                phones += '<li>Sin telefonos</li>';
+                            }
+                            return phones;
+                        }
+                    },
+                    {data: 'created_at'},
                     {
                         data: function (data) {
                             @include('admin.partials.buttons', ['route' => $route])
@@ -80,7 +94,7 @@
                     }
                 ],
                 initComplete: function () {
-                    this.api().columns([1, 2, 6]).every(function () {
+                    this.api().columns([2, 3, 4, 5]).every(function () {
                         var column = this;
                         var name_column = $(column.header()).text();
                         var select = $('<select style="min-width:200px"><option value="">' + name_column + '</option></select>');
@@ -147,9 +161,10 @@
                     <th data-priority="0">Id</th>
                     <th data-priority="1">Nombre Completo</th>
                     <th data-priority="2">Correo</th>
-                    <th data-priority="3">Telefonos</th>
                     <th data-priority="5">Sucursal</th>
-                    <th data-priority="4">Acción</th>
+                    <th data-priority="6">Telefonos</th>
+                    <th data-priority="4">Fecha creación</th>
+                    <th data-priority="3">Acción</th>
 
                 </tr>
                 </thead>

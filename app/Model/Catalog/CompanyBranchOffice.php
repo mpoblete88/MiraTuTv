@@ -29,21 +29,21 @@ class CompanyBranchOffice extends Model
 
     public function company()
     {
-        return $this->belongsTo(\App\Company::class, 'company_id');
+        return $this->belongsTo(\App\Model\Catalog\Company::class, 'company_id');
     }
 
     public function address()
     {
-        return $this->hasOne(\App\CompanyBranchOfficeAddress::class, 'company_branch_office_id');
+        return $this->hasOne(\App\Model\Catalog\CompanyBranchOfficeAddress::class, 'company_branch_office_id');
     }
 
     public function socials()
     {
-        return $this->hasMany(\App\CompanyBranchOfficeSocial::class, 'company_branch_office_id');
+        return $this->hasMany(\App\Model\Catalog\CompanyBranchOfficeSocial::class, 'company_branch_office_id');
     }
 
     public function contacts()
     {
-        return $this->hasMany(\App\CompanyBranchOfficeContact::class, 'company_branch_office_id');
+        return $this->hasMany(\App\Model\Catalog\CompanyBranchOfficeContact::class, 'company_branch_office_id');
     }
 }

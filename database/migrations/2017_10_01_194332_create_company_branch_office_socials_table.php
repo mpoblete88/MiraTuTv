@@ -13,15 +13,16 @@ class CreateCompanyBranchOfficeSocialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('company_branch_office_socials', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('company_branch_office_id');
-            $table->string('name');
-            $table->string('user_name');
-            $table->string('url');
-            $table->text('icon_path');
-            $table->timestamps();
-        });
+        Schema::create(
+         'company_branch_office_socials',
+         function (Blueprint $table) {
+             $table->increments('id');
+             $table->text('url');
+             $table->integer('type_id');
+             $table->integer('company_branch_office_id');
+             $table->timestamps();
+         }
+        );
     }
 
     /**

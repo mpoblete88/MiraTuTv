@@ -2,7 +2,7 @@
 
 namespace App\Model\Catalog;
 
-use App\CompanyBranchOfficeAddressPhone;
+use App\Model\Catalog\CompanyBranchOfficeAddressPhone;
 use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model

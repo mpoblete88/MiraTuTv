@@ -19,6 +19,7 @@ mix.sass('resources/assets/sass/app.scss', 'public/css');
 mix.sass('resources/assets/sass/datatable.scss', 'public/css');
 mix.sass('resources/assets/sass/admin.scss', 'public/css');
 
+mix.copy('resources/assets/css','public/css');
 mix.copy('resources/assets/images','public/images');
 mix.copy('resources/assets/images/favicon.ico','public/');
 mix.copy('resources/assets/fonts/','public/fonts/');

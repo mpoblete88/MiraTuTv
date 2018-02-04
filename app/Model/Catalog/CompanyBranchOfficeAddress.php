@@ -36,7 +36,7 @@ class CompanyBranchOfficeAddress extends Model
 
     public function phones()
     {
-        return $this->hasMany(\App\CompanyBranchOfficeAddressPhone::class, 'company_branch_office_address_id');
+        return $this->hasMany(CompanyBranchOfficeAddressPhone::class, 'company_branch_office_address_id');
     }
 
     public function getCoordination($address)

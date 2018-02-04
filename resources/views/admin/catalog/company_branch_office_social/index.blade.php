@@ -1,12 +1,12 @@
 @extends('admin.layout.head')
-@section('title','Telefonos Sucursales')
+@section('title','Redes Sociales Sucursales')
 @section('extra_scripts')
     <link rel="stylesheet" href="{{asset('css/datatable.css')}}">
     <script type="text/javascript" charset="utf8" src="{{ asset('js/datatable.js') }}"></script>
 
     <script>
         $(document).ready(function () {
-            var user_table = $('#company-branch-office-table').DataTable({
+            var table = $('#{{$route}}-table').DataTable({
                 "sDom": '<"top"if>rt<"bottom"lp><"clear">',
                 language: {
                     "paginate": {
@@ -62,57 +62,19 @@
                         })
                     }
                 },
-                ajax: '{!! route('datatable_company_branch_offices') !!}',
+                ajax: '{!! route('datatable_company_branch_office_social') !!}',
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Todo"]],
                 "pageLength": 10,
                 stateSave: true,
                 columns: [
 
                     {data: 'id'},
-                    {data: 'name'},
-                    {data: 'address'},
-                    {
-                        data: function (data) {
-                            var social = '';
-                            if (data.socials !== 'Sin registros') {
-                                social += '<ul>';
-                                $.each(data.socials, function (value, key) {
-                                    social += '<li><a href="' + key.social + '">' + key.type + '</a></li>';
-                                });
-                                social += '</ul>';
-                            } else {
-                                social += data.socials;
-                            }
-
-                            return social;
-                        }
-                    },
-                    {
-                        data: function (data) {
-                            var phone = '';
-                            if (data.phones !== 'Sin registros') {
-                                phone += '<ul>';
-                                $.each(data.phones, function (value, key) {
-                                    phone += '<li>' + key.phone + '</li>';
-                                });
-                                phone += '</ul>';
-                            } else {
-                                phone += data.phones;
-                            }
-
-                            return phone;
-                        }
-                    },
-                    {
-                        data: function (data) {
-                            return 'Sin registros';
-                        }
-                    },
-                    {
-                        data: function (data) {
-                            return '<span class="label label-' + data.status_color + '">' + data.status_label + '</span>';
-                        }
-                    },
+                    {data: function(data)
+                        {
+                            return '<a href="'+data.url+'">'+data.url+'</a>';
+                        }},
+                    {data: 'type.name'},
+                    {data: 'branch_office.name'},
                     {
                         data: function (data) {
                             @include('admin.partials.buttons', ['route' => $route])
@@ -120,7 +82,7 @@
                     }
                 ],
                 initComplete: function () {
-                    this.api().columns([1, 2, 6]).every(function () {
+                    this.api().columns([2, 3]).every(function () {
                         var column = this;
                         var name_column = $(column.header()).text();
                         var select = $('<select style="min-width:200px"><option value="">' + name_column + '</option></select>');
@@ -173,24 +135,21 @@
 
             <div class="pull-right box-tools">
 
-                <a href="{{ route('company_branch_office.create')}}" class="btn btn-success btn-sm"
+                <a href="{{ route($route.'.create')}}" class="btn btn-success btn-sm"
                    title="{{ trans('general.action.create')}}"><i class="fa fa-plus" aria-hidden="true"></i></a>
 
             </div>
         </div>
         <div class="box-body">
             @include('flash::message')
-            <table id="company-branch-office-table" class="table table-bordered table-striped dataTable" cellspacing="0"
+            <table id="{{$route}}-table" class="table table-bordered table-striped dataTable" cellspacing="0"
                    width="100%">
                 <thead>
                 <tr>
                     <th data-priority="0">Id</th>
-                    <th data-priority="1">Nombre</th>
-                    <th data-priority="4">Direcciones</th>
-                    <th data-priority="5">Redes Sociales</th>
-                    <th data-priority="6">Telefonos</th>
-                    <th data-priority="7">Contactos</th>
-                    <th data-priority="2">Estado</th>
+                    <th data-priority="1">Link</th>
+                    <th data-priority="2">Red Social</th>
+                    <th data-priority="4">Sucursal</th>
                     <th data-priority="3">Acción</th>
 
                 </tr>

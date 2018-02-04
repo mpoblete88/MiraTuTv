@@ -7,7 +7,7 @@
 
  */
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
+@import "~bootstrap-colorpicker/src/sass/colorpicker";
 html, body {
   height: 100%;
 }
@@ -8546,5 +8546,5 @@ table.text-center {
 .select2-container .select2-selection--single .select2-selection__rendered {
   padding-right: 10px;
 }
-tbody > tr > td form {display:inline; margin-right:.3rem;}
+td > form {display:inline; margin-right:.3rem;}
 @import 'fontawesome';

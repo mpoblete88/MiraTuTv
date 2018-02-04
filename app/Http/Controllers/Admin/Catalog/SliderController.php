@@ -20,7 +20,7 @@ class SliderController extends Controller
         $sliders = Slider::get();
 
 
-        return view('admin.catalog.' . parent::getRouteActual() . '.index')->with(['sliders' => $sliders]);
+        return view('admin.catalog.'.parent::getRouteActual().'.index')->with(['sliders' => $sliders]);
     }
 
     /**
@@ -30,7 +30,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('admin.catalog.' . parent::getRouteActual() . '.create');
+        return view('admin.catalog.'.parent::getRouteActual().'.create');
     }
 
     /**
@@ -41,28 +41,29 @@ class SliderController extends Controller
      */
     public function store(Request $request)
     {
-        $slider = Slider::create($request->except('attachment'));
-        $imageName = time() . '.' . $request->file('attachment')->getClientOriginalName();
-        $path = public_path() . '\images\sliders/' . $slider->id . '/';
-        $attachment_path = 'images\sliders/' . $slider->id . '/' . $imageName;
-        $archiveFinal = $path . $imageName;
+        $slider          = Slider::create($request->except('attachment'));
+        $imageName       = time().'.'.$request->file('attachment')->getClientOriginalName();
+        $path            = public_path().'\images\sliders/'.$slider->id.'/';
+        $attachment_path = 'images\sliders/'.$slider->id.'/'.$imageName;
+        $archiveFinal    = $path.$imageName;
         $request->file('attachment')->move(
-            $path,
-            $imageName
+         $path,
+         $imageName
         );
-        $typeAttachment = mime_content_type($archiveFinal);
-        $typeAttachmentExplode = explode("/", $typeAttachment);
-        $sliderAttachment = new SliderAttachment();
-        $sliderAttachment->slider_id = $slider->id;
-        $sliderAttachment->file_name = $imageName;
-        $sliderAttachment->size = filesize($archiveFinal);
+        $typeAttachment                = mime_content_type($archiveFinal);
+        $typeAttachmentExplode         = explode("/", $typeAttachment);
+        $sliderAttachment              = new SliderAttachment();
+        $sliderAttachment->slider_id   = $slider->id;
+        $sliderAttachment->file_name   = $imageName;
+        $sliderAttachment->size        = filesize($archiveFinal);
         $sliderAttachment->format_file = $typeAttachmentExplode[1];
-        $sliderAttachment->path = $attachment_path;
+        $sliderAttachment->path        = $attachment_path;
         $sliderAttachment->save();
 
         $slider->save();
         flash(trans('general.message.success'))->success();
-        return redirect()->route(parent::getRouteActual() . '.index');
+
+        return redirect()->route(parent::getRouteActual().'.index');
     }
 
     /**
@@ -85,14 +86,15 @@ class SliderController extends Controller
     public function edit($id)
     {
         $slider = Slider::findOrFail($id);
-        return view('admin.catalog.' . parent::getRouteActual() . '.edit', compact('slider'));
+
+        return view('admin.catalog.'.parent::getRouteActual().'.edit', compact('slider'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  int                      $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -101,31 +103,32 @@ class SliderController extends Controller
         $slider->update($request->except('attachment'));
 
         if (!is_null($request->file('attachment'))) {
-            $imageName = time() . '.' . $request->file('attachment')->getClientOriginalName();
-            $path = public_path() . '\images\sliders/' . $slider->id . '/';
-            $attachment_path = 'images\sliders/' . $slider->id . '/' . $imageName;
-            $archiveFinal = $path . $imageName;
+            $imageName       = time().'.'.$request->file('attachment')->getClientOriginalName();
+            $path            = public_path().'\images\sliders/'.$slider->id.'/';
+            $attachment_path = 'images\sliders/'.$slider->id.'/'.$imageName;
+            $archiveFinal    = $path.$imageName;
             $request->file('attachment')->move(
-                $path,
-                $imageName
+             $path,
+             $imageName
             );
-            $typeAttachment = mime_content_type($archiveFinal);
+            $typeAttachment        = mime_content_type($archiveFinal);
             $typeAttachmentExplode = explode("/", $typeAttachment);
 
             if (is_null($slider->attachment)) {
-                $sliderAttachment = new SliderAttachment();
+                $sliderAttachment            = new SliderAttachment();
                 $sliderAttachment->slider_id = $slider->id;
             } else {
                 $sliderAttachment = $slider->attachment;
             }
-            $sliderAttachment->file_name = $imageName;
-            $sliderAttachment->size = filesize($archiveFinal);
+            $sliderAttachment->file_name   = $imageName;
+            $sliderAttachment->size        = filesize($archiveFinal);
             $sliderAttachment->format_file = $typeAttachmentExplode[1];
-            $sliderAttachment->path = $attachment_path;
+            $sliderAttachment->path        = $attachment_path;
             $sliderAttachment->save();
         }
         flash(trans('general.message.success'))->success();
-        return redirect()->route(parent::getRouteActual() . '.index');
+
+        return redirect()->route(parent::getRouteActual().'.index');
     }
 
     /**
@@ -139,13 +142,15 @@ class SliderController extends Controller
         $slider = Slider::findOrFail($id);
         $slider->delete();
         flash(trans('general.message.destroy'))->error();
-        return redirect()->route(parent::getRouteActual() . '.index');
+
+        return redirect()->route(parent::getRouteActual().'.index');
     }
 
     public function getDataTable()
     {
-        $sliders = Slider::all();
+        $sliders   = Slider::all();
         $datatable = DataTables::of($sliders)->make(true);
+
         return $datatable;
     }
 }

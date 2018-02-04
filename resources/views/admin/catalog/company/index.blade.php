@@ -1,5 +1,5 @@
 @extends('admin.layout.head')
-@section('title','Comapañia')
+@section('title','Compañia')
 @section('content')
     <div class="box box-info">
         <div class="box-header with-border">
@@ -9,7 +9,7 @@
         <!-- form start -->
         @include('flash::message')
 
-        {!! Form::open(['route' => ['channel.update', $company->id], 'method' => 'put']) !!}
+        {!! Form::open(['route' => ['company.update', $company->id], 'method' => 'put', 'files' => true]) !!}
         <div class="box-body">
             <div class="form-group">
                 {{ Form::label('lblDescription', 'Nombre', ['class' => ''])}}
@@ -25,7 +25,7 @@
             </div>
             <div class="form-group">
                 {{ Form::label('lblFavicon', 'Favicon', ['class' => ''])}}
-                {{ Form::file("favicon", ['class' => '']) }}
+                {{ Form::file("favicon_path", ['class' => '']) }}
 
 
                 <img alt="*" src="{{ asset($company->favicon_path) }}">

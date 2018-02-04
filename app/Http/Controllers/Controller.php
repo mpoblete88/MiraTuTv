@@ -16,15 +16,17 @@ class Controller extends BaseController
 
     protected function getRouteActual()
     {
-        $routeAs = \Route::getCurrentRoute()->action['as'];
+        $routeAs       = \Route::getCurrentRoute()->action['as'];
         $explode_route = explode('.', $routeAs);
+
         return $explode_route[0];
     }
 
     protected function getCoordinate($address)
     {
-        $client = new \GuzzleHttp\Client();
+        $client   = new \GuzzleHttp\Client();
         $geocoder = new Geocoder($client);
+
         return $geocoder->getCoordinatesForAddress($address);
     }
 }
