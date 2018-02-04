@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
-use App\Admin;
-use App\Http\Requests\AdminRequest;
-use Illuminate\Http\Request;
+use App\Model\Catalog\Admin;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminRequest;
 use Yajra\DataTables\Facades\DataTables;
 
 class AdminController extends Controller
@@ -114,7 +113,7 @@ class AdminController extends Controller
         $admin = Admin::findOrFail($id);
         $admin->update([
             'status' => $admin->status == 'active' ? 'inactive' : 'active',
-            ]);
+        ]);
         flash('Se ha desactivado correctamente')->error();
 
         return redirect()->route('app_admins.index');

@@ -1,7 +1,7 @@
 <?php
 
-    use App\Catalog\Property;
-    use Illuminate\Database\Seeder;
+use App\Model\Catalog\Property;
+use Illuminate\Database\Seeder;
 
 class PropertyTableSeeder extends Seeder
 {
@@ -21,6 +21,7 @@ class PropertyTableSeeder extends Seeder
             ['Casa', 'casa'],
             ['Departamento', 'Dpto.'],
             ['Block', 'block'],
+            ['Oficina', 'Of.'],
 
         ]);
 
@@ -28,8 +29,8 @@ class PropertyTableSeeder extends Seeder
         for ($i = 0; $i < count($properties); $i++) {
 
             Property::create([
-                'name'        => $properties[ $i ][0],
-                'description' => $properties[ $i ][1],
+                'name' => $properties[$i][0],
+                'description' => $properties[$i][1],
             ]);
 
         }

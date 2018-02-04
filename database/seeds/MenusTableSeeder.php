@@ -185,6 +185,34 @@ class MenusTableSeeder extends Seeder
                 'updated_by_user_id' => NULL,
                 'deleted_by_user_id' => NULL,
             ),
+            12 => 
+            array (
+                'id' => 14,
+                'title' => 'Telefono Sucursales',
+                'route' => 'company_branch_office_phones.index',
+                'icon' => 'fas fa-briefcase',
+                'parent_id' => 2,
+                'hierarchy' => 100,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'created_by_user_id' => NULL,
+                'updated_by_user_id' => NULL,
+                'deleted_by_user_id' => NULL,
+            ),
+            13 => 
+            array (
+                'id' => 15,
+                'title' => 'Contacto Sucursales',
+                'route' => 'company_branch_office_contacts.index',
+                'icon' => 'fas fa-briefcase',
+                'parent_id' => 2,
+                'hierarchy' => 100,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+                'created_by_user_id' => NULL,
+                'updated_by_user_id' => NULL,
+                'deleted_by_user_id' => NULL,
+            ),
         ));
         
         

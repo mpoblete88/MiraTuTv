@@ -12,11 +12,13 @@
         "amelia/rememberable": "^2.0",
         "bytestgear/laravel-accountable": "^1.1",
         "fideloper/proxy": "~3.3",
+        "guzzlehttp/guzzle": "^6.3",
         "laracasts/flash": "^3.0",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
         "orangehill/iseed": "dev-master",
+        "spatie/geocoder": "^3.1",
         "styde/html": "~1.4",
         "yajra/laravel-datatables-oracle": "~8.0"
     },

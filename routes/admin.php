@@ -20,3 +20,5 @@ Route::resource('app_customers', 'Admin\Catalog\CustomerController');
 Route::resource('app_admins', 'Admin\Catalog\AdminController');
 Route::resource('system_maintenance', 'Admin\Catalog\systemMaintenanceController');
 Route::resource('company_branch_office', 'Admin\Catalog\CompanyBranchOfficeController');
+Route::resource('company_branch_office_phones', 'Admin\Catalog\CompanyBranchOfficePhoneController');
+Route::resource('company_branch_office_contacts', 'Admin\Catalog\CompanyBranchOfficeContactController');

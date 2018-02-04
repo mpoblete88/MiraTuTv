@@ -1,5 +1,5 @@
 @extends('admin.layout.head')
-@section('title','Sucursales')
+@section('title','Telefonos Sucursales')
 @section('extra_scripts')
     <link rel="stylesheet" href="{{asset('css/datatable.css')}}">
     <script type="text/javascript" charset="utf8" src="{{ asset('js/datatable.js') }}"></script>
@@ -104,18 +104,7 @@
                     },
                     {
                         data: function (data) {
-                            var url = "";
-                            var edit_url = "{{ route('company_branch_office.edit', ':ID:') }}";
-                            var delete_url = '{{ Form::open(array("route" => array("company_branch_office.destroy", ":ID:"), "method" => "delete")) }}' +
-                                ' <button type="submit" class="btn btn-danger btn-xs" title="{{ trans('general.action.delete')}}"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>' +
-                                '{{ Form::close() }}';
-
-                            edit_url = edit_url.replace(':ID:', data.id);
-                            delete_url = delete_url.replace(':ID:', data.id);
-                            url += delete_url;
-                            url += '<a href="' + edit_url + '" class="btn btn-success btn-xs" title="{{ trans('general.action.edit')}}"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>';
-
-                            return url;
+                            @include('admin.partials.buttons', ['route' => $route])
                         }
                     }
                 ],

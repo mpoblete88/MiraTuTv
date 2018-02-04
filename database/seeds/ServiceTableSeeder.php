@@ -46,7 +46,7 @@ class ServiceTableSeeder extends Seeder
 
         for ($i = 0; $i < count($services); $i++) {
 
-            $service = new \App\Catalog\Service();
+            $service = new \App\Model\Catalog\Service();
             $service->name = $services[ $i ][0];
             $service->code = $services[ $i ][1];
             $service->description = $services[ $i ][2];
@@ -59,7 +59,7 @@ class ServiceTableSeeder extends Seeder
 
             foreach ($code_explode as $plan_short_name)
             {
-                $service_plans = new \App\Catalog\ServicePlan();
+                $service_plans = new \App\Model\Catalog\ServicePlan();
                 $service_plans->service_id = $service->id;
                 $service_plans->plan_id = $plan_id_map[$plan_short_name];
                 $service_plans->save();
@@ -67,7 +67,7 @@ class ServiceTableSeeder extends Seeder
 
             }
 
-            $service_price = new \App\Catalog\ServicePrice();
+            $service_price = new \App\Model\Catalog\ServicePrice();
             $service_price->service_id = $service->id;
             $service_price->price = $services[ $i ][3];
             $service_price->save();

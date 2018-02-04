@@ -15,15 +15,17 @@ class CreateCompanyBranchOfficeAddressesTable extends Migration
     {
         Schema::create('company_branch_office_addresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('company_branch_office_id');
-            $table->integer('city_id');
-            $table->integer('property_id');
-            $table->text('address');
-            $table->string('number');
-            $table->string('property_number');
-            $table->text('latitude');
-            $table->text('longitude');
+            $table->string('address');
+            $table->string('number', 45)->nullable();
+            $table->integer('property_number')->unsigned()->nullable();
+            $table->string('latitude', 45);
+            $table->string('longitude', 45);
+            $table->integer('property_id')->unsigned();
+            $table->integer('commune_id')->unsigned();
+            $table->integer('company_branch_office_id')->unsigned();
+            $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
+
         });
     }
 

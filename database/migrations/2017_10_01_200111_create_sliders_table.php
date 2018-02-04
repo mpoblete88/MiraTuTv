@@ -22,7 +22,6 @@ class CreateSlidersTable extends Migration
             $table->text('url');
             $table->enum('status',['active','inactive']);
             $table->text('description');
-
             $table->timestamps();
         });
     }

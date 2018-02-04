@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
-use App\Catalog\City;
-use App\Catalog\Property;
-use App\Company;
-use App\CompanyBranchOffice;
-use App\CompanyBranchOfficeAddress;
+use App\Model\Catalog\Property;
+use App\Model\Catalog\Commune;
+use App\Model\Catalog\Company;
+use App\Model\Catalog\CompanyBranchOffice;
+use App\Model\Catalog\CompanyBranchOfficeAddress;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -33,8 +33,8 @@ class CompanyBranchOfficeController extends Controller
     public function create()
     {
         $properties = Property::pluck('name', 'id');
-        $cities = City::pluck('name','id');
-        return view('admin.catalog.company_branch_office.create', compact('properties', 'cities'));
+        $communes = Commune::orderBy('name')->get()->pluck('name', 'id');
+        return view('admin.catalog.company_branch_office.create', compact('properties', 'communes'));
     }
 
     /**
@@ -45,15 +45,19 @@ class CompanyBranchOfficeController extends Controller
      */
     public function store(Request $request)
     {
-        $companyBranchOffice = new CompanyBranchOffice($request->only(['name','rut']));
+        $companyBranchOffice = new CompanyBranchOffice($request->only(['name', 'rut']));
         $companyBranchOffice->company_id = Company::firstOrFail()->id;
         $companyBranchOffice->status = $request->status == 1 ? 'active' : 'inactive';
         $companyBranchOffice->save();
 
-        $companyBranchOfficeAddress = new CompanyBranchOfficeAddress($request->only(['address', 'number']));
+        $companyBranchOfficeAddress = new CompanyBranchOfficeAddress($request->only(['address', 'number', 'property_number']));
         $companyBranchOfficeAddress->company_branch_office_id = $companyBranchOffice->id;
         $companyBranchOfficeAddress->property_id = $request->property;
-        $companyBranchOfficeAddress->city_id = $request->city;
+        $companyBranchOfficeAddress->commune_id = $request->commune;
+        $full_address = $companyBranchOfficeAddress->address . ' ' . $companyBranchOfficeAddress->number . ' ' . $companyBranchOfficeAddress->commune->name . ' ' . $companyBranchOfficeAddress->commune->province->region->name . ' ' . $companyBranchOfficeAddress->commune->province->region->country->nicename;
+        $companyBranchOfficeAddress->latitude = parent::getCoordinate($full_address)['lat'];
+        $companyBranchOfficeAddress->longitude = parent::getCoordinate($full_address)['lng'];
+        $companyBranchOfficeAddress->save();
         flash(trans('validation.success'))->success();
         return redirect()->route('company_branch_office.index');
     }
@@ -77,8 +81,11 @@ class CompanyBranchOfficeController extends Controller
      */
     public function edit($id)
     {
+
         $company_branch_office = CompanyBranchOffice::findOrFail($id);
-        return view('admin.catalog.company_branch_office.edit', compact('company_branch_office'));
+        $properties = Property::pluck('name', 'id');
+        $communes = Commune::orderBy('name')->get()->pluck('name', 'id');
+        return view('admin.catalog.company_branch_office.edit', compact('company_branch_office', 'properties', 'communes'));
     }
 
     /**
@@ -90,10 +97,21 @@ class CompanyBranchOfficeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $company_branch_office = CompanyBranchOffice::findOrFail($id);
-        $company_branch_office->update($request->all());
-        $company_branch_office->status = $request->status == 1 ? 'active' : 'inactive';
-        $company_branch_office->save();
+        $companyBranchOffice = CompanyBranchOffice::findOrFail($id);
+        $companyBranchOffice->update($request->only(['name', 'rut']));
+        $companyBranchOffice->status = $request->status == 1 ? 'active' : 'inactive';
+        $companyBranchOffice->save();
+
+        $companyBranchOfficeAddress = $companyBranchOffice->address;
+        $companyBranchOfficeAddress->update($request->only(['address', 'number', 'property_number']));
+        $companyBranchOfficeAddress->company_branch_office_id = $companyBranchOffice->id;
+        $companyBranchOfficeAddress->property_id = $request->property;
+        $companyBranchOfficeAddress->commune_id = $request->commune;
+        $full_address = $companyBranchOfficeAddress->address . ' ' . $companyBranchOfficeAddress->number . ' ' . $companyBranchOfficeAddress->commune->name . ' ' . $companyBranchOfficeAddress->commune->province->region->name . ' ' . $companyBranchOfficeAddress->commune->province->region->country->nicename;
+        $companyBranchOfficeAddress->latitude = parent::getCoordinate($full_address)['lat'];
+        $companyBranchOfficeAddress->longitude = parent::getCoordinate($full_address)['lng'];
+        $companyBranchOfficeAddress->save();
+
         flash(trans('validation.success'))->success();
         return redirect()->route('company_branch_office.index');
     }
@@ -118,23 +136,21 @@ class CompanyBranchOfficeController extends Controller
 
     public function getDatatable()
     {
-        $companyBranchOffice = CompanyBranchOffice::with(['company', 'addresses', 'socials', 'contacts'])->get();
+        $companyBranchOffice = CompanyBranchOffice::with(['company', 'address', 'socials', 'contacts'])->get();
         $valid_offices = collect();
         $phones = collect();
-
         foreach ($companyBranchOffice as $office) {
 
-            if ($office->addresses->count() > 0) {
-                foreach ($office->addresses->first()->phones as $phone) {
+                foreach ($office->address->phones as $phone) {
                     $phones->push([
                         'phone' => $phone->country->phonecode . '' . $phone->phone,
                     ]);
                 }
-            }
+
             $valid_offices->push([
                 'id' => $office->id,
                 'name' => $office->name . ' ' . $office->rut,
-                'address' => $office->addresses->first()->address . ' ' . $office->addresses->first()->number,
+                'address' => $office->address->address . ' ' . $office->address->number,
                 'phones' => $phones->count() == 0 ? 'Sin registros' : $phones,
                 'status_color' => $office->status_color,
                 'status_label' => $office->status_label,

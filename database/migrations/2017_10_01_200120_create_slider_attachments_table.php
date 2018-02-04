@@ -16,8 +16,6 @@ class CreateSliderAttachmentsTable extends Migration
         Schema::create('slider_attachments', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('slider_id');
-
-            $table->string('types_channel');
             $table->string('file_name');
             $table->string('size');
             $table->string('format_file');

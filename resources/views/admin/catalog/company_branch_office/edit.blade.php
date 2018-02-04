@@ -19,9 +19,30 @@
                 {{ Form::label('lbl', 'RUT', ['class' => 'control-label']) }}
                 {{ Form::text('rut', $company_branch_office->rut,['class' => 'form-control' ]) }}
             </div>
-            <div class="form-group">
 
-                {{ Form::checkbox('status', true, $company_branch_office->status == 'active') }}
+            <div class="form-group">
+                {{ Form::label('lbl', 'Dirección', ['class' => 'control-label']) }}
+                {{ Form::text('address', $company_branch_office->address->address, ['class' => 'form-control' ]) }}
+            </div>
+
+            <div class="form-group">
+                {{ Form::label('lbl', 'Numero dirección', ['class' => 'control-label']) }}
+                {{ Form::number('number', $company_branch_office->address->number, ['class' => 'form-control' ]) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('lbl', 'Tipo de Propiedad', ['class' => 'control-label']) }}
+                {{ Form::select('property', $properties,  $company_branch_office->address->property->id, ['class' => 'form-control' ]) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('lbl', 'Numero de Propiedad (En caso de ser necesario)', ['class' => 'control-label']) }}
+                {{ Form::number('property_number',  $company_branch_office->address->property_number, ['class' => 'form-control' ]) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('lbl', 'Comuna', ['class' => 'control-label']) }}
+                {!! Form::selectMultiple('commune', $communes,  $company_branch_office->address->commune->id)  !!}
+            </div>
+            <div class="form-group">
+                {{ Form::checkbox('status', true, true) }}
                 {{ Form::label('lbl', 'Activo', ['class' => 'control-label']) }}
             </div>
 

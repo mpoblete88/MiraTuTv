@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\ViewComposers;
 
-use App\Menu;
+use App\Model\System\Menu;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 /**

@@ -1,7 +1,7 @@
 <?php
 
-    use App\Catalog\Channel;
-    use Illuminate\Database\Seeder;
+use App\Model\Catalog\Category;
+use Illuminate\Database\Seeder;
 
 class CategoriesTableSeeder extends Seeder
 {
@@ -34,9 +34,9 @@ class CategoriesTableSeeder extends Seeder
 
         for ($i = 0; $i < count($categories); $i++) {
 
-            \App\Catalog\Category::create([
-                'name'        => $categories[ $i ][0],
-                'description' => $categories[ $i ][1],
+            Category::create([
+                'name' => $categories[$i][0],
+                'description' => $categories[$i][1],
             ]);
 
 

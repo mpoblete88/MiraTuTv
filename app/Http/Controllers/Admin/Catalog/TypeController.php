@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
-use App\Catalog\Type;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TypeRequest;
-use Illuminate\Http\Request;
+use App\Model\Catalog\Type;
 use Yajra\DataTables\Facades\DataTables;
 
 class TypeController extends Controller

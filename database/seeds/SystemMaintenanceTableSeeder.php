@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Model\System\SystemMaintenance;
 class SystemMaintenanceTableSeeder extends Seeder
 {
     /**
@@ -26,7 +26,7 @@ class SystemMaintenanceTableSeeder extends Seeder
 
     for ($i = 0; $i < count($system); $i++) {
 
-        \App\SystemMaintenance::create([
+        SystemMaintenance::create([
             'status'            => $system[ $i ][0],
             'title'             => $system[ $i ][1],
             'subtitle'         => $system[ $i ][2],

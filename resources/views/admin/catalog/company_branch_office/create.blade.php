@@ -34,11 +34,15 @@
                 {{ Form::select('property', $properties, null, ['class' => 'form-control' ]) }}
             </div>
             <div class="form-group">
-                {{ Form::label('lbl', 'Ciudad', ['class' => 'control-label']) }}
-                {{ Form::select('city', $cities, null, ['class' => 'form-control' ]) }}
+                {{ Form::label('lbl', 'Numero de Propiedad (En caso de ser necesario)', ['class' => 'control-label']) }}
+                {{ Form::number('property_number', null, ['class' => 'form-control' ]) }}
             </div>
             <div class="form-group">
-                {{ Form::checkbox('status', true, false) }}
+                {{ Form::label('lbl', 'Comuna', ['class' => 'control-label']) }}
+                {!! Form::selectMultiple('commune', $communes, null)  !!}
+            </div>
+            <div class="form-group">
+                {{ Form::checkbox('status', true, true) }}
                 {{ Form::label('lbl', 'Activo', ['class' => 'control-label']) }}
             </div>
 
@@ -46,7 +50,7 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
-            {{ Form::submit('Modificar', ['class' => 'btn btn-success']) }}
+            {{ Form::submit('Crear', ['class' => 'btn btn-success']) }}
         </div>
         <!-- /.box-footer -->
         {!!  Form::close() !!}

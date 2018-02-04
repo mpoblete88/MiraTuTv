@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
-use App\Catalog\Category;
-use App\Catalog\Channel;
-use App\Catalog\ChannelCategory;
-use App\Catalog\Type;
+use App\Model\Catalog\Category;
+use App\Model\Catalog\Channel;
+use App\Model\Catalog\ChannelCategory;
+use App\Model\Catalog\Type;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;

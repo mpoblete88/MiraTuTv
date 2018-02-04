@@ -78,18 +78,7 @@
                     },
                     {
                         data: function (data) {
-                            var url = "";
-                            var edit_url = "{{ route('app_admins.edit', ':ID:') }}";
-                            var delete_url = '{{ Form::open(array("route" => array("app_admins.destroy", ":ID:"), "method" => "delete")) }}' +
-                                ' <button type="submit" class="btn btn-danger btn-xs" title="{{ trans('general.action.delete')}}"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>' +
-                                '{{ Form::close() }}';
-
-                            edit_url = edit_url.replace(':ID:', data.id);
-                            delete_url = delete_url.replace(':ID:', data.id);
-                            url += delete_url;
-                            url += '<a href="' + edit_url + '" class="btn btn-success btn-xs" title="{{ trans('general.action.edit')}}"><i class="fa fa-pencil-square" aria-hidden="true"></i></a>';
-
-                            return url;
+                            @include('admin.partials.buttons', ['route' => $route])
                         }
                     }
                 ],

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
-use App\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserFormRequest;
+use App\Model\Catalog\User;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserController extends Controller
@@ -19,7 +19,7 @@ class UserController extends Controller
         $users = User::get();
 
 
-        return view('admin.catalog.user.index')->with(['users'=>$users]);
+        return view('admin.catalog.user.index')->with(['users' => $users]);
     }
 
     /**
@@ -35,10 +35,10 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserFormRequest $request)
     {
         User::create([
             'first_name' => $request->txtNames,
@@ -55,7 +55,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -66,7 +66,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -78,11 +78,11 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserFormRequest $request, $id)
     {
         $user = User::findOrFail($id);
         $user->update([
@@ -100,7 +100,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -108,7 +108,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $user->update([
             'status' => $user->status == 'active' ? 'inactive' : 'active'
-            ]);
+        ]);
         flash('Se ha desactivado al usuario')->error();
         return redirect()->route('users.index');
     }

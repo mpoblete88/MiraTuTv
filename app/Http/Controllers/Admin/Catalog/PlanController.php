@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
-use App\Catalog\Channel;
-use App\Catalog\Plan;
+use App\Model\Catalog\Channel;
+use App\Model\Catalog\Plan;
 use App\Http\Requests\PlanRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

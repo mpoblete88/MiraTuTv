@@ -1,5 +1,6 @@
 <?php
 
+use App\Model\Catalog\Plan;
 use Illuminate\Database\Seeder;
 
 class PlanTableSeeder extends Seeder
@@ -15,24 +16,23 @@ class PlanTableSeeder extends Seeder
     }
 
 
-
     public function createPlan()
     {
         $plans = ([
-            ['BASE', 'Plan Base','B'],
+            ['BASE', 'Plan Base', 'B'],
             ['FUTBOL', 'Plan Futbol', 'F'],
-            ['CINE', 'Plan Cine','C'],
-            ['TOTAL', 'Plan Total','T'],
+            ['CINE', 'Plan Cine', 'C'],
+            ['TOTAL', 'Plan Total', 'T'],
 
         ]);
 
 
         for ($i = 0; $i < count($plans); $i++) {
 
-            \App\Catalog\Plan::create([
-                'name'        => $plans[ $i ][0],
-                'description' => $plans[ $i ][1],
-                'code'        => $plans[ $i ][2],
+            Plan::create([
+                'name' => $plans[$i][0],
+                'description' => $plans[$i][1],
+                'code' => $plans[$i][2],
             ]);
 
 

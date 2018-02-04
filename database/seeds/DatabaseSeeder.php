@@ -17,20 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::truncate();
-        Admin::truncate();
-        Customer::truncate();
-        Company::truncate();
-        CompanyBranchOffice::truncate();
-        \App\CompanyBranchOfficeAddress::truncate();
-        Property::truncate();
-        \App\Catalog\Channel::truncate();
-        \App\Catalog\Category::truncate();
-        \App\Catalog\Type::truncate();
-        \App\Catalog\Plan::truncate();
-        \App\Catalog\Service::truncate();
-        \App\SystemMaintenance::truncate();
-
 
         $this->call(UserTableSeeder::class);
         $this->call(CompanyTableSeeder::class);
@@ -43,5 +29,8 @@ class DatabaseSeeder extends Seeder
         $this->call(SystemMaintenanceTableSeeder::class);
         $this->call(MenusTableSeeder::class);
         $this->call(CountrySeeder::class);
+        $this->call(RegionsTableSeeder::class);
+        $this->call(ProvincesTableSeeder::class);
+        $this->call(CommunesTableSeeder::class);
     }
 }

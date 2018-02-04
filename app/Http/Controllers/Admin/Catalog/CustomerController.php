@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
-use App\Customer;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CustomerRequest;
+use App\Model\Catalog\Customer;
 use Yajra\DataTables\Facades\DataTables;
 
 class CustomerController extends Controller
@@ -20,7 +19,7 @@ class CustomerController extends Controller
         $customers = Customer::get();
 
 
-        return view('customer.catalog.customer.index')->with(['customers'=>$customers]);
+        return view('customer.catalog.customer.index')->with(['customers' => $customers]);
     }
 
     /**
@@ -36,10 +35,10 @@ class CustomerController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CustomerRequest $request)
     {
         $dtpBorn = date('Y-m-d', strtotime($request->dtpBorn));
         $customer = Customer::create([
@@ -64,7 +63,7 @@ class CustomerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -75,7 +74,7 @@ class CustomerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -87,20 +86,21 @@ class CustomerController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CustomerRequest $request, $id)
     {
         $dtpBorn = date('Y-m-d', strtotime($request->dtpBorn));
 
-        Customer::findOrFail($id)->update([
+        $customer = Customer::findOrFail($id);
+        $customer->update([
             'first_name' => $request->txtNames,
             'last_name' => $request->txtLastNames,
             'nick_name' => $request->txtNameUser,
             'email' => $request->txtEmail,
-            'password' => bcrypt($request->txtPassword),
+            'password' => !is_null($request->txtPassword) ? bcrypt($request->txtPassword) : $customer->password,
             'birthdate' => $dtpBorn,
             'rut' => $request->txtRut,
         ]);
@@ -113,7 +113,7 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -121,7 +121,7 @@ class CustomerController extends Controller
         $customer = Customer::findOrFail($id);
         $customer->update([
             'status' => $customer->status == 'active' ? 'inactive' : 'active'
-            ]);
+        ]);
         $customer->save();
         flash('Se ha desactivado la cuenta')->error();
         return redirect()->route('app_customers.index');

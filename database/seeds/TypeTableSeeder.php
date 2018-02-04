@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Model\Catalog\Type;
 class TypeTableSeeder extends Seeder
 {
     /**
@@ -28,7 +28,7 @@ class TypeTableSeeder extends Seeder
 
         for ($i = 0; $i < count($types); $i++) {
 
-            \App\Catalog\Type::create([
+            Type::create([
                 'name'       => $types[ $i ][1],
                 'short_name' => $types[ $i ][0],
             ]);

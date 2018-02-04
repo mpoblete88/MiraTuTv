@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                 {{ Form::label('lbl', 'Canales', ['class' => 'control-label']) }}
-                {{ Form::select('channels[]', $channels,$plan->channels->pluck('id'),['class' => 'form-control', 'multiple']) }}
+                {!! Form::selectMultiple('channels[]', $channels, $plan->channels->pluck('id'),['multiple']) !!}
             </div>
 
 
