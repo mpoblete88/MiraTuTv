@@ -9,6 +9,11 @@ class Plan extends Model
     protected $table = 'plans';
     protected $fillable = ['name', 'description', 'code'];
 
+    public function decoders()
+    {
+        return $this->hasMany(Decoder::class, 'plan_id');
+    }
+
     public function channels()
     {
 

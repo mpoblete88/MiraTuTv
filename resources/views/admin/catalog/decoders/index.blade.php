@@ -1,12 +1,12 @@
 @extends('admin.layout.head')
-@section('title','Canales')
+@section('title','Decodificadores')
 @section('extra_scripts')
     <link rel="stylesheet" href="{{asset('css/datatable.css')}}">
     <script type="text/javascript" charset="utf8" src="{{ asset('js/datatable.js') }}"></script>
 
     <script>
         $(document).ready(function () {
-            $('#{{$route}}-table').DataTable({
+            var table = $('#{{$route}}-table').DataTable({
                 "sDom": '<"top"if>rt<"bottom"lp><"clear">',
                 language: {
                     "paginate": {
@@ -62,7 +62,7 @@
                         })
                     }
                 },
-                ajax: '{!! route('datatable_channels') !!}',
+                ajax: '{!! route('datatables_decoder') !!}',
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Todo"]],
                 "pageLength": 10,
                 stateSave: true,
@@ -70,25 +70,16 @@
 
                     {data: 'id'},
                     {data: 'name'},
-                    {data: 'channel'},
-                    {data: 'type'},
+                    {data: 'code'},
+                    {data: 'serial_number'},
+                    {data: 'plan.name'},
+                    {data: 'created_at_format'},
+                    {data: 'updated_at_format'},
                     {
                         data: function (data) {
-                            var categories = data.category;
-                            if (categories.length < 1)
-                                return 'Sin categoria';
-                            else {
-                                var cat = '<ul>';
-                                $.each(categories, function (value, key) {
-                                    cat += '<li>' + key + '</li>';
-                                })
-                                cat += '<ul>';
-                                return cat;
-                            }
+                            return '<span class="label label-' + data.status_color + '">' + data.status_label + '</span>';
                         }
                     },
-                    {data: 'status'},
-                    {data: 'plans'},
                     {
                         data: function (data) {
                             @include('admin.partials.buttons', ['route' => $route])
@@ -96,10 +87,10 @@
                     }
                 ],
                 initComplete: function () {
-                    this.api().columns([1, 2, 3, 4]).every(function () {
+                    this.api().columns([1, 2, 3, 4, 5, 6]).every(function () {
                         var column = this;
                         var name_column = $(column.header()).text();
-                        var select = $('<select style="min-width:200px"><option value="">' + name_column + '</option></select>');
+                        var select = $('<select style="min-width:100px"><option value="">' + name_column + '</option></select>');
 
                         select.appendTo($(column.header()).empty());
                         column.data().unique().sort().each(function (d, j) {
@@ -139,10 +130,10 @@
 
         });
     </script>
-
 @endsection
 
 @section('content')
+    @include('flash::message')
     <div class="box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">@yield('title')</h3>
@@ -151,7 +142,8 @@
 
                 <a href="{{ route($route.'.create')}}" class="btn btn-success btn-sm"
                    title="{{ trans('general.action.create')}}"><i class="fa fa-plus" aria-hidden="true"></i></a>
-
+                <a href="{{ route('multiple.decoders')}}" class="btn btn-primary btn-sm"
+                   title="{{ trans('general.action.multiple')}}"><i class="fas fa-archive"></i></a>
             </div>
         </div>
         <div class="box-body">
@@ -162,12 +154,13 @@
                 <tr>
                     <th data-priority="0">#</th>
                     <th data-priority="1">Nombre</th>
-                    <th data-priority="4">Canal</th>
-                    <th data-priority="5">Tipo</th>
-                    <th data-priority="6">Categoria</th>
-                    <th data-priority="7">Estado</th>
-                    <th data-priority="8">En planes</th>
-                    <th data-priority="3">Accion</th>
+                    <th data-priority="2">Código</th>
+                    <th data-priority="3">Nº Serie</th>
+                    <th data-priority="4">Plan</th>
+                    <th data-priority="8">F. Creación</th>
+                    <th data-priority="7">F. Modificación</th>
+                    <th data-priority="6">Estado</th>
+                    <th data-priority="5">Accion</th>
 
                 </tr>
                 </thead>

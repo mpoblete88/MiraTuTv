@@ -22,8 +22,11 @@ Route::get('company-branch-offices-contacts', 'Admin\Catalog\CompanyBranchOffice
 
 Route::get('plans', 'Admin\Catalog\PlanController@getDatatable')->name('datatable_plans');
 Route::get('channels', 'Admin\Catalog\ChannelController@getDatatable')->name('datatable_channels');
-Route::get('category_channel-channel', 'Admin\Catalog\CategoryController@getDatatable')->name(
+Route::get('category-channel', 'Admin\Catalog\CategoryController@getDatatable')->name(
  'datatables_category_channel'
+);
+Route::get('decoders', 'Admin\Catalog\DecoderController@getDatatable')->name(
+ 'datatables_decoder'
 );
 Route::get('types-channel-channel', 'Admin\Catalog\TypeController@getDatatable')->name('datatables_type_channel');
 Route::get('sliders', 'Admin\Catalog\SliderController@getDatatable')->name('datatables_slider');

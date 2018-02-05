@@ -60,7 +60,7 @@
 
 
             <div class="form-group">
-                {{ Form::checkbox('isActivate', 'true', $maintenance->status == 1)}}
+                {{ Form::checkbox('isActivate', 'true', $maintenance->status == 'active')}}
                 {{ Form::label('lblDescription', 'Activar', ['class' => ''])}}
             </div>
 

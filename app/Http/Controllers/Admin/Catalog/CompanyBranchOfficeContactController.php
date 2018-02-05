@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Catalog;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CompanyBranchOfficeContactRequest;
 use App\Model\Catalog\CompanyBranchOffice;
 use App\Model\Catalog\CompanyBranchOfficeAddressPhoneType;
 use App\Model\Catalog\CompanyBranchOfficeContact;
@@ -43,7 +44,7 @@ class CompanyBranchOfficeContactController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyBranchOfficeContactRequest $request)
     {
 
         $contact = CompanyBranchOfficeContact::create(
@@ -100,7 +101,7 @@ class CompanyBranchOfficeContactController extends Controller
      * @param  int                      $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CompanyBranchOfficeContactRequest $request, $id)
     {
         $contact = CompanyBranchOfficeContact::findOrFail($id);
         $contact->update(

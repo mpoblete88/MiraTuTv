@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
+use App\Http\Requests\CompanyBranchOfficeSocialRequest;
 use App\Model\Catalog\CompanyBranchOffice;
 use App\Model\Catalog\CompanyBranchOfficeSocial;
 use App\Model\Catalog\CompanyBranchOfficeSocialType;
@@ -43,7 +44,7 @@ class CompanyBranchOfficeSocialController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyBranchOfficeSocialRequest $request)
     {
 
         CompanyBranchOfficeSocial::create(
@@ -96,7 +97,7 @@ class CompanyBranchOfficeSocialController extends Controller
      * @param  int                      $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CompanyBranchOfficeSocialRequest $request, $id)
     {
         $social = CompanyBranchOfficeSocial::findOrFail($id);
         $social->update(

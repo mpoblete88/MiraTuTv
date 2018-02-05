@@ -23,3 +23,6 @@ Route::resource('company_branch_office', 'Admin\Catalog\CompanyBranchOfficeContr
 Route::resource('company_branch_office_phones', 'Admin\Catalog\CompanyBranchOfficePhoneController');
 Route::resource('company_branch_office_contacts', 'Admin\Catalog\CompanyBranchOfficeContactController');
 Route::resource('company_branch_office_social', 'Admin\Catalog\CompanyBranchOfficeSocialController');
+Route::resource('decoders', 'Admin\Catalog\DecoderController');
+Route::get('multiple/decoders', 'Admin\Catalog\DecoderController@multiple')->name('multiple.decoders');
+Route::post('decoders/multiple', 'Admin\Catalog\DecoderController@multiplePost')->name('decoders.multiple.post');

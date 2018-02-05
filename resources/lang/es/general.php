@@ -12,6 +12,7 @@ return [
         'view' => 'Visualizar',
     ),
     'message.create' => 'Se ha creado exitosamente.',
+    'message.success' => 'Se ha enviado exitosamente el formulario',
     'message.destroy' => 'Se ha removido exitosamente.',
     'message.edit' => 'Se ha modificado exitosamente.',
     'message.recover' => 'Se ha recuperado exitosamente.',

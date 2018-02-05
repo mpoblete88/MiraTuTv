@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Catalog;
 
+use App\Http\Requests\CompanyBranchOfficePhoneRequest;
 use App\Model\Catalog\Country;
 use App\Model\Catalog\CompanyBranchOffice;
 use App\Model\Catalog\CompanyBranchOfficeAddressPhone;
@@ -42,7 +43,7 @@ class CompanyBranchOfficePhoneController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyBranchOfficePhoneRequest $request)
     {
         $companyBranchOfficePhones = new CompanyBranchOfficeAddressPhone();
         $companyBranchOfficePhones->phone = $request->phone;
@@ -90,7 +91,7 @@ class CompanyBranchOfficePhoneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CompanyBranchOfficePhoneRequest $request, $id)
     {
         $companyBranchOfficePhones = CompanyBranchOfficeAddressPhone::findOrFail($id);
         $companyBranchOfficePhones->phone = $request->phone;

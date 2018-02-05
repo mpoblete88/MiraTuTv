@@ -8,10 +8,6 @@ class SystemMaintenance extends Model
 {
     protected $table = 'system_maintenances';
 
-    protected $casts = [
-        'status' => 'int'
-    ];
-
     protected $fillable = [
         'status',
         'title',
