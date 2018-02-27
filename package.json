@@ -29,7 +29,9 @@
     "datatables.net-responsive-bs": "^2.2.1",
     "datatables.net-select-bs": "^1.2.4",
     "font-awesome": "^4.7.0",
+    "icheck": "^1.0.2",
     "multiple-select": "^1.2.1",
-    "select2": "^4.0.6-rc.1"
+    "select2": "^4.0.6-rc.1",
+    "toastr": "^2.1.4"
   }
 }

@@ -2,12 +2,13 @@
 
 namespace App\Model\Catalog;
 
+use App\Traits\TimeAttribute;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Customer extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, TimeAttribute;
 
     protected $guard = 'customer ';
 

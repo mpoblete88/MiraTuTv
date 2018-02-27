@@ -5,4 +5,3 @@
     <strong>Copyright &copy; {{ date('Y') }} <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
     reserved.
 </footer>
-@include('admin.layout.scripts_js')

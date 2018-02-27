@@ -2,10 +2,12 @@
 
 namespace App\Model\Catalog;
 
+use App\Traits\TimeAttribute;
 use Illuminate\Database\Eloquent\Model;
 
 class Plan extends Model
 {
+    use TimeAttribute;
     protected $table = 'plans';
     protected $fillable = ['name', 'description', 'code'];
 
